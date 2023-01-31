@@ -12,7 +12,7 @@
     <!--
     title tag
     -->
-    <title>Orions - App Landing Page</title>
+    <title>KOMINFO</title>
 
     <!--
     favicon
