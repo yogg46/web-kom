@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    @livewireStyles
+
 </head>
 
 <body>
@@ -44,7 +46,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="/home" class="brand-logo">
                 <img class="logo-abbr" src="/asset/images/Kominfo3.png" alt="">
                 <img class="logo-compact" src="/asset/images/Kominfo-text.png" alt="">
                 <img class="brand-title" src="/asset/images/Kominfo-text.png" alt="">
@@ -708,11 +710,11 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Dashboard
+                                {{ $tittle }}
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <div class="input-group search-area d-xl-inline-flex d-none">
                                     <input type="text" class="form-control" placeholder="Search here...">
                                     <div class="input-group-append">
@@ -720,15 +722,15 @@
                                                     class="flaticon-381-search-2"></i></a></span>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown notification_dropdown">
-                                <a class="nav-link  ai-icon" href="javascript:void(0)" role="button"
-                                    data-toggle="dropdown">
-                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                            </li> --}}
+                            <li class="nav-item text-primary dropdown notification_dropdown">
+                                <a class="nav-link  ai-icon text-primary" href="javascript:void(0)" role="button"
+                                    data-toggle="dropdown" style="background: rgba(78, 116, 254, 0.027);">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="5b86e5"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M12.8333 5.91732V3.49998C12.8333 2.85598 13.356 2.33331 14 2.33331C14.6428 2.33331 15.1667 2.85598 15.1667 3.49998V5.91732C16.9003 6.16698 18.5208 6.97198 19.7738 8.22498C21.3057 9.75681 22.1667 11.8346 22.1667 14V18.3913L23.1105 20.279C23.562 21.1831 23.5142 22.2565 22.9822 23.1163C22.4513 23.9761 21.5122 24.5 20.5018 24.5H15.1667C15.1667 25.144 14.6428 25.6666 14 25.6666C13.356 25.6666 12.8333 25.144 12.8333 24.5H7.49817C6.48667 24.5 5.54752 23.9761 5.01669 23.1163C4.48469 22.2565 4.43684 21.1831 4.88951 20.279L5.83333 18.3913V14C5.83333 11.8346 6.69319 9.75681 8.22502 8.22498C9.47919 6.97198 11.0985 6.16698 12.8333 5.91732ZM14 8.16664C12.4518 8.16664 10.969 8.78148 9.87469 9.87581C8.78035 10.969 8.16666 12.453 8.16666 14V18.6666C8.16666 18.8475 8.12351 19.026 8.04301 19.1881C8.04301 19.1881 7.52384 20.2265 6.9755 21.322C6.88567 21.5028 6.89501 21.7186 7.00117 21.8901C7.10734 22.0616 7.29517 22.1666 7.49817 22.1666H20.5018C20.7037 22.1666 20.8915 22.0616 20.9977 21.8901C21.1038 21.7186 21.1132 21.5028 21.0234 21.322C20.475 20.2265 19.9558 19.1881 19.9558 19.1881C19.8753 19.026 19.8333 18.8475 19.8333 18.6666V14C19.8333 12.453 19.2185 10.969 18.1242 9.87581C17.0298 8.78148 15.547 8.16664 14 8.16664Z"
-                                            fill="#FE634E" />
+                                            fill="#5b86e5" />
                                     </svg>
                                     <div class="pulse-css"></div>
                                 </a>
@@ -756,14 +758,26 @@
 
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                                    <img src="images/profile/17.jpg" width="20" alt="" />
-                                    <!-- <div class="header-info">
-          <span class="text-black"><strong>Brian Lee</strong></span>
-          <p class="fs-12 mb-0">Admin</p>
-         </div> -->
+                                    <div class="media ai-icon">
+
+                                        <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" viewBox="0 0 24 24" fill="none" stroke="#5b86e5"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-user">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+
+
+                                    </div>
+
+                                    <div class="header-info">
+                                        <span class="text-primary"><strong>{{ Auth::user()->name }}</strong></span>
+                                        <p class="fs-12 mb-0">{{ Auth::user()->role }}</p>
+                                    </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="/asset/app-profile.html" class="dropdown-item ai-icon">
+                                    <a href="/profil" class="dropdown-item ai-icon">
                                         <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
                                             width="18" height="18" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -773,7 +787,7 @@
                                         </svg>
                                         <span class="ml-2">Profile </span>
                                     </a>
-                                    <a href="/asset/email-inbox.html" class="dropdown-item ai-icon">
+                                    {{-- <a href="/asset/email-inbox.html" class="dropdown-item ai-icon">
                                         <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success"
                                             width="18" height="18" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -784,7 +798,7 @@
                                             <polyline points="22,6 12,13 2,6"></polyline>
                                         </svg>
                                         <span class="ml-2">Inbox </span>
-                                    </a>
+                                    </a> --}}
                                     <a href="{{ route('logout') }}" class="dropdown-item ai-icon"
                                         onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
@@ -821,117 +835,40 @@
             <div class="deznav-scroll">
 
                 <ul class="metismenu" id="menu">
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-networking"></i>
+                    <li class=" "><a class=" ai-icon" href="/home" aria-expanded="false">
+                            <i class="flaticon-381-networking "></i>
                             <span class="nav-text">Dashboard</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="event.html">Event</a></li>
-                            <li><a href="event-detail.html">Event Detail</a></li>
-                            <li><a href="customers.html">Customers</a></li>
-                            <li><a href="analytics.html">Analytics</a></li>
-                            <li><a href="reviews.html">Reviews</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-television"></i>
-                            <span class="nav-text">Apps</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/app-profile.html">Profile</a></li>
-                            <li><a href="/asset/post-details.html">Post Details</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="/asset/email-compose.html">Compose</a></li>
-                                    <li><a href="/asset/email-inbox.html">Inbox</a></li>
-                                    <li><a href="/asset/email-read.html">Read</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/asset/app-calender.html">Calendar</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="/asset/ecom-product-grid.html">Product Grid</a></li>
-                                    <li><a href="/asset/ecom-product-list.html">Product List</a></li>
-                                    <li><a href="/asset/ecom-product-detail.html">Product Details</a></li>
-                                    <li><a href="/asset/ecom-product-order.html">Order</a></li>
-                                    <li><a href="/asset/ecom-checkout.html">Checkout</a></li>
-                                    <li><a href="/asset/ecom-invoice.html">Invoice</a></li>
-                                    <li><a href="/asset/ecom-customers.html">Customers</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-controls-3"></i>
-                            <span class="nav-text">Charts</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/chart-flot.html">Flot</a></li>
-                            <li><a href="/asset/chart-morris.html">Morris</a></li>
-                            <li><a href="/asset/chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="/asset/chart-chartist.html">Chartist</a></li>
-                            <li><a href="/asset/chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="/asset/chart-peity.html">Peity</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-internet"></i>
-                            <span class="nav-text">Bootstrap</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/ui-accordion.html">Accordion</a></li>
-                            <li><a href="/asset/ui-alert.html">Alert</a></li>
-                            <li><a href="/asset/ui-badge.html">Badge</a></li>
-                            <li><a href="/asset/ui-button.html">Button</a></li>
-                            <li><a href="/asset/ui-modal.html">Modal</a></li>
-                            <li><a href="/asset/ui-button-group.html">Button Group</a></li>
-                            <li><a href="/asset/ui-list-group.html">List Group</a></li>
-                            <li><a href="/asset/ui-media-object.html">Media Object</a></li>
-                            <li><a href="/asset/ui-card.html">Cards</a></li>
-                            <li><a href="/asset/ui-carousel.html">Carousel</a></li>
-                            <li><a href="/asset/ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="/asset/ui-popover.html">Popover</a></li>
-                            <li><a href="/asset/ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="/asset/ui-tab.html">Tab</a></li>
-                            <li><a href="/asset/ui-typography.html">Typography</a></li>
-                            <li><a href="/asset/ui-pagination.html">Pagination</a></li>
-                            <li><a href="/asset/ui-grid.html">Grid</a></li>
 
-                        </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-heart"></i>
-                            <span class="nav-text">Plugins</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/uc-select2.html">Select 2</a></li>
-                            <li><a href="/asset/uc-nestable.html">Nestedable</a></li>
-                            <li><a href="/asset/uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="/asset/uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="/asset/uc-toastr.html">Toastr</a></li>
-                            <li><a href="/asset/map-jqvmap.html">Jqv Map</a></li>
-                            <li><a href="/asset/uc-lightgallery.html">Lightgallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                            <i class="flaticon-381-settings-2"></i>
-                            <span class="nav-text">Widget</span>
-                        </a>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-notepad"></i>
-                            <span class="nav-text">Forms</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/form-element.html">Form Elements</a></li>
-                            <li><a href="/asset/form-wizard.html">Wizard</a></li>
-                            <li><a href="/asset/form-editor-summernote.html">Summernote</a></li>
-                            <li><a href="form-pickers.html">Pickers</a></li>
-                            <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    @if (Auth::user()->role == 'Super Admin')
+                        <li><a href="/user-management" class="ai-icon" aria-expanded="false">
+                                <i class="flaticon-381-user-9 "></i>
+                                <span class="nav-text">User Management</span>
+                            </a>
+                        </li>
+                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                                <i class="flaticon-381-user-8"></i>
+                                <span class="nav-text">Pegawai</span>
+                            </a>
+                        </li>
+                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                                <i class="flaticon-381-id-card-1"></i>
+                                <span class="nav-text">OPD</span>
+                            </a>
+                        </li>
+                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                                <i class="flaticon-381-television"></i>
+                                <span class="nav-text">Aplikasi</span>
+                            </a>
+                        </li>
+                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                                <i class="flaticon-381-news"></i>
+                                <span class="nav-text">Pengaduan</span>
+                            </a>
+                        </li>
+                    @endif
+                    {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-network"></i>
                             <span class="nav-text">Table</span>
                         </a>
@@ -939,31 +876,9 @@
                             <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
                             <li><a href="table-datatable-basic.html">Datatable</a></li>
                         </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-layer-1"></i>
-                            <span class="nav-text">Pages</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="/asset/page-register.html">Register</a></li>
-                            <li><a href="/asset/page-login.html">Login</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="/asset/page-error-400.html">Error 400</a></li>
-                                    <li><a href="/asset/page-error-403.html">Error 403</a></li>
-                                    <li><a href="/asset/page-error-404.html">Error 404</a></li>
-                                    <li><a href="/asset/page-error-500.html">Error 500</a></li>
-                                    <li><a href="/asset/page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/asset/page-lock-screen.html">Lock Screen</a></li>
-                        </ul>
-                    </li>
+                    </li> --}}
                 </ul>
-                <div class="copyright">
-                    <p><strong>Acara Ticketing Dashboard</strong> © 2021 All Rights Reserved</p>
-                    <p>Made with <span class="heart"></span> by DexignZone</p>
-                </div>
+
             </div>
         </div>
         <!--**********************************
@@ -977,421 +892,15 @@
             <!-- row -->
             <div class="container-fluid">
                 <!-- Add Order -->
-                <div class="modal fade" id="addOrderModalside">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Add Event</h5>
-                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label class="text-black font-w500">Event Name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="text-black font-w500">Event Date</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="text-black font-w500">Description</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button" class="btn btn-primary">Create</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-xxl-4">
-                        <div class="row">
-                            <div class="col-xl-12 col-md-6">
-                                <div class="card">
-                                    <div class="card-header border-0 pb-0">
-                                        <h4 class="fs-20">Best Selling</h4>
-                                        <select class="form-control style-1 default-select ">
-                                            <option>This Week</option>
-                                            <option>Next Week</option>
-                                            <option>This Month</option>
-                                            <option>Next Month</option>
-                                        </select>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="donutChart"></div>
-                                        <div class="d-flex justify-content-between mt-4">
-                                            <div class="pr-2">
-                                                <svg width="20" height="8" viewBox="0 0 20 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="20" height="8" rx="4"
-                                                        fill="#214BB8" />
-                                                </svg>
-                                                <h4 class="fs-18 text-black mb-1 font-w600">21,512</h4>
-                                                <span class="fs-14">Ticket Left</span>
-                                            </div>
-                                            <div class="pr-2">
-                                                <svg width="20" height="8" viewBox="0 0 20 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="20" height="8" rx="4"
-                                                        fill="#FE634E" />
-                                                </svg>
-                                                <h4 class="fs-18 text-black mb-1 font-w600">45,612</h4>
-                                                <span class="fs-14">Ticket Sold</span>
-                                            </div>
-                                            <div class="">
-                                                <svg width="20" height="8" viewBox="0 0 20 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="20" height="8" rx="4"
-                                                        fill="#45ADDA" />
-                                                </svg>
-                                                <h4 class="fs-18 text-black mb-1 font-w600">275</h4>
-                                                <span class="fs-14">Event Held</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-md-6">
-                                <div class="card">
-                                    <div class="card-header border-0 pb-0">
-                                        <h4 class="fs-20">Latest Sales</h4>
-                                        <select class="form-control style-1 default-select ">
-                                            <option>This Week</option>
-                                            <option>Next Week</option>
-                                            <option>This Month</option>
-                                            <option>Next Month</option>
-                                        </select>
-                                    </div>
-                                    <div class="card-body pb-0 dz-scroll height630 loadmore-content"
-                                        id="latestSalesContent">
-                                        <div class="pb-3 mb-3 border-bottom">
-                                            <p class="font-w600"><a href="event.html" class="text-black">The Story’s
-                                                    of Danau Toba (Drama Theater)</a></p>
-                                            <div class="d-flex align-items-end">
-                                                <img src="images/profile/20.jpg" alt="" width="42"
-                                                    class="rounded-circle mr-2">
-                                                <div class="mr-auto">
-                                                    <h4 class="fs-14 mb-0"><a href="app-profile.html"
-                                                            class="text-black">Steffany Humble</a></h4>
-                                                    <span class="fs-12">2m ago</span>
-                                                </div>
-                                                <span class="badge badge-sm light badge-primary">4 Ticket</span>
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 mb-3 border-bottom">
-                                            <p class="font-w600"><a href="event.html" class="text-black">Envato
-                                                    Author SF Meetup</a></p>
-                                            <div class="d-flex align-items-end">
-                                                <img src="images/profile/21.jpg" alt="" width="42"
-                                                    class="rounded-circle mr-2">
-                                                <div class="mr-auto">
-                                                    <h4 class="fs-14 mb-0"><a href="app-profile.com"
-                                                            class="text-black">Jacob Swing Swing</a></h4>
-                                                    <span class="fs-12">6h ago</span>
-                                                </div>
-                                                <span class="badge badge-sm light badge-primary">2 Ticket</span>
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 mb-3 border-bottom">
-                                            <p class="font-w600"><a href="event.html" class="text-black">Envato
-                                                    Atuhor Community Fun Hiking at Sibayak Mountaint</a></p>
-                                            <div class="d-flex align-items-end">
-                                                <img src="images/profile/22.jpg" alt="" width="42"
-                                                    class="rounded-circle mr-2">
-                                                <div class="mr-auto">
-                                                    <h4 class="fs-14 mb-0"><a href="app-profile.com"
-                                                            class="text-black">Robert Carloz</a></h4>
-                                                    <span class="fs-12">10h ago</span>
-                                                </div>
-                                                <span class="badge badge-sm light badge-primary">1 Ticket</span>
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 mb-3 border-bottom">
-                                            <p class="font-w600"><a href="event.html" class="text-black">Indonesia
-                                                    Envato Authors National Meetup</a></p>
-                                            <div class="d-flex align-items-end">
-                                                <img src="images/profile/23.jpg" alt="" width="42"
-                                                    class="rounded-circle mr-2">
-                                                <div class="mr-auto">
-                                                    <h4 class="fs-14 mb-0"><a href="app-profile.com"
-                                                            class="text-black">Kevin Stefanus</a></h4>
-                                                    <span class="fs-12">2m ago</span>
-                                                </div>
-                                                <span class="badge badge-sm light badge-primary">1 Ticket</span>
-                                            </div>
-                                        </div>
-                                        <div class="pb-3 mb-3 border-bottom">
-                                            <p class="font-w600"><a href="event.html" class="text-black">Envato
-                                                    Author SF Meetup</a></p>
-                                            <div class="d-flex align-items-end">
-                                                <img src="images/profile/21.jpg" alt="" width="42"
-                                                    class="rounded-circle mr-2">
-                                                <div class="mr-auto">
-                                                    <h4 class="fs-14 mb-0"><a href="app-profile.com"
-                                                            class="text-black">Jacob Swing Swing</a></h4>
-                                                    <span class="fs-12">6h ago</span>
-                                                </div>
-                                                <span class="badge badge-sm light badge-primary">2 Ticket</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer text-center border-0">
-                                        <a class="btn btn-primary btn-sm dz-load-more" id="latestSales"
-                                            href="javascript:void(0)" rel="ajax/latest-sales.html">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-xxl-8">
-                        <div class="row">
-                            <div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-end">
-                                            <div>
-                                                <p class="fs-14 mb-1">New Sales</p>
-                                                <span class="fs-35 text-black font-w600">93
-                                                    <svg class="ml-1" width="19" height="12"
-                                                        viewBox="0 0 19 12" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M2.00401 11.1924C0.222201 11.1924 -0.670134 9.0381 0.589795 7.77817L7.78218 0.585786C8.56323 -0.195262 9.82956 -0.195262 10.6106 0.585786L17.803 7.77817C19.0629 9.0381 18.1706 11.1924 16.3888 11.1924H2.00401Z"
-                                                            fill="#33C25B" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <canvas class="lineChart" id="chart_widget_2" height="85"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <p class="fs-14 mb-1">Event Held</p>
-                                                <span class="fs-35 text-black font-w600">856
-                                                    <svg class="ml-1" width="19" height="12"
-                                                        viewBox="0 0 19 12" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M2.00401 11.1924C0.222201 11.1924 -0.670134 9.0381 0.589795 7.77817L7.78218 0.585786C8.56323 -0.195262 9.82956 -0.195262 10.6106 0.585786L17.803 7.77817C19.0629 9.0381 18.1706 11.1924 16.3888 11.1924H2.00401Z"
-                                                            fill="#33C25B" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="d-inline-block ml-auto position-relative donut-chart-sale">
-                                                <span class="donut"
-                                                    data-peity='{ "fill": ["rgb(254, 99, 78)", "rgba(244, 244, 244, 1)"],   "innerRadius": 31, "radius": 10}'>6/8</span>
-                                                <small class="text-secondary">90%</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-xxl-12 col-lg-4">
-                                <div class="card">
-                                    <div class="card-header align-items-start pb-0 border-0">
-                                        <div>
-                                            <h4 class="fs-16 mb-0 text-black font-w600">Increase 25%</h4>
-                                            <span class="fs-12">Comparisson</span>
-                                        </div>
-                                        <select class="form-control style-1 default-select ">
-                                            <option>Daily</option>
-                                            <option>Monthly</option>
-                                            <option>Weekly</option>
-                                        </select>
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <canvas id="widgetChart1" height="50"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="card" id="sales-revenue">
-                                    <div class="card-header pb-0 d-block d-sm-flex border-0">
-                                        <h3 class="fs-20 text-black mb-0">Sales Revenue</h3>
-                                        <div class="card-action revenue-tabs mt-3 mt-sm-0">
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" data-toggle="tab" href="#monthly"
-                                                        role="tab" aria-selected="false">
-                                                        Monthly
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="#weekly"
-                                                        role="tab" aria-selected="false">
-                                                        Weekly
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="#today"
-                                                        role="tab" aria-selected="true">
-                                                        Daily
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="user" role="tabpanel">
-                                                <canvas id="revenue" class="chartjs"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="card">
-                                    <div class="card-header border-0 pb-sm-0 pb-5">
-                                        <h4 class="fs-20">Recent Event List</h4>
-                                        <div class="dropdown custom-dropdown mb-0">
-                                            <div data-toggle="dropdown">
-                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M12 12.9999C12.5523 12.9999 13 12.5522 13 11.9999C13 11.4477 12.5523 10.9999 12 10.9999C11.4477 10.9999 11 11.4477 11 11.9999C11 12.5522 11.4477 12.9999 12 12.9999Z"
-                                                        stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M12 5.99994C12.5523 5.99994 13 5.55222 13 4.99994C13 4.44765 12.5523 3.99994 12 3.99994C11.4477 3.99994 11 4.44765 11 4.99994C11 5.55222 11.4477 5.99994 12 5.99994Z"
-                                                        stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M12 19.9999C12.5523 19.9999 13 19.5522 13 18.9999C13 18.4477 12.5523 17.9999 12 17.9999C11.4477 17.9999 11 18.4477 11 18.9999C11 19.5522 11.4477 19.9999 12 19.9999Z"
-                                                        stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                                <a class="dropdown-item text-danger"
-                                                    href="javascript:void(0);">Cancel</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="event-bx owl-carousel">
-                                            <div class="items">
-                                                <div class="image-bx">
-                                                    <img src="images/events/1.png" alt="">
-                                                    <div class="info">
-                                                        <p class="fs-18 font-w600"><a href="event-detail.html"
-                                                                class="text-black">International Live Choice Festivals
-                                                                (2020)</a></p>
-                                                        <span class="fs-14 text-black d-block mb-3">Manchester,
-                                                            London</span>
-                                                        <p class="fs-12">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et dolore magna aliqua. Ut enim ad mini</p>
-                                                        <ul>
-                                                            <li><i class="las la-dollar-sign"></i>$124,00</li>
-                                                            <li><i class="las la-calendar"></i>June 20, 2020</li>
-                                                            <li><i class="fa fa-ticket"></i>561 pcs</li>
-                                                            <li><i class="las la-clock"></i>08:35 AM</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="items">
-                                                <div class="image-bx">
-                                                    <img src="images/events/3.png" alt="">
-                                                    <div class="info">
-                                                        <p class="fs-18 font-w600"><a href="event-detail.html"
-                                                                class="text-black">Envato Atuhor Community Fun Hiking
-                                                                at Sibayak Mt.</a></p>
-                                                        <span class="fs-14 text-black d-block mb-3">London, United
-                                                            Kingdom</span>
-                                                        <p class="fs-12">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et dolore magna aliqua. Ut enim ad mini</p>
-                                                        <ul>
-                                                            <li><i class="las la-dollar-sign"></i>$124,00</li>
-                                                            <li><i class="las la-calendar"></i>June 20, 2020</li>
-                                                            <li><i class="fa fa-ticket"></i>561 pcs</li>
-                                                            <li><i class="las la-clock"></i>08:35 AM</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="items">
-                                                <div class="image-bx">
-                                                    <img src="images/events/1.png" alt="">
-                                                    <div class="info">
-                                                        <p class="fs-18 font-w600"><a href="event-detail.html"
-                                                                class="text-black">International Live Choice Festivals
-                                                                (2020)</a></p>
-                                                        <span class="fs-14 text-black d-block mb-3">Manchester,
-                                                            London</span>
-                                                        <p class="fs-12">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et dolore magna aliqua. Ut enim ad mini</p>
-                                                        <ul>
-                                                            <li><i class="las la-dollar-sign"></i>$124,00</li>
-                                                            <li><i class="las la-calendar"></i>June 20, 2020</li>
-                                                            <li><i class="fa fa-ticket"></i>561 pcs</li>
-                                                            <li><i class="las la-clock"></i>08:35 AM</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="items">
-                                                <div class="image-bx">
-                                                    <img src="images/events/2.png" alt="">
-                                                    <div class="info">
-                                                        <p class="fs-18 font-w600"><a href="event-detail.html"
-                                                                class="text-black">Envato Indonesian Authors Meetup
-                                                                2020</a></p>
-                                                        <span class="fs-14 text-black d-block mb-3">Medan,
-                                                            Indonesia</span>
-                                                        <p class="fs-12">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et dolore magna aliqua. Ut enim ad mini</p>
-                                                        <ul>
-                                                            <li><i class="las la-dollar-sign"></i>$124,00</li>
-                                                            <li><i class="las la-calendar"></i>June 20, 2020</li>
-                                                            <li><i class="fa fa-ticket"></i>561 pcs</li>
-                                                            <li><i class="las la-clock"></i>08:35 AM</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="items">
-                                                <div class="image-bx">
-                                                    <img src="images/events/3.png" alt="">
-                                                    <div class="info">
-                                                        <p class="fs-18 font-w600"><a href="event-detail.html"
-                                                                class="text-black">Envato Atuhor Community Fun Hiking
-                                                                at Sibayak Mt.</a></p>
-                                                        <span class="fs-14 text-black d-block mb-3">London, United
-                                                            Kingdom</span>
-                                                        <p class="fs-12">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et dolore magna aliqua. Ut enim ad mini</p>
-                                                        <ul>
-                                                            <li><i class="las la-dollar-sign"></i>$124,00</li>
-                                                            <li><i class="las la-calendar"></i>June 20, 2020</li>
-                                                            <li><i class="fa fa-ticket"></i>561 pcs</li>
-                                                            <li><i class="las la-clock"></i>08:35 AM</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                {{-- <div class="page-titles">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Layout</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Blank</a></li>
+					</ol>
+                </div> --}}
+                @yield('isi')
+
             </div>
         </div>
         <!--**********************************
@@ -1428,6 +937,7 @@
     <!--**********************************
         Scripts
     ***********************************-->
+    @livewireScripts
     <!-- Required vendors -->
     <script src="/asset/vendor/global/global.min.js"></script>
     <script src="/asset/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>

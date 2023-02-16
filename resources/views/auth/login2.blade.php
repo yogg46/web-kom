@@ -94,7 +94,7 @@
             style="background-image: url(assets/images/patterns/pattern.jpg);"></div>
         <div class="background-pattern-gradient"></div>
     </div> --}}
-  
+
     <!--**********************************
         Scripts
     ***********************************-->

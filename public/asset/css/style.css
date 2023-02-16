@@ -4,7 +4,7 @@
     Name                 : Acara
     Author               : DexignZone
     Author Portfolio     : https://themeforest.net/user/dexignzone/portfolio
-    
+
 
 
     Table of Sass Contents
@@ -16,7 +16,7 @@
         _mixin
         _variable
 
-    2. bootstrap 
+    2. bootstrap
         -Here goes all official bootstrap scss files
 
     3. Global/Base
@@ -25745,8 +25745,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 [data-primary="color_5"] .profile-tab .nav-item .nav-link:hover,
 [data-primary="color_5"] .profile-tab .nav-item .nav-link.active {
-  border-bottom: 0.2px solid #c62828;
-  color: #c62828;
+  border-bottom: 0.2px solid #5b86e5;
+  color: #5b86e5;
 }
 
 [data-primary="color_5"] .amChartsInputField {
@@ -35722,7 +35722,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
         width: 100%;
         // padding-left: 3%;
 		margin-bottom: 20px;
-	
+
         @media(min-width: 1200px){
             width: 100%;
             // margin-left: 3%;
@@ -35788,7 +35788,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
             width: 100%;
             height: 100%;
             padding: 0;
-            
+
             @include respond(phone) {
                 padding: 0;
             }
@@ -35800,11 +35800,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 					border-color: $d-border;
 				}
             }
-    
+
             input.error {
                 position: relative;
             }
-    
+
             label.error {
 				margin-top: 5px;
 				margin-left: 0;
@@ -35933,7 +35933,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .wizard > .content{
     background: transparent;
-    // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1); 
+    // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .wizard, .tabcontrol{
@@ -35943,7 +35943,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .step-form-horizontal {
     .wizard {
         padding-top: 3.5rem;
-        
+
         .steps {
             li {
                 position: relative;
@@ -35966,7 +35966,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
                         .number {
                             color: $white;
                             background: $primary;
-                            border-color: transparent; 
+                            border-color: transparent;
 							@at-root [data-theme-version="dark"] & {
 								border-color:$primary;
 							}
@@ -35989,7 +35989,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
                     .number {
                         color: $primary;
                         background: $white;
-                        border: 2px solid $primary; 
+                        border: 2px solid $primary;
                     }
                 }
 
@@ -36032,7 +36032,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
                         //     width: 4rem;
                         //     height: 4rem;
                         // }
-						
+
 						@at-root [data-theme-version="dark"] & {
 							background:$d-bg;
 							border-color:$d-border;

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\SuperAdmin\UserManagement;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::view('/loogi', 'auth.login3');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/post', Userm::class);
+Route::get('/user-management', UserManagement::class)->name('userManagement');
+
