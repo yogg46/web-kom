@@ -937,7 +937,62 @@
     <!--**********************************
         Scripts
     ***********************************-->
+    {{-- @livewireScripts --}}
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
+    <x-livewire-alert::flash />
+    <x-livewire-alert::scripts />
+    <script>
+        window.addEventListener('closeModal', event => {
+            $("#tambahUser").modal('hide');
+        })
+        window.addEventListener('edit', event => {
+            $("#editUser").modal('hide');
+        })
+        window.livewire.on('closeModal', () => {
+            $('#tambahUser').modal('hide');
+        });
+        window.livewire.on('edit', () => {
+            $('#editUser').modal('hide');
+        });
+    </script>
+
     @livewireScripts
+
+    <script wire:ignore>
+        window.addEventListener('swal:confirm', event => {
+            swal.fire({
+                    title: event.detail.title,
+                    text: event.detail.text,
+                    icon: event.detail.type,
+                    showCancelButton: true,
+                    reverseButtons: true
+                })
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        window.livewire.emit('delete', event.detail.id);
+                    }
+                });
+        });
+
+        window.addEventListener('swal:confirmpass', event => {
+            swal.fire({
+                    title: event.detail.title,
+                    text: event.detail.text,
+                    icon: event.detail.type,
+                    showCancelButton: true,
+                    reverseButtons: true
+                })
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        window.livewire.emit('resetpass', event.detail.id);
+                    }
+                });
+        });
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @include('sweetalert::alert')
     <!-- Required vendors -->
     <script src="/asset/vendor/global/global.min.js"></script>
     <script src="/asset/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>

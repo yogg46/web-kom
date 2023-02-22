@@ -251,28 +251,33 @@ stylesheets
                                                 <label for="name-field">Email</label>
 
                                             </div>
+
+                                            
                                             <div class="form-floating">
+                                                <input class="input form-control" id="password" type="password"
+                                                    type="password" placeholder="Email address" name="password" required
+                                                    autocomplete="current-password">
+                                                <label for="email-field">Password
+                                                </label>
+
+                                            </div>
+                                            <div class="form-floating">
+
                                                 @error('email')
-                                                    <span class="invalid-feedback" role="alert">
+                                                    <span class="text text-danger" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
                                             </div>
                                             <div class="form-floating">
-                                                <input class="input form-control" id="password" type="password"
-                                                    type="password" placeholder="Email address" name="password" required
-                                                    autocomplete="current-password">
-                                                <label for="email-field">Password</label>
 
-                                            </div>
-                                            <div class="form-floating">
-                                                aaaa
                                                 @error('password')
                                                     <span class="text text-danger" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
                                             </div>
+
                                             {{-- <div class="form-floating">
                                                 <input class="input form-control" id="message-field" type="text"
                                                     placeholder="Message">
