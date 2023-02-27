@@ -15,7 +15,7 @@ class UserManagement extends Component
 
     public $name, $email, $role, $status, $ids, $password;
     public $search = '';
-    protected $listeners = ['closeModal', 'delete', 'resetpass'];
+    protected $listeners = [ 'delete', 'resetpass'];
 
 
 
@@ -49,7 +49,7 @@ class UserManagement extends Component
 
         $simpan->save();
         // session()->alert('message', 'Data Berhasil Disimpan.');
-        $this->emit('closeModal');
+        // $this->emit('closeModal');
         $this->dispatchBrowserEvent('closeModal');
         $this->alert('success', 'Data Berhasil Disimpan');
         // $this->dispatchBrowserEvent('closeModal');

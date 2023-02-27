@@ -847,22 +847,22 @@
                                 <span class="nav-text">User Management</span>
                             </a>
                         </li>
-                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                        <li><a href="/pegawai" class="ai-icon" aria-expanded="false">
                                 <i class="flaticon-381-user-8"></i>
                                 <span class="nav-text">Pegawai</span>
                             </a>
                         </li>
-                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                        <li><a href="/opd" class="ai-icon" aria-expanded="false">
                                 <i class="flaticon-381-id-card-1"></i>
                                 <span class="nav-text">OPD</span>
                             </a>
                         </li>
-                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                        <li><a href="/aplikasi" class="ai-icon" aria-expanded="false">
                                 <i class="flaticon-381-television"></i>
                                 <span class="nav-text">Aplikasi</span>
                             </a>
                         </li>
-                        <li><a href="/" class="ai-icon" aria-expanded="false">
+                        <li><a href="/pengaduan" class="ai-icon" aria-expanded="false">
                                 <i class="flaticon-381-news"></i>
                                 <span class="nav-text">Pengaduan</span>
                             </a>

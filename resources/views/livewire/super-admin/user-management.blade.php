@@ -6,7 +6,8 @@
             <div class="modal-content ">
                 <div class="modal-header">
                     <h5 class="modal-title">Tambah User</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    <button type="button" wire:click.prevent="resetInput" class="close"
+                        data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
                 <form action="" wire:submit.prevent="save">
@@ -55,7 +56,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="button" wire:click.prevent="resetInput" class="btn btn-danger light"
+                            data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
@@ -69,7 +71,8 @@
             <div class="modal-content ">
                 <div class="modal-header">
                     <h5 class="modal-title">Edit User</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    <button wire:click.prevent="resetInput" type="button" class="close"
+                        data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
                 <form action="" wire:submit.prevent="update">
@@ -133,7 +136,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="button" wire:click.prevent="resetInput" class="btn btn-danger light"
+                            data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
@@ -207,9 +211,11 @@
                                                     class="btn btn-primary shadow btn-xs sharp mr-1"
                                                     data-toggle="modal" data-target="#editUser"><i
                                                         class="fa fa-pencil"></i></a>
-                                                <a wire:click.prevent="konfimasiReset({{ $key->id }})" class="btn btn-warning shadow btn-xs sharp mr-1"><i
+                                                <a wire:click.prevent="konfimasiReset({{ $key->id }})"
+                                                    class="btn btn-warning shadow btn-xs sharp mr-1"><i
                                                         class=" fa fa-repeat "></i></a>
-                                                <a wire:click.prevent="konfimasiDEL({{ $key->id }})" class="btn btn-danger shadow btn-xs sharp"><i
+                                                <a wire:click.prevent="konfimasiDEL({{ $key->id }})"
+                                                    class="btn btn-danger shadow btn-xs sharp"><i
                                                         class="fa fa-trash"></i></a>
                                             </div>
                                         </td>
@@ -223,28 +229,32 @@
 
 
 
-                        <nav>
-                            <ul class="pagination pagination-sm pagination-gutter pagination-info">
-                                <li class="page-item page-indicator">
-                                    <a class="page-link" href="javascript:void(0)">
-                                        <i class="la la-angle-left"></i></a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-                                <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-                                <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
-                                <li class="page-item page-indicator">
-                                    <a class="page-link" href="javascript:void(0)">
-                                        <i class="la la-angle-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
+
 
 
 
 
                     </div>
+                </div>
+
+                <div class="card-footer">
+                    <nav class="float-right">
+                        <ul class="pagination pagination-sm pagination-gutter pagination-info">
+                            <li class="page-item page-indicator">
+                                <a class="page-link" href="javascript:void(0)">
+                                    <i class="la la-angle-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                            <li class="page-item page-indicator">
+                                <a class="page-link" href="javascript:void(0)">
+                                    <i class="la la-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
