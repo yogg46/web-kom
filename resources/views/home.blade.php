@@ -1,26 +1,19 @@
 {{-- @include('layouts.main') --}}
 @extends('layouts.main')
+
+@push('css')
+<link href="/asset/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+@endpush
+
+
 @section('isi')
     @if (Auth::user()->role == 'Super Admin')
-        <div class="d-flex flex-wrap mb-2 align-items-center justify-content-between">
-            <div class="mb-3 mr-3">
-                <div class="input-group search-area d-xl-inline-flex d-none">
-                    <input type="text" class="form-control" placeholder="cari project">
-                    <div class="input-group-append">
-                        <span class="input-group-text"><a href="javascript:void(0)"><i
-                                    class="flaticon-381-search-2"></i></a></span>
-                    </div>
-                </div>
-            </div>
-            <div class="event-tabs mb-3 mr-3">
-                <ul class="nav nav-tabs" role="tablist">
+        {{-- <div class="d-flex flex-wrap mb-2 align-items-center justify-content-between"> --}}
 
-                </ul>
-            </div>
 
             <div class="row">
 
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                         </div>
@@ -156,23 +149,24 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
-                <div class="col-lg-12">
+</div>
+                <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Daftar Aplikasi</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table data-primary="color_5" class="  display min-w850" id="example">
                                     <thead class="thead-info">
                                         <tr>
-                                            <th scope="col">No.</th>
-                                            <th scope="col">Aplikasi</th>
-                                            <th scope="col">OPD</th>
-                                            <th scope="col">Status</th>
+                                            <th >No.</th>
+                                            <th >Aplikasi</th>
+                                            <th >OPD</th>
+                                            <th >Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -195,13 +189,27 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th >No.</th>
+                                            <th >Aplikasi</th>
+                                            <th >OPD</th>
+                                            <th >Status</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
                     </div>
 
                 </div>
-            </div>
+            {{-- </div> --}}
         </div>
     @endif
 @endsection
+
+
+@push('js')
+<script src="/asset/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/asset/js/plugins-init/datatables.init.js"></script>
+@endpush

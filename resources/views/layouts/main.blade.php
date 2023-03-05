@@ -10,14 +10,16 @@
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/Kominfo3.png">
-    <link rel="stylesheet" href="/asset/vendor/chartist/css/chartist.min.css">
+    @stack('css')
+    {{-- <link rel="stylesheet" href="/asset/vendor/chartist/css/chartist.min.css"> --}}
     <link href="/asset/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="/asset/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    {{-- <link href="/asset/vendor/owl-carousel/owl.carousel.css" rel="stylesheet"> --}}
+    @livewireStyles
     <link href="/asset/css/style.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    @livewireStyles
 
 </head>
 
@@ -943,72 +945,35 @@
     <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
     <x-livewire-alert::flash />
     <x-livewire-alert::scripts />
-    <script>
-        window.addEventListener('closeModal', event => {
-            $("#tambahUser").modal('hide');
-        })
-        window.addEventListener('edit', event => {
-            $("#editUser").modal('hide');
-        })
-        window.livewire.on('closeModal', () => {
-            $('#tambahUser').modal('hide');
-        });
-        window.livewire.on('edit', () => {
-            $('#editUser').modal('hide');
-        });
-    </script>
+
 
     @livewireScripts
 
-    <script wire:ignore>
-        window.addEventListener('swal:confirm', event => {
-            swal.fire({
-                    title: event.detail.title,
-                    text: event.detail.text,
-                    icon: event.detail.type,
-                    showCancelButton: true,
-                    reverseButtons: true
-                })
-                .then((result) => {
-                    if (result.isConfirmed) {
-                        window.livewire.emit('delete', event.detail.id);
-                    }
-                });
-        });
 
-        window.addEventListener('swal:confirmpass', event => {
-            swal.fire({
-                    title: event.detail.title,
-                    text: event.detail.text,
-                    icon: event.detail.type,
-                    showCancelButton: true,
-                    reverseButtons: true
-                })
-                .then((result) => {
-                    if (result.isConfirmed) {
-                        window.livewire.emit('resetpass', event.detail.id);
-                    }
-                });
-        });
-    </script>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @include('sweetalert::alert')
     <!-- Required vendors -->
     <script src="/asset/vendor/global/global.min.js"></script>
     <script src="/asset/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-    <script src="/asset/vendor/chart.js/Chart.bundle.min.js"></script>
+    {{-- <script src="/asset/vendor/chart.js/Chart.bundle.min.js"></script> --}}
     <script src="/asset/js/custom.min.js"></script>
     <script src="/asset/js/deznav-init.js"></script>
-    <script src="/asset/vendor/owl-carousel/owl.carousel.js"></script>
+    {{-- <script src="/asset/vendor/owl-carousel/owl.carousel.js"></script> --}}
+
+    @stack('js')
+
+    {{-- <script src="/asset/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/asset/js/plugins-init/datatables.init.js"></script> --}}
 
     <!-- Chart piety plugin files -->
-    <script src="/asset/vendor/peity/jquery.peity.min.js"></script>
+    {{-- <script src="/asset/vendor/peity/jquery.peity.min.js"></script>` --}}
 
     <!-- Apex Chart -->
-    <script src="/asset/vendor/apexchart/apexchart.js"></script>
+    {{-- <script src="/asset/vendor/apexchart/apexchart.js"></script> --}}
 
     <!-- Dashboard 1 -->
-    <script src="/asset/js/dashboard/dashboard-1.js"></script>
+    {{-- <script src="/asset/js/dashboard/dashboard-1.js"></script> --}}
 
     <script>
         function carouselReview() {

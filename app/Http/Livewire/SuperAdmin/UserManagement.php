@@ -15,14 +15,17 @@ class UserManagement extends Component
 
     public $name, $email, $role, $status, $ids, $password;
     public $search = '';
-    protected $listeners = [ 'delete', 'resetpass'];
+    protected $listeners = ['delete', 'resetpass'];
 
 
-
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
     public function render()
     {
         return view('livewire.super-admin.user-management', [
-            'user' => User::search('name', $this->search)
+            'user' => User::search('name', $this->search)->whereLike('role',$this->search)->whereLike('status',$this->search)
                 ->orderBy('created_at', 'desc')
                 ->paginate(10),
         ])
@@ -31,23 +34,38 @@ class UserManagement extends Component
             ])
             ->section('isi');
     }
-    public function save()
+
+    protected $rules = [
+        'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+        'email' => 'required|email',
+        'role' => 'required',
+    ];
+
+    public function updated($field)
     {
-        $this->validate([
+        $this->validateOnly($field, [
             'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
-            // 'username' => 'required|regex:/^\S*$/u|unique:users',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email:rfc,dns',
             'role' => 'required',
         ]);
+    }
+    public function save()
+    {
+        $this->validate();
 
-        $simpan = new User;
+        // $simpan = new User;
+        // $simpan->name = $this->name;
+        // $simpan->role = $this->role;
+        // $simpan->password = Hash::make('password');
+        // $simpan->email = $this->email;
+        // $simpan->save();
 
-        $simpan->name = $this->name;
-        $simpan->role = $this->role;
-        $simpan->password = Hash::make('password');
-        $simpan->email = $this->email;
-
-        $simpan->save();
+        User::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'role' => $this->role,
+            'password' => Hash::make('password'),
+        ]);
         // session()->alert('message', 'Data Berhasil Disimpan.');
         // $this->emit('closeModal');
         $this->dispatchBrowserEvent('closeModal');
@@ -95,10 +113,10 @@ class UserManagement extends Component
 
     public function resetInput()
     {
-        $this->name = null;
-        $this->ids = null;
-        $this->email = null;
-        $this->role = null;
+        $this->name = '';
+        $this->ids = '';
+        $this->email = '';
+        $this->role = '';
     }
 
     public function konfimasiReset($id)
@@ -120,7 +138,7 @@ class UserManagement extends Component
         // $this->status = $User->status;
         $User = User::find($this->ids);
         $User->update([
-            // 'status' => 1,
+            'status' => 'aktif',
             'password' => $this->password = Hash::make('password')
         ]);
 

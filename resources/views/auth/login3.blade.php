@@ -252,7 +252,14 @@ stylesheets
 
                                             </div>
 
-                                            
+                                            <div class="form-floating">
+
+                                                @error('email')
+
+                                                        <strong style="margin-left: 10px"class="text ml-8 text-danger">{{ $message }}</strong>
+
+                                                @enderror
+                                            </div>
                                             <div class="form-floating">
                                                 <input class="input form-control" id="password" type="password"
                                                     type="password" placeholder="Email address" name="password" required
@@ -261,20 +268,13 @@ stylesheets
                                                 </label>
 
                                             </div>
-                                            <div class="form-floating">
 
-                                                @error('email')
-                                                    <span class="text text-danger" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
                                             <div class="form-floating">
 
                                                 @error('password')
-                                                    <span class="text text-danger" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
+
+                                                        <strong style="margin-left: 10px" class="text text-danger">{{ $message }}</strong>
+
                                                 @enderror
                                             </div>
 

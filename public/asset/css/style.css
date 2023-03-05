@@ -4635,6 +4635,7 @@ input[type="button"].btn-block {
 }
 
 .custom-file-input {
+    border-radius: 0.75rem;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -25072,8 +25073,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 }
 
 [data-primary="color_3"] .btn-primary:hover {
-  background-color: #fe2002;
-  border-color: #fe2002;
+  background-color: #5b86e5;
+  border-color: #5b86e5;
 }
 
 [data-primary="color_3"] .btn-outline-primary {
@@ -38989,7 +38990,8 @@ button:focus {
 }
 
 .btn-outline-light {
-  color: #B1B1B1;
+  color: #ffffff;
+
 }
 
 [data-theme-version="dark"] .btn-outline-light {
@@ -40232,7 +40234,7 @@ code {
 .pagination-primary .page-item.active .page-link {
   background: #5b86e5;
   border-color: #5b86e5;
-  box-shadow: 0 10px 20px 0px rgba(254, 99, 78, 0.2);
+  box-shadow: 0 10px 20px 0px rgba(91, 134, 229, 0.2);
 }
 
 [data-theme-version="dark"] .pagination-primary .page-item:hover .page-link,
