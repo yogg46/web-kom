@@ -36,3 +36,30 @@ Route::get('/opd', ODP::class)->name('opd');
 Route::get('/pengaduan', Pengaduan::class)->name('pengaduan');
 Route::get('/aplikasi', Aplikasi::class)->name('aplikasi');
 
+
+Route::get('/antrian', function () {
+    $tittle = 'Antrian';
+    return view('daftar-antrian',compact('tittle'));
+});
+Route::get('/aplikasi-pm', function () {
+    $tittle = 'Aplikasi';
+    return view('aplikasi-pm',compact('tittle'));
+});
+Route::get('/aplikasi/show-belum', function () {
+    $tittle = 'Aplikasi';
+    return view('show-aplikasi-belum',compact('tittle'));
+});
+Route::get('/aplikasi/show-progress', function () {
+    $tittle = 'Aplikasi';
+    return view('show-aplikasi-progress',compact('tittle'));
+});
+Route::get('/maintenance', function () {
+    $tittle = 'Maintenance';
+    return view('maintenance',compact('tittle'));
+});
+Route::get('/perbaikan', function () {
+    $tittle = 'Perbaikan';
+    return view('perbaikan',compact('tittle'));
+});
+
+

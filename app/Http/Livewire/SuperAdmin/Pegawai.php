@@ -27,9 +27,9 @@ class Pegawai extends Component
 
 
     public function updatingSearch()
-{
-    $this->resetPage();
-}
+    {
+        $this->resetPage();
+    }
     public function render()
     {
 
@@ -46,7 +46,7 @@ class Pegawai extends Component
     }
     protected $rules = [
         'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
-        'email' => 'required|email:email:rfc,dns',
+        'email' => 'required|email:email',
         'jabatan' => 'required',
         'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
     ];
@@ -55,7 +55,7 @@ class Pegawai extends Component
     {
         $this->validateOnly($field, [
             'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
-            'email' => 'required|email:rfc,dns',
+            'email' => 'required|email',
             'jabatan' => 'required',
             'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
         ]);

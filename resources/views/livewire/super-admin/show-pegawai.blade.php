@@ -23,7 +23,7 @@
                                 <p>{{ $pegawai->jabatan }}</p>
                             </div>
                             <div class="profile-email px-2 pt-2">
-                                <h4 class="text-muted mb-0">{{ $pegawai->email }}</h4>
+                                <h4 class="text-muted mb-2">{{ $pegawai->email }}</h4>
                                 <p style="text-transform: capitalize"><i
                                     class="fa fa-circle {{ $pegawai->status == 'aktif' ? 'text-success' : 'text-danger' }}  mr-1"></i>
                                 {{ $pegawai->status }}</p>
