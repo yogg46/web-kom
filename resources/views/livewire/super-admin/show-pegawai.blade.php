@@ -19,8 +19,8 @@
                         </div>
                         <div class="profile-details">
                             <div class="profile-name px-3 pt-2">
-                                <h3 class="text-primary mb-0">{{ $pegawai->nama_pegawai }}</h3>
-                                <p>{{ $pegawai->jabatan }}</p>
+                                <h3 class="text-primary mb-0">{{ $pegawai->name }}</h3>
+                                <p>{{ $pegawai->role }}</p>
                             </div>
                             <div class="profile-email px-2 pt-2">
                                 <h4 class="text-muted mb-2">{{ $pegawai->email }}</h4>

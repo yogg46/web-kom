@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pegawais', function (Blueprint $table) {
+        Schema::create('progres', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_pegawai');
-            $table->string('email');
-            $table->enum('jabatan', ["System Analyst", "Programmer", "Project Manager", "Quality Assurance"]);
-            $table->string('avatar')->nullable();
-            $table->enum('status', ['aktif', 'tidak aktif'])->default('aktif');
-            $table->string('slug');
+            $table->unsignedBigInteger('id_aplikasi');
+            $table->enum('status',['Disposisi Surat']);
+            $table->string('catatan')->nullable();
+            $table->dateTime('tanggal');
+            $table->foreign('id_aplikasi')->references('id')->on('aplikasis')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pegawais');
+        Schema::dropIfExists('progres');
     }
 };

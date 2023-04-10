@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\SuperAdmin;
 
 use App\Models\Pegawai;
+use App\Models\User;
 use Livewire\Component;
 
 class ShowPegawai extends Component
@@ -11,7 +12,7 @@ class ShowPegawai extends Component
     public $pegawai ;
     public function mount($slug)
     {
-        $this->pegawai = Pegawai::where('slug',$slug)->first();
+        $this->pegawai = User::where('slug',$slug)->first();
     }
     public function render()
     {

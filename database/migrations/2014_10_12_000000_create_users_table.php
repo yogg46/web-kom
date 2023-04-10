@@ -18,10 +18,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->default(bcrypt('password'));
             $table->string('avatar')->nullable();
-            $table->enum('role', ['Super Admin', 'Project Manager']);
+            $table->enum('role', ['Super Admin', 'Project Manager', "System Analyst", "Programmer", "Quality Assurance"]);
             $table->enum('status', ['aktif', 'tidak aktif'])->default('aktif');
+            $table->string('slug')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -281,7 +281,7 @@
             <div class="col-xl-4 col-lg-5 col-md-7">
                 {{-- <div class="widget-stat card  " style="background-color: {{ $key->jabatan == 'Analis' ? '#82AAE3' : ($key->jabatan == 'Programer' ? '#91D8E4' : ($key->jabatan == 'Project Manager' ? '#BFEAF5' : '#CFF5E7')) }}"> --}}
                 <div
-                    class="widget-stat card {{ $key->jabatan == 'System Analyst' ? 'gradient-11' : ($key->jabatan == 'Programmer' ? 'gradient-17' : ($key->jabatan == 'Project Manager' ? 'gradient-3' : 'gradient-18')) }} ">
+                    class="widget-stat card {{ $key->role == 'System Analyst' ? 'gradient-11' : ($key->role == 'Programmer' ? 'gradient-17' : ($key->role == 'Project Manager' ? 'gradient-3' : 'gradient-18')) }} ">
                     <div class="card-body p-4">
                         <div class="media">
                             <span class="mr-3 bg-white">
@@ -300,8 +300,8 @@
 
                             </span>
                             <div class="media-body text-white text-right">
-                                <p class="mb-1">{{ Str::substr($key->nama_pegawai, 0, 20) }}</p>
-                                <h4 class="text-white">{{ $key->jabatan }}</h4>
+                                <p class="mb-1">{{ Str::substr($key->name, 0, 20) }}</p>
+                                <h4 class="text-white">{{ $key->role }}</h4>
                             </div>
                         </div>
 

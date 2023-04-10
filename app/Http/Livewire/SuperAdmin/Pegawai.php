@@ -34,8 +34,8 @@ class Pegawai extends Component
     {
 
         return view('livewire.super-admin.pegawai', [
-            'pegawai' => ModelsPegawai::search('nama_pegawai', $this->search)
-                ->whereLike('jabatan', $this->search)
+            'pegawai' => User::search('name', $this->search)
+                ->whereLike('role', $this->search)
                 ->orderBy('created_at', 'desc')
                 ->paginate(9),
         ])
@@ -45,10 +45,10 @@ class Pegawai extends Component
             ->section('isi');
     }
     protected $rules = [
-        'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+        'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
         'email' => 'required|email:email',
         'jabatan' => 'required',
-        'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
+        'role' => 'file|mimes:jpeg,png,jpg|max:12048'
     ];
 
     public function updated($field)
@@ -96,10 +96,10 @@ class Pegawai extends Component
         // }
 
 
-        ModelsPegawai::create([
-            'nama_pegawai' => $this->nama_pegawai,
+        User::create([
+            'name' => $this->nama_pegawai,
             'email' => $this->email,
-            'jabatan' => $this->jabatan,
+            'role' => $this->jabatan,
             'avatar' => $nama_avatar,
 
         ]);
@@ -113,11 +113,11 @@ class Pegawai extends Component
 
     public function edit($id)
     {
-        $pegawai = ModelsPegawai::where('id', $id)->first();
+        $pegawai = User::where('id', $id)->first();
         $this->ids = $pegawai->id;
-        $this->nama_pegawai = $pegawai->nama_pegawai;
+        $this->nama_pegawai = $pegawai->name;
         $this->email = $pegawai->email;
-        $this->jabatan = $pegawai->jabatan;
+        $this->jabatan = $pegawai->role;
         $this->status = $pegawai->status;
         $this->avatar = $pegawai->avatar;
         $this->cek = 1;
@@ -142,11 +142,11 @@ class Pegawai extends Component
         $image = $manager->make('storage/' . $nama_avatarUP)->fit(500, 500);
         $image->save('storage/' . $nama_avatarUP);
         if ($this->ids) {
-            $pegawai = ModelsPegawai::find($this->ids);
+            $pegawai = User::find($this->ids);
             $pegawai->update([
-                'nama_pegawai' => $this->nama_pegawai,
+                'name' => $this->nama_pegawai,
                 'email' => $this->email,
-                'jabatan' => $this->jabatan,
+                'role' => $this->jabatan,
                 // 'status' => $this->status,
                 'avatar' => $nama_avatarUP
             ]);
@@ -162,7 +162,7 @@ class Pegawai extends Component
 
     public function konfimasiDEL($id)
     {
-        $nama = ModelsPegawai::where('id', $id)->get();
+        $nama = User::where('id', $id)->get();
         $this->dispatchBrowserEvent('swal:confirm', [
             'type' => 'warning',
             'title' => 'Apakah anda yakin akan menghapus ' . $nama[0]->name . '?',
@@ -173,12 +173,12 @@ class Pegawai extends Component
 
     public function delete($id)
     {
-        $Pegawai = ModelsPegawai::where('id', $id)->first();
+        $Pegawai = User::where('id', $id)->first();
         if (Storage::exists('public/' . $Pegawai->avatar)) {
             Storage::delete('public/' . $Pegawai->avatar);
             $this->alert('success', 'gambar Berhasil Diupdate');
         };
-        ModelsPegawai::where('id', $id)->delete();
+        User::where('id', $id)->delete();
 
         $this->alert('success', 'Pegawai ' . $Pegawai->name . ' Berhasil Dihapus');
     }
