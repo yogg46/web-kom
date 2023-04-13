@@ -1,36 +1,30 @@
 @extends('layouts.main')
 
 @section('isi')
-<div class="d-flex flex-wrap mb-2 align-items-center justify-content-between">
-    <div class="mb-3 mr-3">
-        <div class="input-group search-area d-xl-inline-flex d-none">
-            <input type="text" class="form-control" placeholder="masukkan nama">
-            <div class="input-group-append">
-                <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
-            </div>
-        </div>
-    </div>
-    <div class="event-tabs mb-3 mr-3">
-        <ul class="nav nav-tabs" role="tablist">
-
-        </ul>
-    </div>
-    <div class="d-flex mb-3">
-
-
-
-                 <button type="button" class="btn btn-rounded btn-info"><span
-                    class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i>
-                </span>Tambah Aplikasi</button>
-
-    </div>
-</div>
+ 
 
 <div class="row">
 
     <div class="col-12">
         <div class="card">
             <div class="card-header">
+                <div class="mb-3 mr-3">
+                    <div class="input-group search-area d-xl-inline-flex d-none">
+                        <input type="text" class="form-control" placeholder="masukkan nama">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+
+
+
+                    <button type="button" class="btn btn-rounded btn-info"><span
+                       class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i>
+                   </span>Tambah Aplikasi</button>
+
+       </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

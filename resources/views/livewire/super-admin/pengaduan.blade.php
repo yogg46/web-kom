@@ -1,23 +1,17 @@
 <div>
     <div class="d-flex flex-wrap mb-2 align-items-center justify-content-between">
-        <div class="mb-3 mr-3">
-            <div class="input-group search-area d-xl-inline-flex d-none">
-                <input type="text" class="form-control" placeholder="cari project">
-                <div class="input-group-append">
-                    <span class="input-group-text"><a href="javascript:void(0)"><i
-                                class="flaticon-381-search-2"></i></a></span>
-                </div>
-            </div>
-        </div>
-        <div class="event-tabs mb-3 mr-3">
-            <ul class="nav nav-tabs" role="tablist">
 
-            </ul>
-        </div>
 
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
+                    <div class="input-group search-area d-xl-inline-flex d-none">
+                        <input type="text" class="form-control" placeholder="cari project">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><a href="javascript:void(0)"><i
+                                        class="flaticon-381-search-2"></i></a></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -81,9 +75,9 @@
 
 
                             </table>
-                            <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">
+                            {{-- <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">
                                 Menampilkan 1
-                                sampai 10 dari 30 daftar</div>
+                                sampai 10 dari 30 daftar</div> --}}
                             <div class="float-right">
 
                                 <nav>

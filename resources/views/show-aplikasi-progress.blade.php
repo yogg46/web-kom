@@ -19,8 +19,18 @@
         <div class="card-body">
             <h3 class="text-bold">Klien (OPD)</h3>
             <p>berisi deskripsi aplikasi sesuai dengan form yg telah diisi oleh project manager</p>
-            <div class="progress-bar bg-danger" style="width: 60%; height:6px;" role="progressbar">
-                <span class="sr-only">60% Complete</span>
+            <div class="d-flex justify-content-between">
+
+                <div class="">Progress
+                </div>
+                <div class="form-group "   >
+                    <input class="form-control form-control-sm text-black" type="number" placeholder="" value="65" min="0" max="100" style="text-align: center;height: 30px;width: 60px">
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-animated" style="width: 65%; height:20px;" role="progressbar">
+                     60% Complete
+                </div>
             </div>
         </div>
     </div>
@@ -36,42 +46,18 @@
                 <h2 class="card-title">Pilih Progres</h2>
             </div>
             <div class="card-body">
-                    {{-- <div class="d-flex"> --}}
-                        {{-- <div class="row"> --}}
+
                             <div class=" d-flex justify-content-between align-items-stretch flex-column h-auto"  >
 
-                                {{-- <div class="col col-md-6 col-xl-6 col-lg-6 col-sm-6"> --}}
-                                    <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4">Analisis Kebutuhan</a>
-                                    {{-- </div> --}}
-                                    {{-- <div class="col col-md-6 col-xl-6 col-lg-6 col-sm-6"> --}}
-                                        <button type="button" class="btn btn-danger  btn-lg light mb-5  ml-2 px-4">Coding</a>
-                                        {{-- </div> --}}
-                                        <button type="button" class="btn btn-info  btn-lg light mb-5 ml-2 px-4">Testing</a>
-                                            <button type="button" class="btn btn-info  btn-lg light  ml-2 px-4">UAT</a>
-                                    </div>
-                                    {{-- <div class="row"> --}}
 
-                                        {{-- <div class="col col-md-6 col-xl-6 col-lg-6 col-sm-6">
-                                            </div>
-                                            <div class="col col-md-6 col-xl-6 col-lg-6 col-sm-6">
-                                                </div> --}}
-                                            {{-- </div> --}}
-                        {{-- </div> --}}
-                    {{-- </div> --}}
-                {{-- <td>
-                    <div class="d-flex">
-                        <button type="button" class="btn btn-info  btn-lg light ml-2 px-4">Disposisi Surat</a>
-                        <button type="button" class="btn btn-danger  btn-lg light ml-2 px-4">Analisis Awal</a>
-                        <button type="button" class="btn btn-info  btn-lg light ml-2 px-4">Antrian</a>
-                    </div>
-                </td> --}}
-                {{-- <td>
-                    <div class="d-flex">
-                        <button type="button" class="btn btn-info  btn-lg light ml-2 px-4">Disposisi Surat</a>
-                        <button type="button" class="btn btn-danger  btn-lg light ml-2 px-4">Analisis Awal</a>
-                        <button type="button" class="btn btn-info  btn-lg light ml-2 px-4">Antrian</a>
-                    </div>
-                </td> --}}
+                                    <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal" data-target="#modalAK">Analisis Kebutuhan</a>
+
+                                        <button type="button" class="btn btn-danger  btn-lg light mb-5  ml-2 px-4" data-toggle="modal" data-target="#modalC">Coding</a>
+
+                                        <button type="button" class="btn btn-info  btn-lg light mb-5 ml-2 px-4" data-toggle="modal" data-target="#modalT">Testing</a>
+                                            <button type="button" class="btn btn-info  btn-lg light  ml-2 px-4" data-toggle="modal" data-target="#modalU">UAT</a>
+                                    </div>
+
             </div>
         </div>
     </div>
@@ -183,5 +169,115 @@
         </div>
     </div>
 
+</div>
+<div class="modal fade" id="modalAK">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Analisis Kebutuhan</h3>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal progres Analisis Kebutuhan">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalC">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Coding</h3>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal progres Coding">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalT">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h3 class="modal-title">Testing</h3>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal testing">
+                        </div>
+                    </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-form-label-lg font-weight-bold">Deskripsi BUG</label>
+                            <div class="col-lg-10">
+                                    <textarea class="form-control form-control-lg" rows="6" id="comment" placeholder="masukkan deskripsi BUG"></textarea>
+                            </div>
+                        </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalU">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h3 class="modal-title">UAT</h3>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal UAT">
+                        </div>
+                    </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-form-label-lg font-weight-bold">Deskripsi BUG</label>
+                            <div class="col-lg-10">
+                                    <textarea class="form-control form-control-lg" rows="6" id="comment" placeholder="masukkan deskripsi BUG"></textarea>
+                            </div>
+                        </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

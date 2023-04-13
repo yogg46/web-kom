@@ -4,14 +4,14 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title font-weight-bold"></h4>
-                    <div class=" card-action"> <button type="button" class="btn btn-rounded btn-info"><span
-                                class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i>
-                            </span>Tambah OPD</button></div>
+                    <div></div>
+                    {{-- <h4 class="card-title font-weight-bold"></h4> --}}
+                    <div class=" card-action">
+                        <button type="button" class="btn btn-rounded btn-info">
+                            <span class="btn-icon-left text-info"><i class="fa fa-plus color-info"></i>
+                            </span>Tambah OPD</button>
+                    </div>
                 </div>
-
-
-
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-responsive-md">
@@ -52,6 +52,10 @@
                                         </div>
                                     </td>
                                 </tr>
+
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
 
