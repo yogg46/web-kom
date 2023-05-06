@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="input-group search-area d-xl-inline-flex d-none">
-                            <input type="text" class="form-control" placeholder="cari project">
+                            <input type="text" class="form-control" placeholder="Cari Project">
                             <div class="input-group-append">
                                 <span class="input-group-text"><a href="javascript:void(0)"><i
                                             class="flaticon-381-search-2"></i></a></span>
