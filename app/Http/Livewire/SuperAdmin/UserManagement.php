@@ -17,6 +17,18 @@ class UserManagement extends Component
     public $search = '';
     protected $listeners = ['delete', 'resetpass'];
 
+    public $sortField = 'created_at';
+    public $sortAsc = true;
+
+    public function sortBy($field)
+    {
+        if ($this->sortField === $field) {
+            $this->sortAsc = !$this->sortAsc;
+        } else {
+            $this->sortField = $field;
+            $this->sortAsc = false;
+        }
+    }
 
     public function updatingSearch()
     {
@@ -26,7 +38,7 @@ class UserManagement extends Component
     {
         return view('livewire.super-admin.user-management', [
             'user' => User::search('name', $this->search)->whereLike('role',$this->search)->whereLike('status',$this->search)
-                ->orderBy('created_at', 'desc')
+                ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
                 ->paginate(10),
         ])
             ->extends('layouts.main', [

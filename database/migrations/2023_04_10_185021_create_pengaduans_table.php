@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_aplikasi');
             $table->string('nama_pengaduan');
-            $table->text('deskripsi');
-            $table->enum('prioritas',['Low','Medium','High','Urgent']);
-            $table->enum('status',['Disposisi Surat'])->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->enum('prioritas',['Low','Medium','High','Urgent'])->nullable();
+            $table->enum('status',['Running','Perbaikan','Tidak AKtif','Maintenance','Develop'])->nullable();
             $table->dateTime('tgl_mulai');
             $table->dateTime('tgl_selesai')->nullable();
             $table->integer('no_pengaduan')->nullable();

@@ -174,11 +174,80 @@
                             <thead>
                                 <tr>
 
-                                    <th class="width50">No.</th>
-                                    <th>Nama User</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Status</th>
+                                    <th class="width50" wire:click="sortBy('created_at')">No.</th>
+                                    <th wire:click="sortBy('name')">
+                                        <span>
+                                            Nama User
+                                            @if($sortField === 'name')
+                                            @if($sortAsc)
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M15.293 7.293a1 1 0 0 0-1.414-1.414L10 9.586 6.707 6.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" />
+                                            </svg>
+
+                                            @else
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M4.707 12.707a1 1 0 0 0 1.414 1.414L10 10.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4z" clip-rule="evenodd" />
+                                            </svg>
+                                        @endif
+                                        @endif
+                                    </span>
+                                    </th>
+                                    <th wire:click="sortBy('email')">
+                                        <span>
+
+                                            Email
+                                            @if($sortField === 'email')
+                                            @if($sortAsc)
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M15.293 7.293a1 1 0 0 0-1.414-1.414L10 9.586 6.707 6.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" />
+                                            </svg>
+
+                                            @else
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M4.707 12.707a1 1 0 0 0 1.414 1.414L10 10.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4z" clip-rule="evenodd" />
+                                            </svg>
+                                        @endif
+                                        @endif
+                                        </span>
+                                    </th>
+                                    <th wire:click="sortBy('role')">
+                                        <span>
+                                        Role
+                                        @if($sortField === 'role')
+                                        @if($sortAsc)
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                            <path fill-rule="evenodd" d="M15.293 7.293a1 1 0 0 0-1.414-1.414L10 9.586 6.707 6.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+
+                                        @else
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                            <path fill-rule="evenodd" d="M4.707 12.707a1 1 0 0 0 1.414 1.414L10 10.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4z" clip-rule="evenodd" />
+                                        </svg>
+                                    @endif
+                                    @endif
+                                        </span>
+                                    </th>
+                                    <th wire:click="sortBy('status')">
+                                        <span>
+                                        Status
+                                        @if($sortField === 'status')
+                                            @if($sortAsc)
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M15.293 7.293a1 1 0 0 0-1.414-1.414L10 9.586 6.707 6.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" />
+                                            </svg>
+
+                                            @else
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd" d="M4.707 12.707a1 1 0 0 0 1.414 1.414L10 10.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4z" clip-rule="evenodd" />
+                                            </svg>
+                                        @endif
+                                        @endif
+                                    </span>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -241,6 +310,11 @@
 
 
                 <div class="card-footer">
+                    <div>
+                        <nav class="float-left ">
+                            <p>Menampilkan {{ $user->firstItem() }} sampai  {{ $user->lastItem() }} dari {{ $user->total() }} daftar</p>
+                        </nav>
+                    </div>
                     {{ $user->onEachSide(1)->links('layouts.halaman') }}
                 </div>
             </div>

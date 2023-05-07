@@ -36,5 +36,10 @@ class DatabaseSeeder extends Seeder
             'status' => 'aktif',
 
         ]);
+
+        $this->call([
+            opdSeeder::class,
+            AplikasiSeeder::class,
+        ]);
     }
 }

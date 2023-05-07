@@ -10,7 +10,10 @@ use Intervention\Image\ImageManager;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
 use Livewire\WithPagination;
+use League\Flysystem\Filesystem;
+use League\Flysystem\Adapter\Local;
 
 
 
@@ -45,10 +48,10 @@ class Pegawai extends Component
             ->section('isi');
     }
     protected $rules = [
-        'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+        'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
         'email' => 'required|email:email',
         'jabatan' => 'required',
-        'role' => 'file|mimes:jpeg,png,jpg|max:12048'
+        'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
     ];
 
     public function updated($field)
@@ -80,10 +83,28 @@ class Pegawai extends Component
         // $simpan->password = Hash::make('password');
         // $simpan->email = $this->email;
         // $simpan->save();
+        // $nama_avatar = $this->avatar->store("images", 'public');
+        // $manager = new ImageManager();
+        // $image = $manager->make('storage/' . $nama_avatar)->fit(500, 500);
+        // $image->save('storage/' . $nama_avatar);
+        // chmod($file_path, 0644);
+        // $adapter = new Local('/path/to/directory');
+        // $filesystem = new Filesystem($adapter);
+
+        // $directory = 'your-directory';
+        // if (!$filesystem->has($directory)) {
+        //     $filesystem->createDir($directory);
+        //     $filesystem->setVisibility($directory, 'public'); // Set directory visibility
+        // }
         $nama_avatar = $this->avatar->store("images", 'public');
+        $file_path = storage_path('app/public/' . $nama_avatar);
+        chmod($file_path, 0777);
         $manager = new ImageManager();
-        $image = $manager->make('storage/' . $nama_avatar)->fit(500, 500);
-        $image->save('storage/' . $nama_avatar);
+        $image = $manager->make($file_path)->fit(500, 500);
+        $image->save(public_path($nama_avatar));
+        if (Storage::exists('public/' . $nama_avatar)) {
+            Storage::delete('public/' . $nama_avatar);
+        }
 
         // if ($image->height() > $image->width()) {
         //     $image->resize(100, null, function ($constraint) {
@@ -130,17 +151,36 @@ class Pegawai extends Component
             'email' => 'required|email',
             'jabatan' => 'required',
         ]);
-        if (Storage::exists('public/' . $this->avatar)) {
-            Storage::delete('public/' . $this->avatar);
-            $this->alert('success', 'gambar Berhasil Diupdate');
-        };
-        $nama_avatarUP = $this->update_avatar->store("images", 'public');
-        $manager = new ImageManager();
-        // $deleteOld = $manager->make('storage/', $this->avatar);
-        // $deleteOld->destroy();
+        // if (Storage::exists('public/' . $this->avatar)) {
+        //     Storage::delete('public/' . $this->avatar);
+        //     $this->alert('success', 'gambar Berhasil Diupdate');
+        // };
+        // $nama_avatarUP = $this->update_avatar->store("images", 'public');
+        // $manager = new ImageManager();
 
-        $image = $manager->make('storage/' . $nama_avatarUP)->fit(500, 500);
-        $image->save('storage/' . $nama_avatarUP);
+
+        // $image = $manager->make('storage/' . $nama_avatarUP)->fit(500, 500);
+        // $image->save('storage/' . $nama_avatarUP);
+
+        // if (Storage::exists('public/' . $this->avatar)) {
+        //     Storage::delete('public/' . $this->avatar);
+        // }
+        if (File::exists($this->avatar)) {
+            File::delete($this->avatar);
+        }
+
+        $nama_avatarUP = $this->update_avatar->store("images", 'public');
+        $file_path = storage_path('app/public/' . $nama_avatarUP);
+
+        chmod($file_path, 0777);
+
+        $manager = new ImageManager();
+        $image = $manager->make($file_path)->fit(500, 500);
+        $image->save(public_path($nama_avatarUP));
+
+        if (Storage::exists('public/' . $nama_avatarUP)) {
+            Storage::delete('public/' . $nama_avatarUP);
+        }
         if ($this->ids) {
             $pegawai = User::find($this->ids);
             $pegawai->update([

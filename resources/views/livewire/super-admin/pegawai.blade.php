@@ -1,7 +1,7 @@
 <div>
 
 
-    {{-- modal tambah --}}
+    {{-- ================================================================== modal tambah =============================================== --}}
     <div wire:ignore.self class="modal fade" id="tambahPegawai">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content ">
@@ -118,7 +118,7 @@
     </div>
 
 
-    {{-- modal edit  --}}
+    {{-- ====================================================================== modal edit ==============================================  --}}
 
     <div wire:ignore.self class="modal fade" id="editPegawai">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -195,7 +195,7 @@
                             @elseif ($avatar)
                                 <div class="mb-3" style="width:100px;
                     height:100px;">
-                                    <img src="{{ Storage::url($avatar) }}" class=" rounded-circle" alt=""
+                                    <img src="{{ asset($avatar) }}" class=" rounded-circle" alt=""
                                         style="width:100%;
                             height:100%; object-fit:cover;">
                                 </div>
@@ -285,8 +285,8 @@
                     <div class="card-body p-4">
                         <div class="media">
                             <span class="mr-3 bg-white">
-                                @if (!empty($key->avatar) && Storage::exists('public/' . $key->avatar))
-                                    <img src="{{ Storage::url($key->avatar) }}" class=" rounded-circle"
+                                @if (!empty($key->avatar) && file_exists(public_path($key->avatar)) )
+                                    <img src="{{ asset($key->avatar) }}" class=" rounded-circle"
                                         alt="" width="85" height="85">
                                 @else
                                     <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg" width="40"
@@ -337,7 +337,13 @@
         @endforeach
     </div>
     <div class="row">
-        <div class="col"></div>
+        <div class="col">
+            <div>
+                <nav class="float-left ">
+                    <p>Menampilkan {{ $pegawai->firstItem() }} sampai {{ $pegawai->lastItem() }} dari {{ $pegawai->total() }} daftar</p>
+                </nav>
+            </div>
+        </div>
         <div class="col">
             {{ $pegawai->onEachSide(1)->links('layouts.halaman') }}
         </div>

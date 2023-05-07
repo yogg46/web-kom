@@ -16,9 +16,11 @@ return new class extends Migration
         Schema::create('data_opds', function (Blueprint $table) {
             $table->id();
             $table->string('nama_opd');
-            $table->string('email');
-            $table->string('alamat');
-            $table->string('no_telp');
+            $table->string('slug')->nullable();
+            $table->string('email')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->string('kecamatan')->nullable();
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('progres', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_aplikasi');
-            $table->enum('status',['Disposisi Surat']);
+            $table->enum('status',['Disposisi Surat','Analisis Awal','Analisis Kebutuhan','Coding','Testing','UAT','Selesai','Ditolak']);
             $table->string('catatan')->nullable();
             $table->dateTime('tanggal');
             $table->foreign('id_aplikasi')->references('id')->on('aplikasis')->onUpdate('cascade');
