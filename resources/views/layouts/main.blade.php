@@ -198,12 +198,12 @@
             <div class="deznav-scroll">
 
                 <ul class="metismenu" id="menu">
-                    <li class=" "><a class=" ai-icon" href="/home" aria-expanded="false">
+                    {{-- <li class=" "><a class=" ai-icon" href="/home" aria-expanded="false">
                             <i class="flaticon-381-networking "></i>
                             <span class="nav-text">Dashboard</span>
                         </a>
 
-                    </li>
+                    </li> --}}
                     @if (Auth::user()->role == 'Super Admin')
                         <li >
                             <a href="/user-management" class="ai-icon" aria-expanded="false">

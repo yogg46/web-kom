@@ -21,6 +21,10 @@ class Aplikasi extends Model
             ]
         ];
     }
+    protected $casts = [
+        'tgl_mulai' => 'datetime',
+        'tgl_selesai' => 'datetime',
+    ];
 
     public function R_OPD()
     {

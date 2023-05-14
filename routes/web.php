@@ -44,7 +44,7 @@ Route::get('/antrian', function () {
 Route::get('/aplikasi-pm', function () {
     $tittle = 'Aplikasi';
     return view('aplikasi-pm',compact('tittle'));
-});
+})->name('aplikasi-pm');
 Route::get('/aplikasi/show-belum', function () {
     $tittle = 'Aplikasi';
     return view('show-aplikasi-belum',compact('tittle'));

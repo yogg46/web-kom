@@ -21,25 +21,24 @@ class ODP extends Component
     }
 
     public function resetPage()
-{
-    $this->gotoPage(1);
-}
+    {
+        $this->gotoPage(1);
+    }
 
     public function render()
     {
 
         if ($this->select == 1) {
-         $data_opd = Data_OPD::search('nama_opd', $this->search)->paginate(9);
-        }
-        elseif($this->select == 2) {
-            $data_opd = Data_OPD::whereNotNull('kecamatan')->search('nama_opd', $this->search)->search('kecamatan',$this->desa)->paginate(9);
-        }else {
+            $data_opd = Data_OPD::search('nama_opd', $this->search)->paginate(9);
+        } elseif ($this->select == 2) {
+            $data_opd = Data_OPD::whereNotNull('kecamatan')->search('nama_opd', $this->search)->search('kecamatan', $this->desa)->paginate(9);
+        } else {
             $data_opd = Data_OPD::whereNull('kecamatan')->search('nama_opd', $this->search)->paginate(9);
         }
 
         return view('livewire.super-admin.o-d-p', [
-            'OPD'=>$data_opd,
-            'desaa'=>Data_OPD::whereNotNull('kecamatan')->pluck('kecamatan'),
+            'OPD' => $data_opd,
+            'desaa' => Data_OPD::whereNotNull('kecamatan')->pluck('kecamatan'),
 
         ])
             ->extends('layouts.main', [
