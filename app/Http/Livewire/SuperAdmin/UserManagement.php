@@ -52,6 +52,14 @@ class UserManagement extends Component
         'email' => 'required|email',
         'role' => 'required',
     ];
+    protected $messages = [
+        'name.required' => 'Kolom nama wajib diisi.',
+        'name.min' => 'Panjang Nama minimal 6 karakter.',
+        'name.regex' => 'Format Nama tidak valid. Hanya diperbolehkan huruf dan spasi.',
+        'email.required' => 'Kolom Email wajib diisi.',
+        'email.email' => 'Format Email tidak valid.',
+        'role.required' => 'Kolom Jabatan wajib diisi.',
+    ];
 
     public function updated($field)
     {

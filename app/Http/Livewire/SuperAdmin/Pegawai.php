@@ -37,8 +37,7 @@ class Pegawai extends Component
     {
 
         return view('livewire.super-admin.pegawai', [
-            'pegawai' => User::search('name', $this->search)
-                ->whereLike('role', $this->search)
+            'pegawai' => User::where('role', '<>', 'Super Admin')->search('name', $this->search)
                 ->orderBy('created_at', 'desc')
                 ->paginate(9),
         ])
@@ -77,25 +76,7 @@ class Pegawai extends Component
     {
         $this->validate();
 
-        // $simpan = new User;
-        // $simpan->name = $this->name;
-        // $simpan->role = $this->role;
-        // $simpan->password = Hash::make('password');
-        // $simpan->email = $this->email;
-        // $simpan->save();
-        // $nama_avatar = $this->avatar->store("images", 'public');
-        // $manager = new ImageManager();
-        // $image = $manager->make('storage/' . $nama_avatar)->fit(500, 500);
-        // $image->save('storage/' . $nama_avatar);
-        // chmod($file_path, 0644);
-        // $adapter = new Local('/path/to/directory');
-        // $filesystem = new Filesystem($adapter);
 
-        // $directory = 'your-directory';
-        // if (!$filesystem->has($directory)) {
-        //     $filesystem->createDir($directory);
-        //     $filesystem->setVisibility($directory, 'public'); // Set directory visibility
-        // }
         $nama_avatar = $this->avatar->store("images", 'public');
         $file_path = storage_path('app/public/' . $nama_avatar);
         chmod($file_path, 0777);
@@ -106,15 +87,7 @@ class Pegawai extends Component
             Storage::delete('public/' . $nama_avatar);
         }
 
-        // if ($image->height() > $image->width()) {
-        //     $image->resize(100, null, function ($constraint) {
-        //         $constraint->aspectRatio();
-        //     });
-        // } else {
-        //     $image->resize(null, 100, function ($constraint) {
-        //         $constraint->aspectRatio();
-        //     });
-        // }
+
 
 
         User::create([
@@ -124,11 +97,10 @@ class Pegawai extends Component
             'avatar' => $nama_avatar,
 
         ]);
-        // session()->alert('message', 'Data Berhasil Disimpan.');
-        // $this->emit('closeModal');
+
         $this->dispatchBrowserEvent('closeModal');
         $this->alert('success', 'Data Berhasil Disimpan');
-        // $this->dispatchBrowserEvent('closeModal');
+
         $this->resetInput();
     }
 

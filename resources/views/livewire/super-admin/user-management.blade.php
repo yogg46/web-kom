@@ -328,12 +328,12 @@
             window.addEventListener('edit', event => {
                 $("#editUser").modal('hide');
             })
-            window.livewire.on('closeModal', () => {
-                $('#tambahUser').modal('hide');
-            });
-            window.livewire.on('edit', () => {
-                $('#editUser').modal('hide');
-            });
+            // window.livewire.on('closeModal', () => {
+            //     $('#tambahUser').modal('hide');
+            // });
+            // window.livewire.on('edit', () => {
+            //     $('#editUser').modal('hide');
+            // });
         </script>
         <script wire:ignore>
             window.addEventListener('swal:confirm', event => {

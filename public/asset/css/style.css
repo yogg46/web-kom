@@ -2283,8 +2283,8 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #7e7e7e;
-  background-color: rgba(0, 0, 0, 0.075);
+  color: #5b86e5;
+  background-color: rgb(91, 134, 229,0.0775);
 }
 
 .table-primary,
@@ -32406,7 +32406,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 }
 
 .bg-primary-alt {
-  background-color: rgba(254, 99, 78, 0.1);
+  background-color: rgb(91, 134, 229,0.1);
 }
 
 .bg-secondary-alt {
@@ -38733,8 +38733,8 @@ button:focus {
 }
 
 .shadow.btn-primary {
-  -webkit-box-shadow: 0 5px 15px 0 rgba(254, 99, 78, 0.2) !important;
-  box-shadow: 0 5px 15px 0 rgba(254, 99, 78, 0.2) !important;
+  -webkit-box-shadow: 0 5px 15px 0rgb(91, 134, 229,0.2) !important;
+  box-shadow: 0 5px 15px 0 rgb(91, 134, 229,0.2) !important;
 }
 
 .shadow.btn-secondary {
@@ -41580,11 +41580,11 @@ code {
 }
 
 .bg-primary-light {
-  background: rgba(255, 211, 205, 0.5);
+  background: rgb(91, 134, 229,0.5);
 }
 
 [data-theme-version="dark"] .bg-primary-light {
-  background-color: rgba(254, 99, 78, 0.05);
+  background-color: rgb(91, 134, 229,0.05);
 }
 
 .bg-secondary-light {
@@ -42111,7 +42111,7 @@ code {
 
 .table.shadow-hover tbody tr:hover {
   background-color: #fff;
-  box-shadow: 0 0px 30px rgba(254, 99, 78, 0.15);
+  box-shadow: 0 0px 30px rgb(91, 134, 229,0.15);
 }
 
 [data-theme-version="dark"] .table.shadow-hover tbody tr:hover {

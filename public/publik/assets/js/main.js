@@ -2,7 +2,7 @@
 const setBackgroundImageSize = () => {
     let elements = document.querySelectorAll('.background-loop');
 
-    if (elements.length < 1) return; 
+    if (elements.length < 1) return;
 
     Array.from(elements).forEach((element, index) => {
 
@@ -16,13 +16,13 @@ const setBackgroundImageSize = () => {
         image.src = imageSrc;
 
         image.addEventListener('load', () => {
-            
+
                 let width = image.width,
                 height = image.height;
-    
+
                 element.dataset.width = width;
                 element.dataset.height = height;
-            
+
         })
     });
 }
@@ -84,7 +84,7 @@ const pricing_slider = new Swiper('.pricing-slider .swiper-container', {
 const testimonial_slider = new Swiper('.testimonial-slider .swiper-container', {
     resizeObserver: true,
     spaceBetween: 0,
-    initialSlide: 1,
+    initialSlide: 0,
     init: false,
     speed: 250,
     slideToClickedSlide: true,
@@ -111,18 +111,18 @@ const testimonial_slider = new Swiper('.testimonial-slider .swiper-container', {
 //         parent.style.height = 'initial';
 //         return;
 //     }
-    
+
 //     const heights = [];
-    
+
 //     Array.from(parent.querySelectorAll('.swiper-slide')).forEach((element) => {
 //         heights.push(element.offsetHeight);
 //         console.log('slide height', element.offsetHeight);
 //     })
-    
+
 
 //     if (parent.style.height !== 'initial')
 //         parent.style.height = Math.max(...heights) + 'px';
-//     else 
+//     else
 //         parent.style.height = Math.max(...heights) + 'px';
 
 //     console.log('parent height', parent.style.height)
@@ -221,7 +221,7 @@ const instagram_slider = new Swiper('.instagram-slider .swiper-container', {
 
 // related posts slider
 const related_posts_slider = new Swiper('.related-posts-slider .swiper-container', {
-    
+
     navigation: {
         nextEl: '.related-posts-slider-navigation-next',
         prevEl: '.related-posts-slider-navigation-prev'
@@ -265,7 +265,7 @@ const tab_button_slider = new Swiper('.tab-button-slider .swiper-container', {
             slidesPerView: 1.8,
             spaceBetween: 30,
             enabled: true
-        }, 
+        },
         992: {
             enabled: false,
         }
@@ -316,8 +316,8 @@ const pricing_switch = () => {
     switch_parent.addEventListener('click', (e) => {
         if (e.target.tagName === 'LABEL')
             e.preventDefault();
-        
-        
+
+
         const input = switch_parent.querySelector('input');
 
         if (input.hasAttribute('checked')) {
@@ -357,14 +357,14 @@ const tabPaneHeight = () => {
                 y: 0,
                 opacity: 1,
                 visibility: 'visible',
-              
+
             })
         } else {
             gsap.to(`#${element.id} .tab-pane-wrapper > *`, {
                 y: 100,
                 opacity: 0,
                 visibility: 'hidden',
-               
+
             })
         }
 
@@ -393,7 +393,7 @@ const tabFunc = () => {
                 y: 100,
                 stagger: 0.1
             })
-            
+
             tl.to(`${active_id} .tab-pane-wrapper > *`, {
                 opacity: 0,
                 visibility: 'hidden',
@@ -410,7 +410,7 @@ const tabFunc = () => {
                 opacity: 1,
                 visibility: 'visible',
                 stagger: 0.1,
-                
+
             }, .25)
 
         })
@@ -584,7 +584,7 @@ Array.from(document.querySelectorAll('.has-child')).forEach((element, index) => 
         e.currentTarget.classList.add('dropped');
 
         toggleSlide(e.currentTarget.querySelector('.child'))
-    
+
     });
 });
 
@@ -594,12 +594,12 @@ const close_button = document.querySelector('.close-button');
 if (typeof(close_button) != 'undefined' && close_button != null) {
     close_button.addEventListener('click', (e) => {
         const dropped = document.querySelector('.dropped');
-    
+
         if (typeof(dropped) == 'undefined' && dropped == null) {
             toggleSlide(dropped.querySelector('.child'));
             dropped.classList.remove('dropped');
         }
-    
+
         document.querySelector('.navigation').classList.remove('shown');
     });
 }
@@ -640,7 +640,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         animateBackgrounds();
     })
-    
+
     testimonial_slider.init();
 
     pricing_switch();

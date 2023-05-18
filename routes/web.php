@@ -4,6 +4,7 @@ use App\Http\Livewire\SuperAdmin\Aplikasi;
 use App\Http\Livewire\SuperAdmin\ODP;
 use App\Http\Livewire\SuperAdmin\Pegawai;
 use App\Http\Livewire\SuperAdmin\Pengaduan;
+use App\Http\Livewire\SuperAdmin\ShowOPD;
 use App\Http\Livewire\SuperAdmin\ShowPegawai;
 use App\Http\Livewire\SuperAdmin\UserManagement;
 use Illuminate\Support\Facades\Route;
@@ -29,37 +30,35 @@ Route::view('/loogi', 'auth.login3');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
 // Route::get('/post', Userm::class);
-Route::get('/user-management', UserManagement::class)->middleware('auth','checkRole:Super Admin')->name('userManagement');
+Route::get('/user-management', UserManagement::class)->middleware('auth', 'checkRole:Super Admin')->name('userManagement');
 Route::get('/pegawai', Pegawai::class)->name('pegawai');
 Route::get('/pegawai/{slug}', ShowPegawai::class)->name('show-pegawai');
 Route::get('/opd', ODP::class)->name('opd');
 Route::get('/pengaduan', Pengaduan::class)->name('pengaduan');
 Route::get('/aplikasi', Aplikasi::class)->name('aplikasi');
 
-
+Route::get('/opd/{slug}', ShowOPD::class)->name('show-opd');
 Route::get('/antrian', function () {
     $tittle = 'Antrian';
-    return view('daftar-antrian',compact('tittle'));
+    return view('daftar-antrian', compact('tittle'));
 });
 Route::get('/aplikasi-pm', function () {
     $tittle = 'Aplikasi';
-    return view('aplikasi-pm',compact('tittle'));
+    return view('aplikasi-pm', compact('tittle'));
 })->name('aplikasi-pm');
 Route::get('/aplikasi/show-belum', function () {
     $tittle = 'Aplikasi';
-    return view('show-aplikasi-belum',compact('tittle'));
+    return view('show-aplikasi-belum', compact('tittle'));
 });
 Route::get('/aplikasi/show-progress', function () {
     $tittle = 'Aplikasi';
-    return view('show-aplikasi-progress',compact('tittle'));
+    return view('show-aplikasi-progress', compact('tittle'));
 });
 Route::get('/maintenance', function () {
     $tittle = 'Maintenance';
-    return view('maintenance',compact('tittle'));
+    return view('maintenance', compact('tittle'));
 });
 Route::get('/perbaikan', function () {
     $tittle = 'Perbaikan';
-    return view('perbaikan',compact('tittle'));
+    return view('perbaikan', compact('tittle'));
 });
-
-

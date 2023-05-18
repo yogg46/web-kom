@@ -11,9 +11,11 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/Kominfo3.png">
     @stack('css')
-    {{-- <link rel="stylesheet" href="/asset/vendor/chartist/css/chartist.min.css"> --}}
+    {{--
+    <link rel="stylesheet" href="/asset/vendor/chartist/css/chartist.min.css"> --}}
     <link href="/asset/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    {{-- <link href="/asset/vendor/owl-carousel/owl.carousel.css" rel="stylesheet"> --}}
+    {{--
+    <link href="/asset/vendor/owl-carousel/owl.carousel.css" rel="stylesheet"> --}}
     @livewireStyles
     <link href="/asset/css/style.css" rel="stylesheet">
 
@@ -120,31 +122,39 @@
                             </li>
 
                             <li class="nav-item dropdown header-profile">
-                                <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                                    <div class="media ai-icon">
+                                <a class="nav-link  ai-icon text-primary" href="javascript:void(0)" role="button"
+                                    data-toggle="dropdown">
+                                    <div class="media ai-icon  ">
+                                        @if (isset(Auth::user()->avatar))
+                                        <img class=" bg-primary-light" src="{{  asset(Auth::user()->avatar)  }}"
+                                            width="20" alt="">
+                                        @else
+                                        <div>
 
-                                        <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg" width="30"
-                                            height="30" viewBox="0 0 24 24" fill="none" stroke="#5b86e5"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-user">
-                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="12" cy="7" r="4"></circle>
-                                        </svg>
+                                            <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg" width="30"
+                                                height="30" viewBox="0 0 24 24" fill="none" stroke="#5b86e5"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-user">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                        @endif
+                                        {{-- <div class=" "></div> --}}
 
 
                                     </div>
 
                                     <div class="header-info">
                                         <span class="text-primary"><strong>{{ Auth::user()->name }}</strong></span>
-                                        <p class="fs-12 mb-0">{{ Auth::user()->role }}</p>
+                                        <p class="fs-12 mb-0 text-primary">{{ Auth::user()->role }}</p>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="/profil" class="dropdown-item ai-icon">
                                         <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
-                                            width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                             <circle cx="12" cy="7" r="4"></circle>
                                         </svg>
@@ -152,9 +162,8 @@
                                     </a>
                                     {{-- <a href="/asset/email-inbox.html" class="dropdown-item ai-icon">
                                         <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success"
-                                            width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path
                                                 d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                                             </path>
@@ -162,13 +171,11 @@
                                         </svg>
                                         <span class="ml-2">Inbox </span>
                                     </a> --}}
-                                    <a href="{{ route('logout') }}" class="dropdown-item ai-icon"
-                                        onclick="event.preventDefault();
+                                    <a href="{{ route('logout') }}" class="dropdown-item ai-icon" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
-                                            width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                             <polyline points="16 17 21 12 16 7"></polyline>
                                             <line x1="21" y1="12" x2="9" y2="12">
@@ -176,8 +183,7 @@
                                         </svg>
                                         <span class="ml-2">Logout </span>
                                     </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
@@ -205,54 +211,55 @@
 
                     </li> --}}
                     @if (Auth::user()->role == 'Super Admin')
-                        <li >
-                            <a href="/user-management" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-user-9 "></i>
-                                <span class="nav-text">User Management</span>
-                            </a>
-                        </li>
-                        <li class="{{ request()->is('pegawai/*') ? 'mm-active' : '' }}"><a href="/pegawai" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-user-8"></i>
-                                <span class="nav-text">Pegawai</span>
-                            </a>
-                        </li>
-                        <li><a href="/opd" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-id-card-1"></i>
-                                <span class="nav-text">OPD</span>
-                            </a>
-                        </li>
-                        <li><a href="/aplikasi" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-television"></i>
-                                <span class="nav-text">Aplikasi</span>
-                            </a>
-                        </li>
-                        <li><a href="/pengaduan" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-news"></i>
-                                <span class="nav-text">Pengaduan</span>
-                            </a>
-                        </li>
+                    <li>
+                        <a href="/user-management" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-user-9 "></i>
+                            <span class="nav-text">User Management</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('pegawai/*') ? 'mm-active' : '' }}"><a href="/pegawai" class="ai-icon"
+                            aria-expanded="false">
+                            <i class="flaticon-381-user-8"></i>
+                            <span class="nav-text">Pegawai</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('opd/*') ? 'mm-active' : '' }}"><a href="/opd" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-id-card-1"></i>
+                            <span class="nav-text">OPD</span>
+                        </a>
+                    </li>
+                    <li><a href="/aplikasi" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-television"></i>
+                            <span class="nav-text">Aplikasi</span>
+                        </a>
+                    </li>
+                    <li><a href="/pengaduan" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-news"></i>
+                            <span class="nav-text">Pengaduan</span>
+                        </a>
+                    </li>
                     @endif
                     @if (Auth::user()->role == 'Project Manager')
                     <li><a href="/aplikasi-pm" class="ai-icon" aria-expanded="false">
-                        <i class="flaticon-381-smartphone-1"></i>
-                        <span class="nav-text">Aplikasi</span>
-                    </a>
-                </li>
+                            <i class="flaticon-381-smartphone-1"></i>
+                            <span class="nav-text">Aplikasi</span>
+                        </a>
+                    </li>
                     <li><a href="/antrian" class="ai-icon" aria-expanded="false">
-                        <i class="flaticon-381-hourglass-1"></i>
-                        <span class="nav-text">Antrian</span>
-                    </a>
-                </li>
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-briefcase"></i>
-                    <span class="nav-text">Productions</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="/maintenance">Maintenance</a></li>
-                    <li><a href="/perbaikan">Perbaikan</a></li>
+                            <i class="flaticon-381-hourglass-1"></i>
+                            <span class="nav-text">Antrian</span>
+                        </a>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-briefcase"></i>
+                            <span class="nav-text">Productions</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/maintenance">Maintenance</a></li>
+                            <li><a href="/perbaikan">Perbaikan</a></li>
 
-                </ul>
-            </li>
+                        </ul>
+                    </li>
                     @endif
                     {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-network"></i>
@@ -280,10 +287,10 @@
                 <!-- Add Order -->
 
                 {{-- <div class="page-titles">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Layout</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Blank</a></li>
-					</ol>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Layout</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Blank</a></li>
+                    </ol>
                 </div> --}}
                 @yield('isi')
 
