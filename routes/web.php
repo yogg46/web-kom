@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\WhatappsGateway;
+use App\Http\Livewire\PM\Antrian;
 use App\Http\Livewire\SuperAdmin\Aplikasi;
 use App\Http\Livewire\SuperAdmin\ODP;
 use App\Http\Livewire\SuperAdmin\Pegawai;
@@ -28,6 +30,10 @@ Route::get('/', function () {
 Auth::routes();
 Route::view('/loogi', 'auth.login3');
 
+
+Route::get('/whatapps', [WhatappsGateway::class, 'index'])->name('whatapps');
+Route::post('/send-message', [WhatappsGateway::class, 'sendMessage'])->name('send-message');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
 // Route::get('/post', Userm::class);
 Route::get('/user-management', UserManagement::class)->middleware('auth', 'checkRole:Super Admin')->name('userManagement');
@@ -38,10 +44,9 @@ Route::get('/pengaduan', Pengaduan::class)->name('pengaduan');
 Route::get('/aplikasi', Aplikasi::class)->name('aplikasi');
 
 Route::get('/opd/{slug}', ShowOPD::class)->name('show-opd');
-Route::get('/antrian', function () {
-    $tittle = 'Antrian';
-    return view('daftar-antrian', compact('tittle'));
-});
+
+Route::get('/antrian', Antrian::class)->name('antrian-pm');
+
 Route::get('/aplikasi-pm', function () {
     $tittle = 'Aplikasi';
     return view('aplikasi-pm', compact('tittle'));

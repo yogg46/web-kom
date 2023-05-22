@@ -27,28 +27,12 @@
 
 <body>
 
-    <!--*******************
-        Preloader start
-    ********************-->
-    <!-- <div id="preloader">
-        <div class="sk-three-bounce">
-            <div class="sk-child sk-bounce1"></div>
-            <div class="sk-child sk-bounce2"></div>
-            <div class="sk-child sk-bounce3"></div>
-        </div>
-    </div> -->
-    <!--*******************
-        Preloader end
-    ********************-->
 
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
+
+
     <div id="main-wrapper">
 
-        <!--**********************************
-            Nav header start
-        ***********************************-->
+
         <div class="nav-header">
             <a href="/home" class="brand-logo">
                 <img class="logo-abbr" src="/asset/images/Kominfo3.png" alt="">
@@ -62,21 +46,7 @@
                 </div>
             </div>
         </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
 
-        <!--**********************************
-            Chat box start
-        ***********************************-->
-
-        <!--**********************************
-            Chat box End
-        ***********************************-->
-
-        <!--**********************************
-            Header start
-        ***********************************-->
         <div class="header">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
@@ -105,7 +75,7 @@
                                             <li>
                                                 <div class="timeline-panel">
                                                     <div class="media mr-2">
-                                                        <img alt="image" width="50" src="images/avatar/1.jpg">
+                                                        {{-- <img alt="image" width="50" src="images/avatar/1.jpg"> --}}
                                                     </div>
                                                     <div class="media-body">
                                                         <h6 class="mb-1">Dr sultads Send you Photo</h6>
@@ -193,13 +163,7 @@
                 </nav>
             </div>
         </div>
-        <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
 
-        <!--**********************************
-            Sidebar start
-        ***********************************-->
         <div class="deznav">
             <div class="deznav-scroll">
 
@@ -211,6 +175,12 @@
 
                     </li> --}}
                     @if (Auth::user()->role == 'Super Admin')
+                    <li class="{{ request()->is('whatapps') ? 'mm-active' : '' }}">
+                        <a href="/whatapps" class="ai-icon" aria-expanded="false">
+                            <i class="fa fa-whatsapp"></i>
+                            <span class="nav-text">Whatapps Gateway                            </span>
+                        </a>
+                    </li>
                     <li>
                         <a href="/user-management" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-381-user-9 "></i>
@@ -274,13 +244,7 @@
 
             </div>
         </div>
-        <!--**********************************
-            Sidebar end
-        ***********************************-->
 
-        <!--**********************************
-            Content body start
-        ***********************************-->
         <div class="content-body">
             <!-- row -->
             <div class="container-fluid">
@@ -296,40 +260,18 @@
 
             </div>
         </div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
 
-        <!--**********************************
-            Footer start
-        ***********************************-->
         <div class="footer">
             <div class="copyright">
                 {{-- <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/"
                         target="_blank">DexignZone</a> 2021</p> --}}
             </div>
         </div>
-        <!--**********************************
-            Footer end
-        ***********************************-->
 
-        <!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
 
 
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
 
-    <!--**********************************
-        Scripts
-    ***********************************-->
     {{-- @livewireScripts --}}
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -354,17 +296,7 @@
 
     @stack('js')
 
-    {{-- <script src="/asset/vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="/asset/js/plugins-init/datatables.init.js"></script> --}}
 
-    <!-- Chart piety plugin files -->
-    {{-- <script src="/asset/vendor/peity/jquery.peity.min.js"></script>` --}}
-
-    <!-- Apex Chart -->
-    {{-- <script src="/asset/vendor/apexchart/apexchart.js"></script> --}}
-
-    <!-- Dashboard 1 -->
-    {{-- <script src="/asset/js/dashboard/dashboard-1.js"></script> --}}
 
 
 </body>
