@@ -25,7 +25,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -36,7 +36,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -47,7 +47,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -69,7 +69,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -80,18 +80,18 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
         Aplikasi::create([
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Perencanaan Pembangunan, Penelitian dan Pengembangan Daerah')->pluck('id')->first(),
             'nama_aplikasi' => 'magetankab.sipd.kemendagri.go.id & penatausahaan',
-            'deskripsi' => 'Aplikasi pemerintah daerah milik kemendagri. Kominfo bertugas untuk mendampingi dan maintenance',
+            'deskripsi' => 'Aplikasi pemerintah daerah milik kemendagri. Kominfo bertugas untuk mendampingi dan Running',
             'keterangan' => 'Perbaikan RAK kelurahan dan bagian yang masih error di SIPD pusat dan backup data aspirasi masyarakat',
             'prioritas' => 'Urgent',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -102,7 +102,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => 'Low',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -124,7 +124,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -146,7 +146,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -168,7 +168,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -179,7 +179,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Sudah tidak di pakai, tapi datanya mungkin masih digunakan untuk monev',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -201,7 +201,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => 'Urgent',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -223,7 +223,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -234,7 +234,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -245,7 +245,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => 'Urgent',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -256,7 +256,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Aplikasi pihak ke 3(ITS), Masih testing',
             'prioritas' => 'High',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -267,7 +267,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Aplikasi dari BPKB, servernya di kominfo',
             'prioritas' => 'Medium',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -278,7 +278,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -289,7 +289,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -300,7 +300,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -311,7 +311,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -322,7 +322,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -333,7 +333,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -344,7 +344,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -355,7 +355,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -366,7 +366,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -377,7 +377,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -388,7 +388,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -399,7 +399,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -410,7 +410,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -432,7 +432,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -465,7 +465,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -509,7 +509,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Aplikasi dari BPKP',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -520,7 +520,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -531,7 +531,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Server di bappeda',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -542,7 +542,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -553,7 +553,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -564,7 +564,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -575,7 +575,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -586,7 +586,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Perlu ke bagian keuangan untuk alur kerja sismiop dan ebhtp',
             'prioritas' => 'High',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -597,7 +597,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -608,7 +608,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => 'High',
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -630,7 +630,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -641,7 +641,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Nitip server di kominfo',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -674,7 +674,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Data saja yang sudah dipakai, aplikasi belum dipakai',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -685,7 +685,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -696,7 +696,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => 'Data tidak update',
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -718,7 +718,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -729,7 +729,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -751,7 +751,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -762,7 +762,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -773,7 +773,7 @@ class AplikasiSeeder extends Seeder
             'keterangan' => null,
             'prioritas' => null,
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
         ]);
 
@@ -807,7 +807,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bpbj.magetan.go.id',
             'deskripsi' => 'Web OPD bagian pengadaan barang dan jasa',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'SETDA Kab Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -817,7 +817,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'ekonomi.magetan.go.id',
             'deskripsi' => 'Web OPD bagian perekonomian',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'SETDA Kab Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -827,7 +827,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'kesrasetda.magetan.go.id',
             'deskripsi' => 'Web OPD bagian administrasi dan kesejahteraan rakyat',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'SETDA Kab Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -847,7 +847,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'tapem.magetan.go.id',
             'deskripsi' => 'Web OPD tata Pemerintahan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'SETDA Kab Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -857,7 +857,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'organisasi.magetan.go.id',
             'deskripsi' => 'Web OPD bagian organisasi',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'SETDA Kab Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -867,7 +867,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'inspektorat.magetan.go.id',
             'deskripsi' => 'WEB OPD inspektorat',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Inspektorat')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -877,7 +877,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bappedalitbang.magetan.go.id',
             'deskripsi' => 'Web OPD bappeda litbang',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Perencanaan Pembangunan, Penelitian dan Pengembangan Daerah')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -887,7 +887,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bakesbangpol.magetan.go.id',
             'deskripsi' => 'Web OPD Bakesbangpol',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Kesatuan Bangsa dan Politik')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -897,7 +897,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bkd.magetan.go.id',
             'deskripsi' => 'Web OPD Badan KepegawaianDaerah',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Kepegawaian Daerah')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -907,7 +907,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dpmd.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Pemberdayaan Masyarakat dan desa',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Pemberdayaan Masyarakat dan Desa')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -917,7 +917,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dppkbpppa.magetan.go.id',
             'deskripsi' => 'Web OPD DPP KB PP PA',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Pengendalian Penduduk, Keluarga Berencana dan Pemberdayaan Perempuan, Perlindungan Anak')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -927,7 +927,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dlh.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Lingkungan Hidup',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Lingkungan Hidup')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -937,7 +937,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'kominfo.magetan.go.id',
             'deskripsi' => 'Web OPD DISKOMINFO',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Komunikasi dan Informatika')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -947,7 +947,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bppkad.magetan.go.id',
             'deskripsi' => 'Web OPD BPPKAD',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Pendapatan, Pengelolaan Keuangan dan Aset Daerah ')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -957,7 +957,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dispenduk.magetan.go.id',
             'deskripsi' => 'Web OPD DISPENDUK',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Kependudukan dan Catatan Sipil ')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -967,7 +967,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dinkes.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Kesehatan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Kesehatan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -977,7 +977,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'disperindag.magetan.go.id',
             'deskripsi' => 'Web OPD DISPERINDAG',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Perindustrian dan Perdagangan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -987,7 +987,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'tphpkp.magetan.go.id',
             'deskripsi' => 'Web OPD TPHPKP',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Tanaman Pangan, Hortikultura, Perkebunan dan Ketahanan Pangan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -997,7 +997,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'disnaker.magetan.go.id',
             'deskripsi' => 'Web OPD DISNAKER',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Tenaga Kerja')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1007,7 +1007,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'pupr.magetan.go.id',
             'deskripsi' => 'Web OPD PUPR',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Pekerjaan Umum dan Penataan Ruang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1017,7 +1017,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dishub.magetan.go.id',
             'deskripsi' => 'Web OPD Dishub',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Perhubungan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1027,7 +1027,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'disnakkan.magetan.go.id',
             'deskripsi' => 'Web OPD DISNAKKAN',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Peternakan dan Perikanan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1037,7 +1037,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dinaspkp.magetan.go.id',
             'deskripsi' => 'Web OPD PERKIM',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Perumahan dan Kawasan Permukiman')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1047,7 +1047,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dikpora.magetan.go.id',
             'deskripsi' => 'Web OPD DIKPORA',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Pendidikan, Kepemudaan dan Olahraga')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1057,7 +1057,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dinsos.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Sosial',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Sosial')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1067,7 +1067,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'wisatadanbudaya.magetan.go.id',
             'deskripsi' => 'Web OPD DISPARBUD',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Pariwisata dan Kebudayaan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1077,7 +1077,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dinkopum.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Koperasi dan Usaha Mikro',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Koperasi dan Usaha Mikro')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1087,7 +1087,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bpbd.magetan.go.id',
             'deskripsi' => 'Web OPD BPBD',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Badan Penanggulangan Bencana Daerah')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1097,7 +1097,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'arpus.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Kearsipan dan Perpustakaan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Kearsipan dan Perpustakaan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1107,7 +1107,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'dpmptsp.magetan.go.id',
             'deskripsi' => 'Web OPD DPMPTSP',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1117,7 +1117,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'satpolppdamkar.magetan.go.id',
             'deskripsi' => 'Web OPD SATPOLPPDAMKAR',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Satuan Polisi Pamong Praja dan Pemadam Kebakaran')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1127,7 +1127,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'rsud.magetan.go.id',
             'deskripsi' => 'Web OPD RSUD Dr. Sayidiman',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'RSUD Dr. Sayidiman')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1137,7 +1137,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'magetankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Magetan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1147,7 +1147,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'panekankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Panekan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Panekan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1157,7 +1157,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'plaosankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Plaosan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Plaosan ')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1167,7 +1167,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'poncolkec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Poncol',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Poncol')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1187,7 +1187,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'lembeyankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Lembeyan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Lembeyan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1197,7 +1197,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'kawedanankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Kawedanan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Kawedanan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1207,7 +1207,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'takerankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Takeran',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Takeran')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1217,7 +1217,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'bendokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Bendo',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Bendo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1237,7 +1237,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'baratkec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Barat',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Barat')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1247,7 +1247,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'karangrejokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Karangrejo',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Karangrejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1257,7 +1257,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'kartoharjokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Kartoharjo',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Kartoharjo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1267,7 +1267,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'karaskec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Karas',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Karas')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1277,7 +1277,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'sukomorokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Sukomoro',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => ' ',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Sukomoro')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1287,7 +1287,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'ngariboyokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Ngariboyo',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Ngariboyo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1297,7 +1297,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'nguntoronadikec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Nguntoronadi',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Nguntoronadi')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1307,7 +1307,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'sidorejokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Sidorejo',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Kecamatan Sidorejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1317,7 +1317,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'puskesmas-goranggarengtaji.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Taji Gorang Gareng',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Puskesmas Taji')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1327,7 +1327,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'puskesmas-takeran.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Takeran',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Masih Development',
             'id_opd' => Data_OPD::where('nama_opd', 'Puskesmas Takeran')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1337,7 +1337,7 @@ class AplikasiSeeder extends Seeder
             'type_aplikasi' => 'WEB',
             'nama_aplikasi' => 'puskesmas-kawedanan.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Kawedanan',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
             'id_opd' => Data_OPD::where('nama_opd', 'Puskesmas Kawedanan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
@@ -1351,7 +1351,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'widorokandang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Widorokandang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Widorokandang',
         ]);
@@ -1360,7 +1360,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sidokerto.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sidokerto')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sidokerto',
         ]);
@@ -1369,7 +1369,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sumbersawit.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sumbersawit')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sumbersawit',
         ]);
@@ -1396,7 +1396,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sidorejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sidorejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sidorejo',
         ]);
@@ -1414,7 +1414,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kalang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kalang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kalang',
         ]);
@@ -1423,7 +1423,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'campursari.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Campursari')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Campursari',
         ]);
@@ -1477,7 +1477,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'nguntoronadi.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Nguntoronadi')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Nguntoronadi',
         ]);
@@ -1513,7 +1513,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sukowidinguntoronadi.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sukowidi')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sukowidi',
         ]);
@@ -1603,7 +1603,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bangsri.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bangsri')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bangsri',
         ]);
@@ -1648,7 +1648,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bayemwetan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bayemwetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bayemwetan',
         ]);
@@ -1747,7 +1747,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'botok.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Botok')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Botok',
         ]);
@@ -1783,7 +1783,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'jungke.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Jungke')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Jungke',
         ]);
@@ -1792,7 +1792,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kuwon.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kuwon')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kuwon',
         ]);
@@ -1855,7 +1855,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'prampelan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Prampelan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Prampelan',
         ]);
@@ -1864,7 +1864,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'maron.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Maron')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Maron',
         ]);
@@ -1900,7 +1900,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'manisrejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Manisrejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Manisrejo',
         ]);
@@ -1918,7 +1918,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sambirembe.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sambirembe')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sambirembe',
         ]);
@@ -1936,7 +1936,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'mantren.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Mantren')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Mantren',
         ]);
@@ -1981,7 +1981,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'jonggrang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Jonggrang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Jonggrang',
         ]);
@@ -1999,7 +1999,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'panggung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Panggung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Panggung',
         ]);
@@ -2044,7 +2044,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'purwodadi.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Purwodadi')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Purwodadi',
         ]);
@@ -2053,7 +2053,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'karangsono.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Karangsono')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Karangsono',
         ]);
@@ -2152,7 +2152,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'pandeyan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Pandeyan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Pandeyan',
         ]);
@@ -2170,7 +2170,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'maospati.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Maospati')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Maospati',
         ]);
@@ -2179,7 +2179,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'malang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Malang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Malang',
         ]);
@@ -2188,7 +2188,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'gulun.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Gulun')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Gulun',
         ]);
@@ -2233,7 +2233,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'duwet.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Duwet')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Duwet',
         ]);
@@ -2296,7 +2296,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kinandang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kinandang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kinandang',
         ]);
@@ -2368,7 +2368,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bogemsukomoro.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bogem')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bogem',
         ]);
@@ -2377,7 +2377,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kentangan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kentangan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kentangan',
         ]);
@@ -2422,7 +2422,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bulu.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bulu')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bulu',
         ]);
@@ -2449,7 +2449,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bandar.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bandar')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bandar',
         ]);
@@ -2467,7 +2467,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'tamanan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Tamanan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Tamanan',
         ]);
@@ -2476,7 +2476,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kalangketi.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kalangketi')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kalangketi',
         ]);
@@ -2512,7 +2512,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'jabung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Jabung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Jabung',
         ]);
@@ -2629,7 +2629,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'terung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Terung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Terung',
         ]);
@@ -2638,7 +2638,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sendangagung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sendangagung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sendangagung',
         ]);
@@ -2656,7 +2656,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sarangan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Sarangan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Sarangan',
         ]);
@@ -2674,7 +2674,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'plaosan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Plaosan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Plaosan',
         ]);
@@ -2692,7 +2692,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sidomukti.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sidomukti')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sidomukti',
         ]);
@@ -2728,7 +2728,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'bogoarum.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Bogoarum')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Bogoarum',
         ]);
@@ -2755,7 +2755,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'plumpung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Plumpung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Plumpung',
         ]);
@@ -2764,7 +2764,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'ngancar.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Ngancar')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Ngancar',
         ]);
@@ -2773,7 +2773,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'purwosari.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Purwosari')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Purwosari',
         ]);
@@ -2782,7 +2782,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'baron.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Baron')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Baron',
         ]);
@@ -2845,7 +2845,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'candirejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Candirejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Candirejo',
         ]);
@@ -2854,7 +2854,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'ringinagung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Ringinagung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Ringinagung',
         ]);
@@ -2863,7 +2863,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'magetankel.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Magetan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Magetan',
         ]);
@@ -2890,7 +2890,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'tambakrejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Tambakrejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Tambakrejo',
         ]);
@@ -2926,7 +2926,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'ngadirejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Ngadirejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Ngadirejo',
         ]);
@@ -3079,7 +3079,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'madigondo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Madigondo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Madigondo',
         ]);
@@ -3088,7 +3088,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kerang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kerang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kerang',
         ]);
@@ -3097,7 +3097,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'jomblang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Jomblang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Jomblang',
         ]);
@@ -3142,7 +3142,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'takeran.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Kelurahan Takeran')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Kelurahan Takeran',
         ]);
@@ -3160,7 +3160,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'tawangrejo.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Tawangrejo')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Tawangrejo',
         ]);
@@ -3169,7 +3169,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'duyung.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Duyung')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Duyung',
         ]);
@@ -3178,7 +3178,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kiringan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kiringan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kiringan',
         ]);
@@ -3187,7 +3187,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'krowe.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Krowe')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Krowe',
         ]);
@@ -3196,7 +3196,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'tapen.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Tapen')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Tapen',
         ]);
@@ -3214,7 +3214,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'nguri.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Nguri')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Nguri',
         ]);
@@ -3223,7 +3223,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kedungpanji.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kedungpanji')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kedungpanji',
         ]);
@@ -3241,7 +3241,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'tunggur.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Tunggur')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Tunggur',
         ]);
@@ -3268,7 +3268,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'kediren.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Kediren')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Kediren',
         ]);
@@ -3277,7 +3277,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'krajan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Krajan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Krajan',
         ]);
@@ -3286,7 +3286,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'joketro.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Joketro')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Joketro',
         ]);
@@ -3304,7 +3304,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'pragak.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Pragak')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Pragak',
         ]);
@@ -3349,7 +3349,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'trosono.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Trosono')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Trosono',
         ]);
@@ -3376,7 +3376,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'nglopang.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Nglopang')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Nglopang',
         ]);
@@ -3385,7 +3385,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'sayutan.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Sayutan')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Sayutan',
         ]);
@@ -3457,7 +3457,7 @@ class AplikasiSeeder extends Seeder
             'nama_aplikasi' => 'poncol.magetan.go.id',
             'id_opd' => Data_OPD::where('nama_opd', 'Desa Poncol')->pluck('id')->first(),
             'status_projek' => 'Selesai',
-            'status_aplikasi' => 'Maintenance',
+            'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
             'deskripsi' => 'Web OPD Desa Poncol',
         ]);

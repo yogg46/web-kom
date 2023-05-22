@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('nama_aplikasi');
             $table->text('deskripsi')->nullable();
             $table->enum('prioritas', ['Low', 'Medium', 'High', 'Urgent'])->nullable();
-            $table->enum('status_projek', ['Disposisi Surat', 'Analisis Awal', 'Analisis Kebutuhan', 'Coding', 'UAT','Progres', 'Selesai', 'Ditolak'])->nullable();
-            $table->enum('status_aplikasi', ['Maintenance', 'Perbaikan', 'Tidak Aktif','Progres', 'Ditolak','Antrian'])->nullable();
+            $table->enum('status_projek', ['Disposisi Surat', 'Analisis Awal', 'Analisis Kebutuhan', 'Coding', 'UAT', 'Selesai', 'Ditolak'])->nullable();
+            $table->enum('status_aplikasi', ['Running', 'Perbaikan', 'Tidak Aktif', 'Semi Aktif', 'Progres', 'Ditolak', 'Antrian', 'Inisiasi'])->nullable();
             $table->enum('type_aplikasi', ['WEB', 'Aplikasi'])->nullable();
             $table->dateTime('tgl_mulai')->nullable();
             $table->dateTime('tgl_selesai')->nullable();

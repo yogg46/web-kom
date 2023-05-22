@@ -198,13 +198,13 @@
                                 <div class="col-lg-10  @error('nama_opd') input-warning-o @enderror">
                                     <input type="text" wire:model='nama_opd' class="form-control form-control-lg"
                                         placeholder="masukkan nama OPD">
-                                </div>
-                                @error('nama_opd')
-                                <div class="invalid-feedback animated fadeInUp d-block">
+                                    @error('nama_opd')
+                                    <div class="invalid-feedback animated fadeInUp d-block">
 
-                                    {{ $message }}
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @enderror
 
                             </div>
                             <div class="form-group row">

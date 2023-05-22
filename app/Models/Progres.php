@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Progres extends Model
 {
     use HasFactory;
+    // protected $guarded  = ['id'];
+
+    protected $fillable = [
+        'status',
+        'tanggal',
+        'id_aplikasi'
+    ];
+
+    protected $casts = [
+        'tanggal' => 'datetime'
+    ];
 }

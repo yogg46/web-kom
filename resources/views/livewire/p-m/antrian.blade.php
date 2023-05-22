@@ -15,7 +15,8 @@
                                 <li wire:sortable.item="{{ $item->id }}" wire:key="item-{{ $item->id }}"
                                     class="dd-item">
                                     <div wire:sortable.handle class="">
-                                        <div class="widget-stat card bg-primary">
+                                        <div
+                                            class="widget-stat card {{ $item->prioritas == 'Urgent' ? ' bg-danger' :($item->prioritas == 'High' ? 'bg-warning' :($item->prioritas == 'Medium' ? 'bg-info':'bg-primary')  ) }} ">
                                             <div class="card-body p-4">
                                                 <div class="media">
                                                     <span class="mr-3">
@@ -24,7 +25,8 @@
                                                     </span>
                                                     <div class="media-body text-white">
                                                         <p class="mb-1">{{ $item->R_OPD->nama_opd }}</p>
-                                                        <h3 class="text-white mb-2">{{ $item->nama_aplikasi }}</h3>
+                                                        <h3 class="text-white mb-2">{{ $item->nama_aplikasi }}{{
+                                                            $item->prioritas ? (' ( '.$item->prioritas.' )') :' '}}</h3>
                                                         <div class="progress  bg-primary">
                                                             <div class="progress-bar progress-animated bg-light"
                                                                 style="width: 50%"></div>

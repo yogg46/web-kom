@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(50)->create();
+        \App\Models\User::factory(10)->create();
         // Pegawai::factory(20)->create();
 
         \App\Models\User::factory()->create([
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             opdSeeder::class,
-            AplikasiSeeder::class,
+            // AplikasiSeeder::class,
         ]);
     }
 }

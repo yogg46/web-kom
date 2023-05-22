@@ -3,8 +3,8 @@
 @section('isi')
 <div class="row">
     <div class="col lg-12">
-    <div class="card">
-        <div class="card-header">
+        <div class="card">
+            <div class="card-header">
 
                 <div class="header-left">
                     <div class="dashboard_bar">
@@ -12,16 +12,16 @@
                     </div>
                 </div>
 
-            <div class="float-right">
-                <a class="badge badge-rounded badge-info badge-xl">PROJEK APLIKASI BARU</a>
+                <div class="float-right">
+                    <a class="badge badge-rounded badge-info badge-xl">PROJEK APLIKASI BARU</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3 class="text-bold">Klien (OPD)</h3>
+                <p>berisi deskripsi aplikasi sesuai dengan form yg telah diisi oleh project manager</p>
             </div>
         </div>
-        <div class="card-body">
-            <h3 class="text-bold">Klien (OPD)</h3>
-            <p>berisi deskripsi aplikasi sesuai dengan form yg telah diisi oleh project manager</p>
-        </div>
     </div>
-</div>
 </div>
 <!-- Add Order -->
 
@@ -34,12 +34,16 @@
             </div>
             <div class="card-body">
 
-                    <div class=" d-flex justify-content-between align-items-stretch flex-column h-auto"  >
-                        <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal" data-target="#modalTPA">Tolak Projek</a>
-                        <button type="button" class="btn btn-danger  btn-lg light ml-2  mb-5 px-4" data-toggle="modal" data-target="#modalDS">Disposisi Surat</a>
-                        <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal" data-target="#modalAA">Analisis Awal</a>
-                        <button type="button" class="btn btn-danger  btn-lg light ml-2 px-4" data-toggle="modal" data-target="#modalA">Antrian</a>
-                    </div>
+                <div class=" d-flex justify-content-between align-items-stretch flex-column h-auto">
+                    <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal"
+                        data-target="#modalTPA">Tolak Projek</a>
+                        <button type="button" class="btn btn-danger  btn-lg light ml-2  mb-5 px-4" data-toggle="modal"
+                            data-target="#modalDS">Disposisi Surat</a>
+                            <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal"
+                                data-target="#modalAA">Analisis Awal</a>
+                                <button type="button" class="btn btn-danger  btn-lg light ml-2 px-4" data-toggle="modal"
+                                    data-target="#modalA">Antrian</a>
+                </div>
 
             </div>
         </div>
@@ -51,9 +55,11 @@
                 <div class="profile-tab">
                     <div class="custom-tab-1">
                         <ul class="nav nav-tabs">
-                            <li class="nav-item"><a href="#info-progres" data-toggle="tab" class="nav-link active show">Informasi Progres</a>
+                            <li class="nav-item"><a href="#info-progres" data-toggle="tab"
+                                    class="nav-link active show">Informasi Progres</a>
                             </li>
-                            <li class="nav-item"><a href="#tim-aplikasi" data-toggle="tab" class="nav-link">Tim Aplikasi</a>
+                            <li class="nav-item"><a href="#tim-aplikasi" data-toggle="tab" class="nav-link">Tim
+                                    Aplikasi</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -61,7 +67,8 @@
                                 <div class="col-xl-12 col-xl-12 col-lg-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <div id="DZ_W_TimeLine" class="widget-timeline dz-scroll height370 ps ps--active-y">
+                                            <div id="DZ_W_TimeLine"
+                                                class="widget-timeline dz-scroll height370 ps ps--active-y">
                                                 <ul class="timeline">
                                                     <li>
                                                         <div class="timeline-badge primary"></div>
@@ -75,8 +82,10 @@
                                                         </div>
                                                         <a class="timeline-panel text-muted" href="#">
                                                             <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-                                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
+                                                            <h6 class="mb-0">New order placed <strong
+                                                                    class="text-info">#XF-2356.</strong></h6>
+                                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at
+                                                                volutapt...</p>
                                                         </a>
                                                     </li>
                                                     <li>
@@ -100,7 +109,8 @@
                                                         </div>
                                                         <a class="timeline-panel text-muted" href="#">
                                                             <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
+                                                            <h6 class="mb-0">Mashable, a news website and blog, goes
+                                                                live.</h6>
                                                         </a>
                                                     </li>
                                                     <li>
@@ -108,11 +118,20 @@
                                                         </div>
                                                         <a class="timeline-panel text-muted" href="#">
                                                             <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
+                                                            <h6 class="mb-0">Mashable, a news website and blog, goes
+                                                                live.</h6>
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 370px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 261px;"></div></div></div>
+                                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                                    <div class="ps__thumb-x" tabindex="0"
+                                                        style="left: 0px; width: 0px;"></div>
+                                                </div>
+                                                <div class="ps__rail-y" style="top: 0px; height: 370px; right: 0px;">
+                                                    <div class="ps__thumb-y" tabindex="0"
+                                                        style="top: 0px; height: 261px;"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +160,8 @@
                 <form>
                     <div class="form-group row">
                         <div class="col-lg-12">
-                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal progres disposisi surat">
+                            <input type="text" class="form-control form-control-lg"
+                                placeholder="masukkan tanggal progres disposisi surat">
                         </div>
                     </div>
                 </form>
@@ -166,15 +186,17 @@
                     <div class="form-group row">
                         <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal projek ditolak">
+                            <input type="text" class="form-control form-control-lg"
+                                placeholder="masukkan tanggal projek ditolak">
                         </div>
                     </div>
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-form-label-lg font-weight-bold">Alasan ditolak</label>
-                            <div class="col-lg-10">
-                                    <textarea class="form-control form-control-lg" rows="8" id="comment" placeholder="masukkan deskripsi"></textarea>
-                            </div>
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-form-label-lg font-weight-bold">Alasan ditolak</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control form-control-lg" rows="8" id="comment"
+                                placeholder="masukkan deskripsi"></textarea>
                         </div>
+                    </div>
 
                 </form>
             </div>
@@ -197,9 +219,11 @@
                 <form>
                     <div class="form-group row">
                         <div class="col-lg-12">
-                            <input type="text" class="form-control form-control-lg" placeholder="masukkan tanggal progres Analisis Awal">
+                            <input type="text" class="form-control form-control-lg"
+                                placeholder="masukkan tanggal progres Analisis Awal">
                         </div>
-            </div></form>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>

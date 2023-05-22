@@ -11,7 +11,7 @@ class WhatappsGateway extends Controller
     public function index()
     {
         $tittle = "Whatapps Gateway";
-        return view('whatappsgateway.index',compact(['tittle']));
+        return view('whatappsgateway.index', compact(['tittle']));
         # code...
     }
 
@@ -33,6 +33,41 @@ class WhatappsGateway extends Controller
         // Prepare the data
         $number = $request->input('number');
         $message = $request->input('message');
+
+        // Send the message
+        try {
+            $response = Http::post('http://localhost:8001/send-message', [
+                'number' => $number,
+                'message' => $message,
+            ]);
+
+            // Check the response status and return the appropriate response
+            if ($response->successful()) {
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Message sent successfully',
+                    'response' => $response->json(),
+                ]);
+            } else {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Failed to send message',
+                    'response' => $response->json(),
+                ], $response->status());
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'An error occurred',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function kirim($nomer, $pesan)
+    {
+        $number = $nomer;
+        $message = $pesan;
 
         // Send the message
         try {

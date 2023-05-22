@@ -54,11 +54,11 @@
                                     ) }}">{{ $item->prioritas }}</span></td>
                                     <td>
                                         <div class="btn-group mb-1">
+                                            @if ($item->R_Tim->count() > 0)
                                             <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
                                                 data-toggle="dropdown">
                                                 {{ $item->R_Tim->count() }}
                                             </button>
-                                            @if ($item->R_Tim->count() > 0)
 
                                             <div class="dropdown-menu">
                                                 @foreach ( $item->R_Tim as $key)
