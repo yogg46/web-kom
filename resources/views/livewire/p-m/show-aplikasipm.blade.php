@@ -77,7 +77,7 @@
                             data-target="#modalTPA">Tolak Projek</button>
                         @endif
 
-                        @if ($aplikasis->status_aplikasi == 'Progres')
+                        @if ($aplikasis->status_aplikasi == 'Progres'||'Antrian')
                         <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal"
                             data-target="#modalAK">Analisis Kebutuhan</button>
 
@@ -151,39 +151,41 @@
                                 <div id="tim-aplikasi" class="tab-pane fade">
                                     <div class="pt-3">
                                         @if ($aplikasis->R_Tim->count() > 0)
+                                        <div class="row">
 
-                                        <div class="media pt-3 pb-3">
-                                            <img src="/asset/images/profile/7.jpg" alt="image" class="mr-3 rounded"
-                                                width="55">
-                                            <div class="media-body">
-                                                <h4 class="m-b-10"><a href="post-details.html" class="text-black">Maria
-                                                        Nobe</a></h4>
-                                                <h5 class="mb-3">Project Manager</h5>
+                                            @foreach ($aplikasis->R_Tim as $item)
+                                            <div class="col-6">
+
+                                                <div class="media pt-3 ">
+                                                    @if (!empty($item->R_User->avatar) &&
+                                                    file_exists(public_path($item->R_User->avatar))
+                                                    )
+                                                    <img src="{{ asset($item->R_User->avatar) }}" class="mr-3 rounded"
+                                                        alt="" width="55" height="55">
+                                                    @else
+                                                    <span class="mr-3 rounded  bg-primary-light"
+                                                        style="width: 55px;height:55px;display: flex; justify-content: center; align-items: center;">
+                                                        <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg"
+                                                            width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                            stroke="#ffff" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="feather feather-user">
+                                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                            <circle cx="12" cy="7" r="4"></circle>
+                                                        </svg>
+                                                    </span>
+                                                    @endif
+
+                                                    <div class="media-body">
+                                                        <h4 class="m-b-10"><span
+                                                                class="text-black">{{ $item->R_User->name }}</span></h4>
+                                                        <h5 class="mb-3">{{ $item->role }}</h5>
+                                                    </div>
+
+                                                </div>
                                             </div>
-                                            <img src="/asset/images/profile/7.jpg" alt="image" class="mr-3 rounded"
-                                                width="55">
-                                            <div class="media-body">
-                                                <h4 class="m-b-10"><a href="post-details.html" class="text-black">Maria
-                                                        Nobe</a></h4>
-                                                <h5 class="mb-3">Project Manager</h5>
-                                            </div>
+                                            @endforeach
                                         </div>
-                                        <div class="media pt-3 pb-3">
-                                            <img src="/asset/images/profile/7.jpg" alt="image" class="mr-3 rounded"
-                                                width="55">
-                                            <div class="media-body">
-                                                <h4 class="m-b-10"><a href="post-details.html" class="text-black">Maria
-                                                        Nobe</a></h4>
-                                                <h5 class="mb-3">Project Manager</h5>
-                                            </div>
-                                            <img src="/asset/images/profile/7.jpg" alt="image" class="mr-3 rounded"
-                                                width="55">
-                                            <div class="media-body">
-                                                <h4 class="m-b-10"><a href="post-details.html" class="text-black">Maria
-                                                        Nobe</a></h4>
-                                                <h5 class="mb-3">Project Manager</h5>
-                                            </div>
-                                        </div>
+
                                         @endif
                                     </div>
                                 </div>
@@ -363,86 +365,157 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
+                <form wire:submit.prevent='simpan_antrian'>
 
-                            <div class="form-group">
-                                <strong><label>Prioritas Aplikasi</label></strong>
-                                <select class="form-control default-select" id="sel1">
-                                    <option>Urgent</option>
-                                    <option>High</option>
-                                    <option>Medium</option>
-                                    <option>Low</option>
-                                </select>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+
+                                <div class="form-group">
+                                    <strong><label>Prioritas Aplikasi</label></strong>
+                                    <div wire:ignore>
+                                        <select wire:model='prioritas' class="form-control default-select">
+                                            <option>Pilih Prioritas Aplikasi</option>
+                                            <option value="Urgent">Urgent</option>
+                                            <option value="High">High</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Low">Low</option>
+                                        </select>
+                                    </div>
+                                    @error('prioritas')
+                                    <div class="invalid-feedback animated fadeInUp d-block">
+
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <strong><label>Pilih Nomor Antrian Aplikasi</label></strong>
-                                <select class="form-control default-select" id="sel2">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                            <div class="col-6">
+                                {{-- {{ $no_urut }} --}}
+                                <div class="form-group">
+                                    <strong><label>Nomor Antrian Aplikasi</label></strong>
+                                    <div wire:ignore>
+                                        <select wire:model='no_urut' class="form-control default-select">
+                                            <option>Pilih Nomor Antrian Aplikasi</option>
+                                            @foreach ($norut as $item => $value)
+                                            <option value="{{ $item }}"> {{ $item }} {{ $value ? ' - '.$value : '' }}
+                                            </option>
+
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @error('no_urut')
+                                    <div class="invalid-feedback animated fadeInUp d-block">
+
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
                             </div>
+
                         </div>
 
-                        <div class="col">
-                            <div class="basic-form">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div wire:ignore class="form-group">
+                                    <strong><label class="control-label">Project Manager</label></strong>
+                                    <select wire:model='pm' class="form-control default-select">
+                                        <option>Pilih Project Manager</option>
+                                        @foreach ($PM as $item => $v)
+                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                @error('pm')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <div wire:ignore class="form-group">
+                                    <strong><label class="control-label">Quality Assurance</label></strong>
+                                    <select wire:model='qa' class="form-control default-select">
+                                        <option>Pilih Quality Assurance</option>
+                                        @foreach ($QA as $item => $v)
+                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                @error('qa')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div wire:ignore class="form-group">
+                                    <strong><label class="control-label">System Analyst</label></strong>
+                                    <select wire:model='sa' class="form-control default-select">
+                                        <option>Pilih System Analyst</option>
+                                        @foreach ($SA as $item => $v)
+                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                @error('sa')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <div wire:ignore class="form-group">
+                                    <strong><label class="control-label">Programmer </label></strong>
+                                    <select multiple id="mySelect" wire:model="pg" class="form-control default-select">
+                                        @foreach ($PG as $item => $v)
+                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @endforeach
+
+                                    </select>
+                                </div>
+                                @error('pg')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong><label class="control-label">Project Manager</label></strong>
-                                            <select class="form-control default-select" id="sel1">
-                                                <option>Anna</option>
-                                                <option>Anni</option>
-                                                <option>Anne</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong><label class="control-label">Quality Assurance</label></strong>
-                                            <select class="form-control default-select" id="sel1">
-                                                <option>Anna</option>
-                                                <option>Anni</option>
-                                                <option>Anne</option>
-                                            </select>
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong><label class="control-label">System Analyst</label></strong>
-                                            <select class="form-control default-select" id="sel1">
-                                                <option>Anna</option>
-                                                <option>Anni</option>
-                                                <option>Anne</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong><label class="control-label">Programmar</label></strong>
-                                            <select multiple class="form-control default-select" id="sel1">
-                                                <option>Anna</option>
-                                                <option>Anni</option>
-                                                <option>Anne</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
+
+
+
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
@@ -632,29 +705,44 @@
 
     @push('js')
     <script>
-        window.addEventListener('UAT', event => {
-                $("#modalU").modal('hide');
+        // document.addEventListener("livewire:load", function () {
+        //     // Inisialisasi Bootstrap Select pada elemen dengan ID mySelect
+        //     $('#mySelect').selectpicker();
+
+        //     // Reload komponen Livewire saat nilai terpilih berubah
+        //     $('#mySelect').on('changed.bs.select', function (e) {
+        //         Livewire.emit('selectedValuesChanged', $(this).val());
+        //     });
+        // });
+
+
+
+
+
+
+            window.addEventListener('UAT', event => {
+            $("#modalU").modal('hide');
             })
-        window.addEventListener('Testing', event => {
-                $("#modalT").modal('hide');
+            window.addEventListener('Testing', event => {
+            $("#modalT").modal('hide');
             })
-        window.addEventListener('Coding', event => {
-                $("#modalC").modal('hide');
+            window.addEventListener('Coding', event => {
+            $("#modalC").modal('hide');
             })
-        window.addEventListener('Analisis-Kebutuhan', event => {
-                $("#modalAK").modal('hide');
+            window.addEventListener('Analisis-Kebutuhan', event => {
+            $("#modalAK").modal('hide');
             })
-        window.addEventListener('Antrian-Aplikasi', event => {
-                $("#modalA").modal('hide');
+            window.addEventListener('Antrian-Aplikasi', event => {
+            $("#modalA").modal('hide');
             })
-        window.addEventListener('Analisis-Awal', event => {
-                $("#modalAA").modal('hide');
+            window.addEventListener('Analisis-Awal', event => {
+            $("#modalAA").modal('hide');
             })
-        window.addEventListener('Tolak-Projek-Aplikasi', event => {
-                $("#modalTPA").modal('hide');
+            window.addEventListener('Tolak-Projek-Aplikasi', event => {
+            $("#modalTPA").modal('hide');
             })
-        window.addEventListener('Disposisi-Surat', event => {
-                $("#modalDS").modal('hide');
+            window.addEventListener('Disposisi-Surat', event => {
+            $("#modalDS").modal('hide');
             })
     </script>
     @endpush

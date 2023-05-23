@@ -47,7 +47,7 @@ class Pegawai extends Component
             ->section('isi');
     }
     protected $rules = [
-        'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+        'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
         'email' => 'required|email:email',
         'jabatan' => 'required',
         'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
@@ -56,7 +56,7 @@ class Pegawai extends Component
     public function updated($field)
     {
         $this->validateOnly($field, [
-            'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+            'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
             'email' => 'required|email',
             'jabatan' => 'required',
             'avatar' => 'file|mimes:jpeg,png,jpg|max:12048'
@@ -119,7 +119,7 @@ class Pegawai extends Component
     public function update()
     {
         $this->validate([
-            'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+            'nama_pegawai' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
             'email' => 'required|email',
             'jabatan' => 'required',
         ]);
@@ -141,18 +141,22 @@ class Pegawai extends Component
             File::delete($this->avatar);
         }
 
-        $nama_avatarUP = $this->update_avatar->store("images", 'public');
-        $file_path = storage_path('app/public/' . $nama_avatarUP);
+        if ($this->update_avatar) {
+            # code...
+            $nama_avatarUP = $this->update_avatar->store("images", 'public');
+            $file_path = storage_path('app/public/' . $nama_avatarUP);
 
-        chmod($file_path, 0777);
+            chmod($file_path, 0777);
 
-        $manager = new ImageManager();
-        $image = $manager->make($file_path)->fit(500, 500);
-        $image->save(public_path($nama_avatarUP));
-
-        if (Storage::exists('public/' . $nama_avatarUP)) {
-            Storage::delete('public/' . $nama_avatarUP);
+            $manager = new ImageManager();
+            $image = $manager->make($file_path)->fit(500, 500);
+            $image->save(public_path($nama_avatarUP));
+            if (Storage::exists('public/' . $nama_avatarUP)) {
+                Storage::delete('public/' . $nama_avatarUP);
+            }
         }
+
+
         if ($this->ids) {
             $pegawai = User::find($this->ids);
             $pegawai->update([
@@ -160,12 +164,17 @@ class Pegawai extends Component
                 'email' => $this->email,
                 'role' => $this->jabatan,
                 // 'status' => $this->status,
-                'avatar' => $nama_avatarUP
+
             ]);
+            if ($this->update_avatar) {
+                $pegawai->update([
+                    'avatar' => $nama_avatarUP
+                ]);
+            }
 
             // session()->flash('message', 'User Berhasil Diupdate.');
             // @dd($User);
-            $this->emit('edit');
+            // $this->emit('edit');
             $this->dispatchBrowserEvent('edit');
             $this->alert('success', 'User Berhasil Diupdate');
             $this->resetInput();

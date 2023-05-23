@@ -37,7 +37,7 @@ class UserManagement extends Component
     public function render()
     {
         return view('livewire.super-admin.user-management', [
-            'user' => User::search('name', $this->search)->whereLike('role',$this->search)->whereLike('status',$this->search)
+            'user' => User::search('name', $this->search)->whereLike('role', $this->search)->whereLike('status', $this->search)
                 ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
                 ->paginate(10),
         ])
@@ -48,7 +48,7 @@ class UserManagement extends Component
     }
 
     protected $rules = [
-        'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+        'name' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
         'email' => 'required|email',
         'role' => 'required',
     ];
@@ -64,7 +64,7 @@ class UserManagement extends Component
     public function updated($field)
     {
         $this->validateOnly($field, [
-            'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+            'name' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
             'email' => 'required|email:rfc,dns',
             'role' => 'required',
         ]);
@@ -106,7 +106,7 @@ class UserManagement extends Component
     public function update()
     {
         $this->validate([
-            'name' => 'required|min:6|regex:/^[a-zA-Z ]*$/',
+            'name' => 'required|min:6|regex:/^[a-zA-Z., ]*$/',
             'email' => 'required|email',
             'role' => 'required',
         ]);

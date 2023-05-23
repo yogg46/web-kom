@@ -21,7 +21,7 @@ class Aplikasipm extends Component
     public $id_opd;
     public $type_projek;
     public $cp;
-
+    public $notif = 0;
     public function updatingSearch()
     {
         $this->resetPage();
@@ -42,7 +42,10 @@ class Aplikasipm extends Component
         ])
             ->section('isi');
     }
-
+    public function updatedSelectedValue($value)
+    {
+        // Lakukan pembaruan komponen Livewire sesuai kebutuhan
+    }
     protected $rules = [
         'nama_aplikasi' => 'required',
         'id_opd' => 'required',
@@ -91,13 +94,14 @@ class Aplikasipm extends Component
         //     'number' => $this->cp,
         //     'message' => 'Aplikasi ' . $this->nama_aplikasi . ' sedang dalam proses Inisiasi',
         // ]);
-
-        $controller = new WhatappsGateway();
-        $controller->kirim($this->cp, 'Aplikasi ' . $this->nama_aplikasi . ' sedang dalam proses Inisiasi');
-
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $controller->kirim($this->cp, 'Aplikasi ' . $this->nama_aplikasi . ' sedang dalam proses Inisiasi');
+        }
 
 
         $this->alert('success', 'Data Berhasil Disimpan');
         $this->dispatchBrowserEvent('tambah');
+        $this->reset();
     }
 }

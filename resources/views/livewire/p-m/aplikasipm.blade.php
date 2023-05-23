@@ -40,17 +40,20 @@
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Jenis Projek</label>
                             <div class="col-lg-10">
-                                {{-- <div class="dropdown bootstrap-select form-control default-select"> --}}
-                                    <select wire:model='type_projek' class="form-control default-select" id="sel2"
-                                        tabindex="-98">
-                                        <option value="">Pilih Jenis Projek</option>
-                                        <option value="WEB">Website</option>
-                                        <option value="Aplikasi">Aplikasi</option>
-                                        {{-- <option>Perbaikan</option>
-                                        <option>Tidak Aktif</option> --}}
-                                    </select>
-                                    {{--
-                                </div> --}}
+                                <div wire:ignore>
+
+                                    {{-- <div class="dropdown bootstrap-select form-control default-select"> --}}
+                                        <select wire:model='type_projek' class="form-control default-select"
+                                            tabindex="-98">
+                                            <option value="">Pilih Jenis Projek</option>
+                                            <option value="WEB">Website</option>
+                                            <option value="Aplikasi">Aplikasi</option>
+                                            {{-- <option>Perbaikan</option>
+                                            <option>Tidak Aktif</option> --}}
+                                        </select>
+                                        {{--
+                                    </div> --}}
+                                </div>
                                 @error('type_projek')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -62,15 +65,17 @@
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Klien (OPD)</label>
                             <div class="col-lg-10">
-                                <select wire:model='id_opd' class="form-control default-select" id="sel1"
-                                    tabindex="-98">
-                                    <option value="">Pilih Klien (OPD)</option>
-                                    @foreach ($opd as $key =>$value)
+                                <div wire:ignore>
+                                    <select wire:model='id_opd' id="mySelect" class="form-control default-select"
+                                        tabindex="-98">
+                                        <option value="">Pilih Klien (OPD)</option>
+                                        @foreach ($opd as $key =>$value)
 
-                                    <option value="{{ $key }}"> {{ $value }}</option>
-                                    @endforeach
+                                        <option value="{{ $key }}"> {{ $value }}</option>
+                                        @endforeach
 
-                                </select>
+                                    </select>
+                                </div>
                                 @error('id_opd')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -78,12 +83,13 @@
                                 </div>
                                 @enderror
                             </div>
+
                         </div>
 
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Deskripsi Projek</label>
                             <div class="col-lg-10">
-                                <textarea wire:model='deskripsi' class="form-control form-control-lg" rows="6"
+                                <textarea wire:model='deskripsi' class="form-control form-control-lg" rows="3"
                                     placeholder="masukkan deskripsi Projek"></textarea>
                                 @error('deskripsi')
                                 <div class="invalid-feedback animated fadeInUp d-block">
@@ -91,6 +97,23 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
+                                <div class="row">
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -227,12 +250,77 @@
         </div>
     </div>
 </div>
+@push('css')
+<style>
+    /* SWITCH */
+    .switch {
+        grid-column: 0.5;
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        grid-gap: 0.5rem;
+        justify-self: center;
+    }
 
+    .switch input {
+        display: none;
+    }
+
+    .switch__1,
+    .switch__2 {
+        width: 6rem;
+    }
+
+    .switch__1 label,
+    .switch__2 label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #fff;
+        background: rgba(255, 255, 255, 0);
+        position: relative;
+        cursor: pointer;
+        border-radius: 1.6rem;
+    }
+
+    .switch__1 label::after,
+    .switch__2 label::after {
+        content: "";
+        position: absolute;
+        left: 0.4rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #9baacf;
+        transition: all 0.4s ease;
+    }
+
+    .switch__1 label::before,
+    .switch__2 label::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(330deg, #5b0eeb 0%, #6d5dfc 50%, #8abdff 100%);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .switch input:checked~label::before {
+        opacity: 1;
+    }
+
+    .switch input:checked~label::after {
+        left: 76%;
+        background: #e4ebf5;
+    }
+</style>
+@endpush
 @push('js')
 <script>
     window.addEventListener('tambah', event => {
-                $("#modaltambah").modal('hide');
-            })
+                    $("#modaltambah").modal('hide');
+                })
 </script>
 @endpush
 </div>
