@@ -58,10 +58,10 @@ Route::middleware(['auth', 'checkRole:Project Manager'])->group(function () {
     Route::get('/aplikasi/{slug}', ShowAplikasipm::class)->name('show-aplikasi');
 });
 
-Route::get('/aplikasi-m/show-progress', function () {
-    $tittle = 'Aplikasi';
-    return view('show-aplikasi-progress', compact('tittle'));
-});
+// Route::get('/aplikasi-m/show-progress', function () {
+//     $tittle = 'Aplikasi';
+//     return view('show-aplikasi-progress', compact('tittle'));
+// });
 Route::get('/maintenance', function () {
     $tittle = 'Maintenance';
     return view('maintenance', compact('tittle'));

@@ -13,7 +13,8 @@ class Progres extends Model
     protected $fillable = [
         'status',
         'tanggal',
-        'id_aplikasi'
+        'id_aplikasi',
+        'catatan',
     ];
 
     protected $casts = [

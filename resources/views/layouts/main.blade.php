@@ -210,7 +210,7 @@
                     </li>
                     @endif
                     @if (Auth::user()->role == 'Project Manager')
-                    <li><a href="/aplikasi-pm" class="ai-icon" aria-expanded="false">
+                    <li class="{{ request()->is('aplikasi/*') ? 'mm-active' : '' }}"><a href="/aplikasi-pm" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-381-smartphone-1"></i>
                             <span class="nav-text">Aplikasi</span>
                         </a>

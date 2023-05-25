@@ -65,6 +65,7 @@ class ShowAplikasipm extends Component
     {
         $this->aplikasis = Aplikasi::where('slug', $slug)->first();
         $this->slug = $slug;
+        $this->progres_apk = $this->aplikasis->progres;
         $this->progres = Progres::where('id_aplikasi', $this->aplikasis->id)->get();
         $this->tim = Tim::where('id_aplikasi', $this->aplikasis->id)->get();
     }
@@ -166,7 +167,8 @@ class ShowAplikasipm extends Component
         ]);
         $this->aplikasis->update([
             'status_projek' => 'Ditolak',
-            'status_aplikasi' => 'Ditolak'
+            'status_aplikasi' => 'Tidak Aktif',
+            'keterangan' => $this->alasan_tolak
         ]);
         $cek = Progres::where('id_aplikasi', $this->aplikasis->id)->where('status', 'Ditolak')->get();
         if ($cek->count() > 0) {
@@ -264,5 +266,209 @@ class ShowAplikasipm extends Component
         }
         $this->mount($this->slug);
         $this->dispatchBrowserEvent('Antrian-Aplikasi');
+    }
+
+    public $analisis_kebutuhan;
+    public $coding;
+    public $progres_apk;
+
+    public function simpan_AK()
+    {
+        $this->validate([
+            'analisis_kebutuhan' => 'required',
+
+        ]);
+
+
+        $this->aplikasis->update([
+            'status_projek' => 'Analisis Kebutuhan',
+            'status_aplikasi' => 'Progres'
+        ]);
+        $cek = Progres::where('id_aplikasi', $this->aplikasis->id)->where('status', 'Analisis Kebutuhan')->get();
+        if ($cek->count() > 0) {
+            foreach ($cek as $key) {
+                $key->delete();
+            }
+        }
+
+        Progres::create([
+            'tanggal' => Carbon::parse($this->analisis_kebutuhan)->format('Y-m-d H:i:s'),
+            'status' => 'Analisis Kebutuhan',
+            'id_aplikasi' => $this->aplikasis->id,
+        ]);
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $pesan = 'Aplikasi ' . $this->aplikasis->nama_aplikasi . ' sedang dalam proses *Analisis Kebutuhan* Pada Tanggal ' . Carbon::parse($this->analisis_kebutuhan)->format('d F Y');
+            $controller->kirim($this->aplikasis->cp, $pesan);
+            $this->reset('notif');
+        }
+
+        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->dispatchBrowserEvent('Analisis-Kebutuhan');
+
+        $this->mount($this->slug);
+    }
+
+    public function simpan_c()
+    {
+        $this->validate([
+            'coding' => 'required',
+
+        ]);
+
+
+        $this->aplikasis->update([
+            'status_projek' => 'Coding',
+            // 'status_aplikasi' => 'Progres'
+        ]);
+        $cek = Progres::where('id_aplikasi', $this->aplikasis->id)->where('status', 'Coding')->get();
+        if ($cek->count() > 0) {
+            foreach ($cek as $key) {
+                $key->delete();
+            }
+        }
+
+        Progres::create([
+            'tanggal' => Carbon::parse($this->coding)->format('Y-m-d H:i:s'),
+            'status' => 'Coding',
+            'id_aplikasi' => $this->aplikasis->id,
+        ]);
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $pesan = 'Aplikasi ' . $this->aplikasis->nama_aplikasi . ' sedang dalam proses *Coding* Pada Tanggal ' . Carbon::parse($this->coding)->format('d F Y');
+            $controller->kirim($this->aplikasis->cp, $pesan);
+            $this->reset('notif');
+        }
+
+        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->dispatchBrowserEvent('Coding');
+
+        $this->mount($this->slug);
+    }
+    public $testing;
+    public $alasan_testing;
+    public function simpan_testing()
+    {
+        $this->validate([
+            'testing' => 'required',
+            'alasan_testing' => 'required',
+
+        ], [
+            'testing.required' => 'Kolom Tanggal harus diisi.',
+            'alasan_testing.required' => 'Kolom Deskripsi BUG ditolak harus diisi.'
+        ]);
+
+
+        $this->aplikasis->update([
+            'status_projek' => 'Testing',
+            // 'status_aplikasi' => 'Progres'
+        ]);
+        $cek = Progres::where('id_aplikasi', $this->aplikasis->id)->where('status', 'Testing')->get();
+        if ($cek->count() > 0) {
+            foreach ($cek as $key) {
+                $key->delete();
+            }
+        }
+
+        Progres::create([
+            'tanggal' => Carbon::parse($this->testing)->format('Y-m-d H:i:s'),
+            'status' => 'Testing',
+
+            'id_aplikasi' => $this->aplikasis->id,
+            'catatan' => $this->alasan_testing
+        ]);
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $pesan = 'Aplikasi ' . $this->aplikasis->nama_aplikasi . ' sedang dalam proses *Testing* Pada Tanggal ' . Carbon::parse($this->testing)->format('d F Y');
+            $controller->kirim($this->aplikasis->cp, $pesan);
+            $this->reset('notif');
+        }
+
+        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->dispatchBrowserEvent('Testing');
+
+        $this->mount($this->slug);
+    }
+    public $uat;
+    public $alasan_uat;
+    public function simpan_uat()
+    {
+        $this->validate([
+            'uat' => 'required',
+            'alasan_uat' => 'required',
+
+        ], [
+            'uat.required' => 'Kolom Tanggal harus diisi.',
+            'alasan_uat.required' => 'Kolom Deskripsi BUG ditolak harus diisi.'
+        ]);
+
+
+        $this->aplikasis->update([
+            'status_projek' => 'UAT',
+            // 'status_aplikasi' => 'Selesai'
+        ]);
+        $cek = Progres::where('id_aplikasi', $this->aplikasis->id)->where('status', 'UAT')->get();
+        if ($cek->count() > 0) {
+            foreach ($cek as $key) {
+                $key->delete();
+            }
+        }
+
+        Progres::create([
+            'tanggal' => Carbon::parse($this->uat)->format('Y-m-d H:i:s'),
+            'status' => 'UAT',
+            'id_aplikasi' => $this->aplikasis->id,
+            'catatan' => $this->alasan_uat
+        ]);
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $pesan = 'Aplikasi ' . $this->aplikasis->nama_aplikasi . ' sedang dalam proses *UAT* Pada Tanggal ' . Carbon::parse($this->uat)->format('d F Y');
+            $controller->kirim($this->aplikasis->cp, $pesan);
+            $this->reset('notif');
+        }
+
+        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->dispatchBrowserEvent('UAT');
+
+        $this->mount($this->slug);
+    }
+
+    public function updateProgres()
+    {
+        $this->aplikasis->update([
+            'progres' => $this->progres_apk
+        ]);
+    }
+    public $selesai;
+    public function simpan_selesai()
+    {
+        $this->validate([
+            'selesai' => 'required'
+        ]);
+
+        $this->aplikasis->update([
+            'status_projek' => 'Selesai',
+            'status_aplikasi' => 'Running',
+            'no_urut' => null,
+            'tgl_selesai' => Carbon::now()
+        ]);
+
+        Progres::create([
+            'tanggal' => Carbon::parse($this->selesai)->format('Y-m-d H:i:s'),
+            'status' => 'Selesai',
+            'id_aplikasi' => $this->aplikasis->id,
+            // 'catatan' => $this->alasan_uat
+        ]);
+        if ($this->notif == 1) {
+            $controller = new WhatappsGateway();
+            $pesan = 'Aplikasi ' . $this->aplikasis->nama_aplikasi . ' sedang dalam proses *Selesai* Pada Tanggal ' . Carbon::parse($this->selesai)->format('d F Y');
+            $controller->kirim($this->aplikasis->cp, $pesan);
+            $this->reset('notif');
+        }
+        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->dispatchBrowserEvent('SELESAI');
+
+        $this->mount($this->slug);
+        # code...
     }
 }

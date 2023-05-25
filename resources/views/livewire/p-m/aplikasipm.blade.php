@@ -204,10 +204,10 @@
                                                 <div class="dropdown-menu">
                                                     @foreach ( $item->R_Tim as $key)
 
-                                                    <a class="dropdown-item">{{ $key->name }}</a>
+                                                    <a class="dropdown-item">{{ $key->R_User->name }}</a>
                                                     @endforeach
-                                                    {{-- <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a> --}}
+                                                    {{-- <a class="dropdown-item"> {{ $key->R_Tim }}</a> --}}
+                                                    {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
 
                                                 </div>
                                                 @endif
@@ -217,11 +217,9 @@
                                             <p>{{ $item->deskripsi }}</p>
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress  bg-primary">
-                                                    <div class="progress-bar progress-animated bg-light"
-                                                        style="width: {{ $item->progres }}%"></div>
-                                                </div>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar progress-animated bg-success"
+                                                    style="width: {{ $item->progres }}%"></div>
                                             </div>
                                             <small>{{ $item->progres }}% </small>
                                         </td>

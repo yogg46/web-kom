@@ -32,13 +32,14 @@
                         </div>
                         <div class="form-group ">
                             <input class="form-control form-control-sm text-black" type="number" placeholder=""
-                                value="65" min="0" max="100" style="text-align: center;height: 30px;width: 60px">
+                                wire:model.lazy='progres_apk' wire:change='updateProgres()' step="10" min="0" max="100"
+                                style="text-align: center;height: 30px;width: 60px">
                         </div>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-success progress-animated" style="width: 65%; height:20px;"
+                        <div class="progress-bar bg-success progress-animated" style="width: {{ $progres_apk }}%;"
                             role="progressbar">
-                            60% Complete
+                            {{-- {{ $progres_apk }} --}}
                         </div>
                     </div>
                     @endif
@@ -50,6 +51,7 @@
     <!-- Add Order -->
 
     <div class="row">
+        @if ($aplikasis->status_projek !== 'Selesai' || $aplikasis->status_projek !=='Ditolak')
 
         <div class="col-xl-6">
             <div class="card">
@@ -77,25 +79,40 @@
                             data-target="#modalTPA">Tolak Projek</button>
                         @endif
 
-                        @if ($aplikasis->status_aplikasi == 'Progres'||'Antrian')
+                        @if ($aplikasis->status_aplikasi == 'Progres'||$aplikasis->status_aplikasi == 'Antrian')
+                        @if(!$aplikasis->R_progres()->where('status', 'Analisis Kebutuhan')->exists())
                         <button type="button" class="btn btn-info  btn-lg light ml-2  mb-5 px-4" data-toggle="modal"
                             data-target="#modalAK">Analisis Kebutuhan</button>
-
+                        @endif
+                        @if(!$aplikasis->R_progres()->where('status', 'Coding')->exists())
                         <button type="button" class="btn btn-danger  btn-lg light mb-5  ml-2 px-4" data-toggle="modal"
                             data-target="#modalC">Coding</button>
-
+                        @endif
+                        @if(!$aplikasis->R_progres()->where('status', 'Testing')->exists())
                         <button type="button" class="btn btn-info  btn-lg light mb-5 ml-2 px-4" data-toggle="modal"
                             data-target="#modalT">Testing</button>
+                        @endif
+                        @if(!$aplikasis->R_progres()->where('status', 'UAT')->exists())
+
                         <button type="button" class="btn btn-info  btn-lg light  ml-2 px-4" data-toggle="modal"
                             data-target="#modalU">UAT</button>
+                        @endif
+                        @if($aplikasis->R_progres()->where('status', 'UAT')->exists())
+
+                        <button type="button" class="btn btn-success  btn-lg light  ml-2 px-4" data-toggle="modal"
+                            data-target="#modalS">Selesai</button>
+                        @endif
+
                         @endif
                     </div>
 
                 </div>
             </div>
         </div>
+        @endif
 
-        <div class="col-xl-6">
+        <div
+            class=" @if ($aplikasis->status_projek !== 'Selesai' || $aplikasis->status_projek !=='Ditolak') col-xl-6  @else col-xl-12  @endif">
             <div class="card">
                 <div class="card-body">
                     <div class="profile-tab">
@@ -104,9 +121,13 @@
                                 <li class="nav-item"><a href="#info-progres" data-toggle="tab"
                                         class="nav-link active show">Informasi Progres</a>
                                 </li>
+                                @if ($aplikasis->status_aplikasi == 'Ditolak' || $aplikasis->status_aplikasi ==
+                                'Inisiasi')
+                                @else
                                 <li class="nav-item"><a href="#tim-aplikasi" data-toggle="tab" class="nav-link">Tim
                                         Aplikasi</a>
                                 </li>
+                                @endif
                             </ul>
                             <div class="tab-content">
                                 <div id="info-progres" class="tab-pane fade active show">
@@ -121,7 +142,8 @@
                                                         @foreach ($aplikasis->R_progres as $item)
 
                                                         <li>
-                                                            <div class="timeline-badge info">
+                                                            <div
+                                                                class="timeline-badge  {{ $item->status == 'Ditolak' ? ' danger' :($item->status == 'Analisis Awal' ? 'warning' :($item->status == 'Disposisi Surat' ? 'info':($item->status == 'Selesai' ? 'success' :'primary'))  ) }}">
                                                             </div>
                                                             <a class="timeline-panel text-muted">
                                                                 <span>{{ $item->tanggal->format('d-m-Y') }}</span>
@@ -176,8 +198,8 @@
                                                     @endif
 
                                                     <div class="media-body">
-                                                        <h4 class="m-b-10"><span
-                                                                class="text-black">{{ $item->R_User->name }}</span></h4>
+                                                        <h4 class="m-b-10"><span class="text-black">{{
+                                                                $item->R_User->name }}</span></h4>
                                                         <h5 class="mb-3">{{ $item->role }}</h5>
                                                     </div>
 
@@ -196,6 +218,55 @@
             </div>
         </div>
 
+    </div>
+    <div wire:ignore.self class="modal fade" id="modalS">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Aplikasi Selesai</h3>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <form wire:submit.prevent='simpan_selesai'>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <input type="date" wire:model='selesai' class="form-control form-control-lg"
+                                    placeholder="masukkan tanggal progres selesai ">
+                                @error('selesai')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
+                                <div class="row">
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <div wire:ignore.self class="modal fade" id="modalDS">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -246,6 +317,7 @@
             </div>
         </div>
     </div>
+
     <div wire:ignore.self class="modal fade" id="modalTPA">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -260,7 +332,7 @@
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
                             <div class="col-lg-10">
                                 <input type="date" wire:model='tolak' class="form-control form-control-lg"
-                                    placeholder="masukkan tanggal progres disposisi surat">
+                                    placeholder="masukkan tanggal Tolak Projek Aplikasi">
                                 @error('tolak')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -322,7 +394,7 @@
                         <div class="form-group row">
                             <div class="col-lg-12">
                                 <input type="date" wire:model='analisis_awal' class="form-control form-control-lg"
-                                    placeholder="masukkan tanggal progres disposisi surat">
+                                    placeholder="masukkan tanggal progres Analisis Awal">
                                 @error('analisis_awal')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -528,20 +600,43 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form wire:submit.prevent='simpan_AK'>
+                    <div class="modal-body">
                         <div class="form-group row">
                             <div class="col-lg-12">
-                                <input type="text" class="form-control form-control-lg"
+                                <input type="date" wire:model='analisis_kebutuhan' class="form-control form-control-lg"
                                     placeholder="masukkan tanggal progres Analisis Kebutuhan">
+                                @error('analisis_kebutuhan')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
-                </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
+                                <div class="row">
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -553,20 +648,43 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form wire:submit.prevent='simpan_c'>
+                    <div class="modal-body">
                         <div class="form-group row">
                             <div class="col-lg-12">
-                                <input type="text" class="form-control form-control-lg"
-                                    placeholder="masukkan tanggal progres Coding">
+                                <input type="date" wire:model='coding' class="form-control form-control-lg"
+                                    placeholder="masukkan tanggal progres Analisis Kebutuhan">
+                                @error('coding')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
-                </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
+                                <div class="row">
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -578,28 +696,57 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form wire:submit.prevent='simpan_testing'>
+                    <div class="modal-body">
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-lg"
-                                    placeholder="masukkan tanggal testing">
+                                <input type="date" wire:model='testing' class="form-control form-control-lg"
+                                    placeholder="masukkan tanggal progres Analisis Kebutuhan">
+                                @error('testing')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Deskripsi BUG</label>
                             <div class="col-lg-10">
-                                <textarea class="form-control form-control-lg" rows="6" id="comment"
-                                    placeholder="masukkan deskripsi BUG"></textarea>
+                                <textarea wire:model='alasan_testing' class="form-control form-control-lg" rows="6"
+                                    id="comment" placeholder="masukkan deskripsi BUG"></textarea>
+                                @error('alasan_testing')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
-                </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 col-form-label font-bold ">Kirim Notifikasi?</label>
+                            <div class="col-lg-8">
+                                <div class="row">
+
+                                    <div>
+
+                                        <div class="switch">
+                                            <div class="switch__1">
+                                                <input wire:model='notif' id="switch-1" type="checkbox">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -611,101 +758,113 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form wire:submit.prevent='simpan_uat'>
+                    <div class="modal-body">
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Tanggal</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control form-control-lg"
-                                    placeholder="masukkan tanggal UAT">
+                                <input type="date" wire:model='uat' class="form-control form-control-lg"
+                                    placeholder="masukkan tanggal progres Analisis Kebutuhan">
+                                @error('uat')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Deskripsi BUG</label>
                             <div class="col-lg-10">
-                                <textarea class="form-control form-control-lg" rows="6" id="comment"
-                                    placeholder="masukkan deskripsi BUG"></textarea>
+                                <textarea wire:model='alasan_uat' class="form-control form-control-lg" rows="6"
+                                    id="comment" placeholder="masukkan deskripsi BUG"></textarea>
+                                @error('alasan_uat')
+                                <div class="invalid-feedback animated fadeInUp d-block">
+
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
-                    </form>
-                </div>
+                </form>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger light" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </div>
         </div>
     </div>
-    @push('css')
-    <style>
-        /* SWITCH */
-        .switch {
-            grid-column: 0.5;
-            display: grid;
-            grid-template-columns: repeat(2, min-content);
-            grid-gap: 0.5rem;
-            justify-self: center;
-        }
+</div>
+@push('css')
+<style>
+    /* SWITCH */
+    .switch {
+        grid-column: 0.5;
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        grid-gap: 0.5rem;
+        justify-self: center;
+    }
 
-        .switch input {
-            display: none;
-        }
+    .switch input {
+        display: none;
+    }
 
-        .switch__1,
-        .switch__2 {
-            width: 6rem;
-        }
+    .switch__1,
+    .switch__2 {
+        width: 6rem;
+    }
 
-        .switch__1 label,
-        .switch__2 label {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 2rem;
-            box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #fff;
-            background: rgba(255, 255, 255, 0);
-            position: relative;
-            cursor: pointer;
-            border-radius: 1.6rem;
-        }
+    .switch__1 label,
+    .switch__2 label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #fff;
+        background: rgba(255, 255, 255, 0);
+        position: relative;
+        cursor: pointer;
+        border-radius: 1.6rem;
+    }
 
-        .switch__1 label::after,
-        .switch__2 label::after {
-            content: "";
-            position: absolute;
-            left: 0.4rem;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background: #9baacf;
-            transition: all 0.4s ease;
-        }
+    .switch__1 label::after,
+    .switch__2 label::after {
+        content: "";
+        position: absolute;
+        left: 0.4rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #9baacf;
+        transition: all 0.4s ease;
+    }
 
-        .switch__1 label::before,
-        .switch__2 label::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            background: linear-gradient(330deg, #5b0eeb 0%, #6d5dfc 50%, #8abdff 100%);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
+    .switch__1 label::before,
+    .switch__2 label::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(330deg, #5b0eeb 0%, #6d5dfc 50%, #8abdff 100%);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
 
-        .switch input:checked~label::before {
-            opacity: 1;
-        }
+    .switch input:checked~label::before {
+        opacity: 1;
+    }
 
-        .switch input:checked~label::after {
-            left: 76%;
-            background: #e4ebf5;
-        }
-    </style>
-    @endpush
+    .switch input:checked~label::after {
+        left: 76%;
+        background: #e4ebf5;
+    }
+</style>
+@endpush
 
-    @push('js')
-    <script>
-        // document.addEventListener("livewire:load", function () {
+@push('js')
+<script>
+    // document.addEventListener("livewire:load", function () {
         //     // Inisialisasi Bootstrap Select pada elemen dengan ID mySelect
         //     $('#mySelect').selectpicker();
 
@@ -720,6 +879,9 @@
 
 
 
+            window.addEventListener('SELESAI', event => {
+            $("#modalS").modal('hide');
+            })
             window.addEventListener('UAT', event => {
             $("#modalU").modal('hide');
             })
@@ -744,6 +906,6 @@
             window.addEventListener('Disposisi-Surat', event => {
             $("#modalDS").modal('hide');
             })
-    </script>
-    @endpush
+</script>
+@endpush
 </div>

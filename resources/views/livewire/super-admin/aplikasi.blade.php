@@ -31,7 +31,7 @@
                                     <th>Tgl Mulai</th>
                                     <th>Tgl Selesai</th>
                                     <th>Deskripsi Aplikasi</th>
-                                    <th >Status</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,8 +53,8 @@
                                         )
                                     ) }}">{{ $item->prioritas }}</span></td>
                                     <td>
+                                        @if ($item->R_Tim->count() > 0)
                                         <div class="btn-group mb-1">
-                                            @if ($item->R_Tim->count() > 0)
                                             <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
                                                 data-toggle="dropdown">
                                                 {{ $item->R_Tim->count() }}
@@ -63,14 +63,14 @@
                                             <div class="dropdown-menu">
                                                 @foreach ( $item->R_Tim as $key)
 
-                                                <a class="dropdown-item">{{ $key->name }}</a>
+                                                <a class="dropdown-item">{{ $key->R_User->name }}</a>
                                                 @endforeach
                                                 {{-- <a class="dropdown-item" href="#">Another action</a>
                                                 <a class="dropdown-item" href="#">Something else here</a> --}}
 
                                             </div>
-                                            @endif
                                         </div>
+                                        @endif
                                     </td>
                                     <td>{{ ($item->tgl_mulai ? date('d m Y', strtotime($item->tgl_mulai)) : '') }}</td>
 

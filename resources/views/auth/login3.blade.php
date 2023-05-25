@@ -10,7 +10,7 @@
     <!--
 title tag
 -->
-    <title>KOMINFO</title>
+    <title>Dinas Komunikasi dan Informatika Kabupaten Magetan</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--
 favicon

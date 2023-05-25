@@ -12,7 +12,7 @@
     <!--
     title tag
     -->
-    <title>KOMINFO</title>
+    <title>Dinas Komunikasi dan Informatika Kabupaten Magetan</title>
 
     <!--
     favicon

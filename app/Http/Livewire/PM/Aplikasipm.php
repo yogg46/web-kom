@@ -51,7 +51,7 @@ class Aplikasipm extends Component
         'id_opd' => 'required',
         'deskripsi' => 'required',
         'type_projek' => 'required',
-        'cp' => 'required|numeric|digits:12',
+        'cp' => 'required|numeric|min_digits:12',
     ];
 
     protected $messages = [
@@ -61,7 +61,8 @@ class Aplikasipm extends Component
         'type_projek.required' => 'Kolom Jenis Projek wajib diisi.',
         'cp.required' => 'Kolom Contact Person wajib diisi.',
         'cp.numeric' => 'Kolom Contact Person harus berupa angka.',
-        'cp.digits' => 'Kolom Contact Person harus terdiri dari 12 digit.',
+        'cp.min_digits' => 'Kolom Contact Person harus memiliki panjang minimal 12 digit.',
+        // 'cp.min' => 'Kolom Contact Person harus terdiri dari 12 digit.',
     ];
 
     public function updated($field)
@@ -71,7 +72,7 @@ class Aplikasipm extends Component
             'id_opd' => 'required',
             'deskripsi' => 'required',
             'type_projek' => 'required',
-            'cp' => 'required|numeric|digits:12',
+            'cp' => 'required|numeric|min_digits:12',
 
         ]);
     }
