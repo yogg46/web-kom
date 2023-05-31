@@ -450,7 +450,8 @@ class ShowAplikasipm extends Component
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'no_urut' => null,
-            'tgl_selesai' => Carbon::now()
+            'tgl_selesai' => Carbon::now(),
+            'progres' => 100
         ]);
 
         Progres::create([

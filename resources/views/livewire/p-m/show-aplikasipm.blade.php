@@ -24,14 +24,14 @@
                 <div class="card-body">
                     <h3 class="text-bold">{{ $aplikasis->R_OPD->nama_opd }}</h3>
                     <p>{{ $aplikasis->deskripsi }}</p>
-                    @if ($aplikasis->status_aplikasi == 'Progres')
+                    @if ($aplikasis->status_aplikasi !== 'Inisiasi')
 
                     <div class="d-flex justify-content-between">
 
                         <div class="">Progress
                         </div>
                         <div class="form-group ">
-                            <input class="form-control form-control-sm text-black" type="number" placeholder=""
+                            <input {{ $aplikasis->status_projek == 'Selesai' ? 'readonly' : '' }} class="form-control form-control-sm text-black" type="number" placeholder=""
                                 wire:model.lazy='progres_apk' wire:change='updateProgres()' step="10" min="0" max="100"
                                 style="text-align: center;height: 30px;width: 60px">
                         </div>
