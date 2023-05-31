@@ -21,6 +21,7 @@ class Aplikasipm extends Component
     public $id_opd;
     public $type_projek;
     public $cp;
+
     public $notif = 0;
     public function updatingSearch()
     {
@@ -51,7 +52,7 @@ class Aplikasipm extends Component
         'id_opd' => 'required',
         'deskripsi' => 'required',
         'type_projek' => 'required',
-        'cp' => 'required|numeric|min_digits:12',
+        'cp' => 'required|numeric|min_digits:11',
     ];
 
     protected $messages = [
@@ -72,7 +73,7 @@ class Aplikasipm extends Component
             'id_opd' => 'required',
             'deskripsi' => 'required',
             'type_projek' => 'required',
-            'cp' => 'required|numeric|min_digits:12',
+            'cp' => 'required|numeric|min_digits:11',
 
         ]);
     }

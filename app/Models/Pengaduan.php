@@ -10,16 +10,25 @@ class Pengaduan extends Model
 {
     use HasFactory;
 
-    use Sluggable;
+    // use Sluggable;
 
     protected $guarded  = ['id'];
 
-    public function sluggable(): array
+    // public function sluggable(): array
+    // {
+    //     return [
+    //         'slug' => [
+    //             'source' => 'nama_pengaduan'
+    //         ]
+    //     ];
+    // }
+    public function R_Aplikasi()
     {
-        return [
-            'slug' => [
-                'source' => 'nama_pengaduan'
-            ]
-        ];
+        # code...
+        return $this->belongsTo(Aplikasi::class, 'id_aplikasi');
     }
+    protected $casts=[
+        'tgl_mulai'=>'datetime',
+        'tgl_selesai'=>'datetime',
+    ];
 }

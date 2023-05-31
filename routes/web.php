@@ -3,6 +3,8 @@
 use App\Http\Controllers\WhatappsGateway;
 use App\Http\Livewire\PM\Antrian;
 use App\Http\Livewire\PM\Aplikasipm;
+use App\Http\Livewire\PM\Maintenance;
+use App\Http\Livewire\PM\Perbaikan;
 use App\Http\Livewire\PM\ShowAplikasipm;
 use App\Http\Livewire\SuperAdmin\Aplikasi;
 use App\Http\Livewire\SuperAdmin\ODP;
@@ -56,17 +58,11 @@ Route::middleware(['auth', 'checkRole:Project Manager'])->group(function () {
     Route::get('/aplikasi-pm', Aplikasipm::class)->name('aplikasi-pm');
 
     Route::get('/aplikasi/{slug}', ShowAplikasipm::class)->name('show-aplikasi');
+    Route::get('/maintenance', Maintenance::class)->name('maintenance');
+    Route::get('/perbaikan', Perbaikan::class)->name('perbaikan');
 });
 
 // Route::get('/aplikasi-m/show-progress', function () {
 //     $tittle = 'Aplikasi';
 //     return view('show-aplikasi-progress', compact('tittle'));
 // });
-Route::get('/maintenance', function () {
-    $tittle = 'Maintenance';
-    return view('maintenance', compact('tittle'));
-});
-Route::get('/perbaikan', function () {
-    $tittle = 'Perbaikan';
-    return view('perbaikan', compact('tittle'));
-});

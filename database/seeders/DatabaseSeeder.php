@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             opdSeeder::class,
-            // AplikasiSeeder::class,
+            AplikasiSeeder::class,
         ]);
     }
 }

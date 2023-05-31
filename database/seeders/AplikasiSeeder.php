@@ -27,6 +27,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -38,6 +39,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -49,6 +51,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -60,6 +63,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -71,6 +75,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -82,6 +87,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -93,6 +99,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -104,6 +111,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -115,6 +123,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -126,6 +135,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -137,6 +147,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Antrian',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -148,6 +159,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -159,6 +171,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Antrian',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -170,6 +183,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -181,6 +195,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -192,6 +207,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -203,6 +219,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -214,6 +231,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -225,6 +243,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -236,6 +255,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -247,6 +267,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -258,6 +279,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -269,6 +291,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -280,6 +303,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -291,6 +315,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -302,6 +327,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -313,6 +339,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -324,6 +351,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -335,6 +363,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -346,6 +375,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -357,6 +387,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -368,6 +399,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -379,6 +411,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -390,6 +423,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -401,6 +435,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -412,6 +447,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -423,6 +459,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -434,6 +471,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -445,6 +483,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -456,6 +495,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -467,6 +507,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -478,6 +519,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -489,6 +531,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -500,6 +543,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -511,6 +555,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -522,6 +567,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -533,6 +579,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -544,6 +591,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -555,6 +603,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -566,6 +615,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -577,6 +627,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -588,6 +639,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -599,6 +651,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -610,6 +663,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -621,6 +675,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -632,6 +687,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -643,6 +699,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -654,6 +711,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Antrian',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -665,6 +723,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Antrian',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -676,6 +735,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -687,6 +747,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -698,6 +759,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -709,6 +771,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -720,6 +783,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -731,6 +795,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -742,6 +807,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Antrian',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -753,6 +819,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -764,6 +831,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -775,6 +843,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -786,6 +855,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
         Aplikasi::create([
@@ -797,6 +867,7 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Progres',
             'type_aplikasi' => 'Aplikasi',
+            'progres' => 100,
         ]);
 
 
@@ -805,7 +876,8 @@ class AplikasiSeeder extends Seeder
         // =========================== WEB OPD ===============================
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bpbj.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bpbj.magetan.go.id',
             'deskripsi' => 'Web OPD bagian pengadaan barang dan jasa',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -815,7 +887,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'ekonomi.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'ekonomi.magetan.go.id',
             'deskripsi' => 'Web OPD bagian perekonomian',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -825,7 +898,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'kesrasetda.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'kesrasetda.magetan.go.id',
             'deskripsi' => 'Web OPD bagian administrasi dan kesejahteraan rakyat',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -835,7 +909,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'humasprotokol.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'humasprotokol.magetan.go.id',
             'deskripsi' => 'Web OPD bagian humas',
             'status_aplikasi' => 'Tidak Aktif',
             'keterangan' => ' ',
@@ -845,7 +920,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'tapem.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'tapem.magetan.go.id',
             'deskripsi' => 'Web OPD tata Pemerintahan',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -855,7 +931,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'organisasi.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'organisasi.magetan.go.id',
             'deskripsi' => 'Web OPD bagian organisasi',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -865,7 +942,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'inspektorat.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'inspektorat.magetan.go.id',
             'deskripsi' => 'WEB OPD inspektorat',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -875,7 +953,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bappedalitbang.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bappedalitbang.magetan.go.id',
             'deskripsi' => 'Web OPD bappeda litbang',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -885,7 +964,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bakesbangpol.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bakesbangpol.magetan.go.id',
             'deskripsi' => 'Web OPD Bakesbangpol',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -895,7 +975,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bkd.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bkd.magetan.go.id',
             'deskripsi' => 'Web OPD Badan KepegawaianDaerah',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -905,7 +986,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dpmd.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dpmd.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Pemberdayaan Masyarakat dan desa',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -915,7 +997,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dppkbpppa.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dppkbpppa.magetan.go.id',
             'deskripsi' => 'Web OPD DPP KB PP PA',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -925,7 +1008,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dlh.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dlh.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Lingkungan Hidup',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -935,7 +1019,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'kominfo.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'kominfo.magetan.go.id',
             'deskripsi' => 'Web OPD DISKOMINFO',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -945,7 +1030,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bppkad.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bppkad.magetan.go.id',
             'deskripsi' => 'Web OPD BPPKAD',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -955,7 +1041,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dispenduk.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dispenduk.magetan.go.id',
             'deskripsi' => 'Web OPD DISPENDUK',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -965,7 +1052,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dinkes.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dinkes.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Kesehatan',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -975,7 +1063,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'disperindag.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'disperindag.magetan.go.id',
             'deskripsi' => 'Web OPD DISPERINDAG',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -985,7 +1074,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'tphpkp.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'tphpkp.magetan.go.id',
             'deskripsi' => 'Web OPD TPHPKP',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -995,7 +1085,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'disnaker.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'disnaker.magetan.go.id',
             'deskripsi' => 'Web OPD DISNAKER',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1005,7 +1096,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'pupr.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'pupr.magetan.go.id',
             'deskripsi' => 'Web OPD PUPR',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1015,7 +1107,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dishub.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dishub.magetan.go.id',
             'deskripsi' => 'Web OPD Dishub',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1025,7 +1118,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'disnakkan.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'disnakkan.magetan.go.id',
             'deskripsi' => 'Web OPD DISNAKKAN',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1035,7 +1129,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dinaspkp.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dinaspkp.magetan.go.id',
             'deskripsi' => 'Web OPD PERKIM',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1045,7 +1140,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dikpora.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dikpora.magetan.go.id',
             'deskripsi' => 'Web OPD DIKPORA',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1055,7 +1151,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dinsos.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dinsos.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Sosial',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1065,7 +1162,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'wisatadanbudaya.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'wisatadanbudaya.magetan.go.id',
             'deskripsi' => 'Web OPD DISPARBUD',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1075,7 +1173,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dinkopum.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dinkopum.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Koperasi dan Usaha Mikro',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1085,7 +1184,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bpbd.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bpbd.magetan.go.id',
             'deskripsi' => 'Web OPD BPBD',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1095,7 +1195,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'arpus.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'arpus.magetan.go.id',
             'deskripsi' => 'Web OPD Dinas Kearsipan dan Perpustakaan',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1105,7 +1206,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'dpmptsp.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'dpmptsp.magetan.go.id',
             'deskripsi' => 'Web OPD DPMPTSP',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1115,7 +1217,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'satpolppdamkar.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'satpolppdamkar.magetan.go.id',
             'deskripsi' => 'Web OPD SATPOLPPDAMKAR',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1125,7 +1228,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'rsud.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'rsud.magetan.go.id',
             'deskripsi' => 'Web OPD RSUD Dr. Sayidiman',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1135,7 +1239,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'magetankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'magetankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Magetan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1145,7 +1250,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'panekankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'panekankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Panekan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1155,7 +1261,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'plaosankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'plaosankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Plaosan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1165,7 +1272,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'poncolkec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'poncolkec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Poncol',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1175,7 +1283,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'parangkec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'parangkec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Parang',
             'status_aplikasi' => 'Tidak Aktif',
             'keterangan' => ' ',
@@ -1185,7 +1294,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'lembeyankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'lembeyankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Lembeyan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1195,7 +1305,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'kawedanankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'kawedanankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Kawedanan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1205,7 +1316,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'takerankec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'takerankec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Takeran',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1215,7 +1327,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'bendokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'bendokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Bendo',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1225,7 +1338,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'maospatikec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'maospatikec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Maospati',
             'status_aplikasi' => 'Tidak Aktif',
             'keterangan' => ' ',
@@ -1235,7 +1349,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'baratkec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'baratkec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Barat',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1245,7 +1360,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'karangrejokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'karangrejokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Karangrejo',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1255,7 +1371,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'kartoharjokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'kartoharjokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Kartoharjo',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1265,7 +1382,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'karaskec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'karaskec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Karas',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1275,7 +1393,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'sukomorokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'sukomorokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Sukomoro',
             'status_aplikasi' => 'Running',
             'keterangan' => ' ',
@@ -1285,7 +1404,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'ngariboyokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'ngariboyokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Ngariboyo',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1295,7 +1415,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'nguntoronadikec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'nguntoronadikec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Nguntoronadi',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1305,7 +1426,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'sidorejokec.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'sidorejokec.magetan.go.id',
             'deskripsi' => 'Web OPD Kecamatan Sidorejo',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1315,7 +1437,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'puskesmas-goranggarengtaji.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'puskesmas-goranggarengtaji.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Taji Gorang Gareng',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1325,7 +1448,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'puskesmas-takeran.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'puskesmas-takeran.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Takeran',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Masih Development',
@@ -1335,7 +1459,8 @@ class AplikasiSeeder extends Seeder
 
         Aplikasi::create([
             'type_aplikasi' => 'WEB',
-            'nama_aplikasi' => 'puskesmas-kawedanan.magetan.go.id',
+
+            'progres' => 100,        'nama_aplikasi' => 'puskesmas-kawedanan.magetan.go.id',
             'deskripsi' => 'Web Puskesmas Kawedanan',
             'status_aplikasi' => 'Running',
             'keterangan' => 'Tidak update',
@@ -1353,7 +1478,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Widorokandang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Widorokandang',
         ]);
 
         Aplikasi::create([
@@ -1362,7 +1488,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sidokerto',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sidokerto',
         ]);
 
         Aplikasi::create([
@@ -1371,7 +1498,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumbersawit',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumbersawit',
         ]);
 
         Aplikasi::create([
@@ -1380,7 +1508,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sidomulyo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sidomulyo',
         ]);
 
         Aplikasi::create([
@@ -1389,7 +1518,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Getasanyar',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Getasanyar',
         ]);
 
         Aplikasi::create([
@@ -1398,7 +1528,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sidorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sidorejo',
         ]);
 
         Aplikasi::create([
@@ -1407,7 +1538,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Durenan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Durenan',
         ]);
 
         Aplikasi::create([
@@ -1416,7 +1548,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kalang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kalang',
         ]);
 
         Aplikasi::create([
@@ -1425,7 +1558,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Campursari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Campursari',
         ]);
 
         Aplikasi::create([
@@ -1434,7 +1568,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sambirobyong',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sambirobyong',
         ]);
 
         Aplikasi::create([
@@ -1443,7 +1578,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Driyorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Driyorejo',
         ]);
 
         Aplikasi::create([
@@ -1452,7 +1588,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kenongomulyo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kenongomulyo',
         ]);
 
         Aplikasi::create([
@@ -1461,7 +1598,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Purworejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Purworejo',
         ]);
 
         Aplikasi::create([
@@ -1470,7 +1608,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Simbatan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Simbatan',
         ]);
 
         Aplikasi::create([
@@ -1479,7 +1618,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Nguntoronadi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Nguntoronadi',
         ]);
 
         Aplikasi::create([
@@ -1488,7 +1628,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Petungrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Petungrejo',
         ]);
 
         Aplikasi::create([
@@ -1497,7 +1638,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Goranggareng',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Goranggareng',
         ]);
 
         Aplikasi::create([
@@ -1506,7 +1648,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Semen',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Semen',
         ]);
 
         Aplikasi::create([
@@ -1515,7 +1658,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sukowidi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sukowidi',
         ]);
 
         Aplikasi::create([
@@ -1524,7 +1668,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Banjarejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Banjarejo',
         ]);
 
         Aplikasi::create([
@@ -1533,7 +1678,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Banjarpanjang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Banjarpanjang',
         ]);
 
         Aplikasi::create([
@@ -1542,7 +1688,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Banyudono',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Banyudono',
         ]);
 
         Aplikasi::create([
@@ -1551,7 +1698,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mojopurno',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mojopurno',
         ]);
 
         Aplikasi::create([
@@ -1560,7 +1708,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngariboyo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngariboyo',
         ]);
 
         Aplikasi::create([
@@ -1569,7 +1718,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Balegondo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Balegondo',
         ]);
 
         Aplikasi::create([
@@ -1578,7 +1728,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Baleasri',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Baleasri',
         ]);
 
         Aplikasi::create([
@@ -1587,7 +1738,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumberdukun',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumberdukun',
         ]);
 
         Aplikasi::create([
@@ -1596,7 +1748,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Selopanggung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Selopanggung',
         ]);
 
         Aplikasi::create([
@@ -1605,7 +1758,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bangsri',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bangsri',
         ]);
 
         Aplikasi::create([
@@ -1614,7 +1768,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pendem',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pendem',
         ]);
 
         Aplikasi::create([
@@ -1623,7 +1778,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Selotinatah',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Selotinatah',
         ]);
 
         Aplikasi::create([
@@ -1632,7 +1788,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Karangmojo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Karangmojo',
         ]);
 
         Aplikasi::create([
@@ -1641,7 +1798,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bayemtaman',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bayemtaman',
         ]);
 
         Aplikasi::create([
@@ -1650,7 +1808,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bayemwetan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bayemwetan',
         ]);
 
         Aplikasi::create([
@@ -1659,7 +1818,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jeruk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jeruk',
         ]);
 
         Aplikasi::create([
@@ -1668,7 +1828,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Gunungan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Gunungan',
         ]);
 
         Aplikasi::create([
@@ -1677,7 +1838,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jajar',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jajar',
         ]);
 
         Aplikasi::create([
@@ -1686,7 +1848,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngelang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngelang',
         ]);
 
         Aplikasi::create([
@@ -1695,7 +1858,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sukowidi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sukowidi',
         ]);
 
         Aplikasi::create([
@@ -1704,7 +1868,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pencol',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pencol',
         ]);
 
         Aplikasi::create([
@@ -1713,7 +1878,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Klurahan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Klurahan',
         ]);
 
         Aplikasi::create([
@@ -1722,7 +1888,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mrahu',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mrahu',
         ]);
 
         Aplikasi::create([
@@ -1731,7 +1898,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kartoharjo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kartoharjo',
         ]);
 
         Aplikasi::create([
@@ -1740,7 +1908,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ginuk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ginuk',
         ]);
 
         Aplikasi::create([
@@ -1749,7 +1918,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Botok',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Botok',
         ]);
 
         Aplikasi::create([
@@ -1758,7 +1928,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Geplak',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Geplak',
         ]);
 
         Aplikasi::create([
@@ -1767,7 +1938,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Temenggungan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Temenggungan',
         ]);
 
         Aplikasi::create([
@@ -1776,7 +1948,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Temboro',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Temboro',
         ]);
 
         Aplikasi::create([
@@ -1785,7 +1958,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jungke',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jungke',
         ]);
 
         Aplikasi::create([
@@ -1794,7 +1968,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kuwon',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kuwon',
         ]);
 
         Aplikasi::create([
@@ -1803,7 +1978,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Taji',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Taji',
         ]);
 
         Aplikasi::create([
@@ -1812,7 +1988,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumursongo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumursongo',
         ]);
 
         Aplikasi::create([
@@ -1821,7 +1998,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sobontoro',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sobontoro',
         ]);
 
         Aplikasi::create([
@@ -1830,7 +2008,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Karas',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Karas',
         ]);
 
         Aplikasi::create([
@@ -1839,7 +2018,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kauman',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kauman',
         ]);
 
         Aplikasi::create([
@@ -1848,7 +2028,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Grabahan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Grabahan',
         ]);
 
         Aplikasi::create([
@@ -1857,7 +2038,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Prampelan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Prampelan',
         ]);
 
         Aplikasi::create([
@@ -1866,7 +2048,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Maron',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Maron',
         ]);
 
         Aplikasi::create([
@@ -1875,7 +2058,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Gebyog',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Gebyog',
         ]);
 
         Aplikasi::create([
@@ -1884,7 +2068,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Baluk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Baluk',
         ]);
 
         Aplikasi::create([
@@ -1893,7 +2078,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pelem',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pelem',
         ]);
 
         Aplikasi::create([
@@ -1902,7 +2088,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Manisrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Manisrejo',
         ]);
 
         Aplikasi::create([
@@ -1911,7 +2098,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Patihan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Patihan',
         ]);
 
         Aplikasi::create([
@@ -1920,7 +2108,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sambirembe',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sambirembe',
         ]);
 
         Aplikasi::create([
@@ -1929,7 +2118,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Gondang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Gondang',
         ]);
 
         Aplikasi::create([
@@ -1938,7 +2128,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mantren',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mantren',
         ]);
 
         Aplikasi::create([
@@ -1947,7 +2138,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Karangrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Karangrejo',
         ]);
 
         Aplikasi::create([
@@ -1956,7 +2148,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Klagen',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Klagen',
         ]);
 
         Aplikasi::create([
@@ -1965,7 +2158,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bangunasri',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bangunasri',
         ]);
 
         Aplikasi::create([
@@ -1974,7 +2168,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Rejomulyo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Rejomulyo',
         ]);
 
         Aplikasi::create([
@@ -1983,7 +2178,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jonggrang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jonggrang',
         ]);
 
         Aplikasi::create([
@@ -1992,7 +2188,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Blaran',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Blaran',
         ]);
 
         Aplikasi::create([
@@ -2001,7 +2198,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Panggung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Panggung',
         ]);
 
         Aplikasi::create([
@@ -2010,7 +2208,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngumpul',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngumpul',
         ]);
 
         Aplikasi::create([
@@ -2019,7 +2218,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Manjung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Manjung',
         ]);
 
         Aplikasi::create([
@@ -2028,7 +2228,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Tebon',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Tebon',
         ]);
 
         Aplikasi::create([
@@ -2037,7 +2238,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Mangge',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Mangge',
         ]);
 
         Aplikasi::create([
@@ -2046,7 +2248,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Purwodadi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Purwodadi',
         ]);
 
         Aplikasi::create([
@@ -2055,7 +2258,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Karangsono',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Karangsono',
         ]);
 
         Aplikasi::create([
@@ -2064,7 +2268,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Banjarejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Banjarejo',
         ]);
 
         Aplikasi::create([
@@ -2073,7 +2278,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bogorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bogorejo',
         ]);
 
         Aplikasi::create([
@@ -2082,7 +2288,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sempol',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sempol',
         ]);
 
         Aplikasi::create([
@@ -2091,7 +2298,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Mranggen',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Mranggen',
         ]);
 
         Aplikasi::create([
@@ -2100,7 +2308,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Kraton',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Kraton',
         ]);
 
         Aplikasi::create([
@@ -2109,7 +2318,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pesu',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pesu',
         ]);
 
         Aplikasi::create([
@@ -2118,7 +2328,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumberejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumberejo',
         ]);
 
         Aplikasi::create([
@@ -2127,7 +2338,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngujung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngujung',
         ]);
 
         Aplikasi::create([
@@ -2136,7 +2348,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ronowijayan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ronowijayan',
         ]);
 
         Aplikasi::create([
@@ -2145,7 +2358,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Suratmajan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Suratmajan',
         ]);
 
         Aplikasi::create([
@@ -2154,7 +2368,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pandeyan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pandeyan',
         ]);
 
         Aplikasi::create([
@@ -2163,7 +2378,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Klagen Gambiran',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Klagen Gambiran',
         ]);
 
         Aplikasi::create([
@@ -2172,7 +2388,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Maospati',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Maospati',
         ]);
 
         Aplikasi::create([
@@ -2181,7 +2398,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Malang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Malang',
         ]);
 
         Aplikasi::create([
@@ -2190,7 +2408,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Gulun',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Gulun',
         ]);
 
         Aplikasi::create([
@@ -2199,7 +2418,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tanjungsepreh',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tanjungsepreh',
         ]);
 
         Aplikasi::create([
@@ -2208,7 +2428,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sugihwaras',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sugihwaras',
         ]);
 
         Aplikasi::create([
@@ -2217,7 +2438,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kleco',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kleco',
         ]);
 
         Aplikasi::create([
@@ -2226,7 +2448,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Setren',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Setren',
         ]);
 
         Aplikasi::create([
@@ -2235,7 +2458,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Duwet',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Duwet',
         ]);
 
         Aplikasi::create([
@@ -2244,7 +2468,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bulugledeg',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bulugledeg',
         ]);
 
         Aplikasi::create([
@@ -2253,7 +2478,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Bendo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Bendo',
         ]);
 
         Aplikasi::create([
@@ -2262,7 +2488,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Carikan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Carikan',
         ]);
 
         Aplikasi::create([
@@ -2271,7 +2498,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kledokan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kledokan',
         ]);
 
         Aplikasi::create([
@@ -2280,7 +2508,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Lemahbang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Lemahbang',
         ]);
 
         Aplikasi::create([
@@ -2289,7 +2518,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Soco',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Soco',
         ]);
 
         Aplikasi::create([
@@ -2298,7 +2528,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kinandang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kinandang',
         ]);
 
         Aplikasi::create([
@@ -2307,7 +2538,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bulak',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bulak',
         ]);
 
         Aplikasi::create([
@@ -2316,7 +2548,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tegalarum',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tegalarum',
         ]);
 
         Aplikasi::create([
@@ -2325,7 +2558,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tanjung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tanjung',
         ]);
 
         Aplikasi::create([
@@ -2334,7 +2568,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pingkuk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pingkuk',
         ]);
 
         Aplikasi::create([
@@ -2343,7 +2578,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Belotan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Belotan',
         ]);
 
         Aplikasi::create([
@@ -2352,7 +2588,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Dukuh',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Dukuh',
         ]);
 
         Aplikasi::create([
@@ -2361,7 +2598,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Truneng',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Truneng',
         ]);
 
         Aplikasi::create([
@@ -2370,7 +2608,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bogem',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bogem',
         ]);
 
         Aplikasi::create([
@@ -2379,7 +2618,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kentangan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kentangan',
         ]);
 
         Aplikasi::create([
@@ -2388,7 +2628,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kembangan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kembangan',
         ]);
 
         Aplikasi::create([
@@ -2397,7 +2638,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kedungguwo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kedungguwo',
         ]);
 
         Aplikasi::create([
@@ -2406,7 +2648,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Tinap',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Tinap',
         ]);
 
         Aplikasi::create([
@@ -2415,7 +2658,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pojoksari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pojoksari',
         ]);
 
         Aplikasi::create([
@@ -2424,7 +2668,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bulu',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bulu',
         ]);
 
         Aplikasi::create([
@@ -2433,7 +2678,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sukomoro',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sukomoro',
         ]);
 
         Aplikasi::create([
@@ -2442,7 +2688,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bibis',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bibis',
         ]);
 
         Aplikasi::create([
@@ -2451,7 +2698,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bandar',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bandar',
         ]);
 
         Aplikasi::create([
@@ -2460,7 +2708,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tambakmas',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tambakmas',
         ]);
 
         Aplikasi::create([
@@ -2469,7 +2718,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tamanan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tamanan',
         ]);
 
         Aplikasi::create([
@@ -2478,7 +2728,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kalangketi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kalangketi',
         ]);
 
         Aplikasi::create([
@@ -2487,7 +2738,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Banjarejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Banjarejo',
         ]);
 
         Aplikasi::create([
@@ -2496,7 +2748,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Turi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Turi',
         ]);
 
         Aplikasi::create([
@@ -2505,7 +2758,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Rejomulyo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Rejomulyo',
         ]);
 
         Aplikasi::create([
@@ -2514,7 +2768,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jabung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jabung',
         ]);
 
         Aplikasi::create([
@@ -2523,7 +2778,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngiliran',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngiliran',
         ]);
 
         Aplikasi::create([
@@ -2532,7 +2788,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bedagung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bedagung',
         ]);
 
         Aplikasi::create([
@@ -2541,7 +2798,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sukowidi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sukowidi',
         ]);
 
         Aplikasi::create([
@@ -2550,7 +2808,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tapak',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tapak',
         ]);
 
         Aplikasi::create([
@@ -2559,7 +2818,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Manjung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Manjung',
         ]);
 
         Aplikasi::create([
@@ -2568,7 +2828,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumberdodol',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumberdodol',
         ]);
 
         Aplikasi::create([
@@ -2577,7 +2838,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tanjungsari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tanjungsari',
         ]);
 
         Aplikasi::create([
@@ -2586,7 +2848,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Panekan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Panekan',
         ]);
 
         Aplikasi::create([
@@ -2595,7 +2858,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sidowayah',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sidowayah',
         ]);
 
         Aplikasi::create([
@@ -2604,7 +2868,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Wates',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Wates',
         ]);
 
         Aplikasi::create([
@@ -2613,7 +2878,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Milangasri',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Milangasri',
         ]);
 
         Aplikasi::create([
@@ -2622,7 +2888,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Cepoko',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Cepoko',
         ]);
 
         Aplikasi::create([
@@ -2631,7 +2898,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Terung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Terung',
         ]);
 
         Aplikasi::create([
@@ -2640,7 +2908,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sendangagung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sendangagung',
         ]);
 
         Aplikasi::create([
@@ -2649,7 +2918,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pacalan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pacalan',
         ]);
 
         Aplikasi::create([
@@ -2658,7 +2928,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Sarangan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Sarangan',
         ]);
 
         Aplikasi::create([
@@ -2667,7 +2938,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Dadi',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Dadi',
         ]);
 
         Aplikasi::create([
@@ -2676,7 +2948,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Plaosan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Plaosan',
         ]);
 
         Aplikasi::create([
@@ -2685,7 +2958,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Buluharjo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Buluharjo',
         ]);
 
         Aplikasi::create([
@@ -2694,7 +2968,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sidomukti',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sidomukti',
         ]);
 
         Aplikasi::create([
@@ -2703,7 +2978,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Nitikan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Nitikan',
         ]);
 
         Aplikasi::create([
@@ -2712,7 +2988,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sumberagung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sumberagung',
         ]);
 
         Aplikasi::create([
@@ -2721,7 +2998,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Randugede',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Randugede',
         ]);
 
         Aplikasi::create([
@@ -2730,7 +3008,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bogoarum',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bogoarum',
         ]);
 
         Aplikasi::create([
@@ -2739,7 +3018,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bulugunung (bulugunung)',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bulugunung (bulugunung)',
         ]);
 
         Aplikasi::create([
@@ -2748,7 +3028,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Puntukdoro',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Puntukdoro',
         ]);
 
         Aplikasi::create([
@@ -2757,7 +3038,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Plumpung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Plumpung',
         ]);
 
         Aplikasi::create([
@@ -2766,7 +3048,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngancar',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngancar',
         ]);
 
         Aplikasi::create([
@@ -2775,7 +3058,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Purwosari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Purwosari',
         ]);
 
         Aplikasi::create([
@@ -2784,7 +3068,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Baron',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Baron',
         ]);
 
         Aplikasi::create([
@@ -2793,7 +3078,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Tambran',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Tambran',
         ]);
 
         Aplikasi::create([
@@ -2802,7 +3088,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Kebonagung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Kebonagung',
         ]);
 
         Aplikasi::create([
@@ -2811,7 +3098,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Sukowinangun',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Sukowinangun',
         ]);
 
         Aplikasi::create([
@@ -2820,7 +3108,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Kepolorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Kepolorejo',
         ]);
 
         Aplikasi::create([
@@ -2829,7 +3118,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Tawanganom',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Tawanganom',
         ]);
 
         Aplikasi::create([
@@ -2838,7 +3128,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Selosari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Selosari',
         ]);
 
         Aplikasi::create([
@@ -2847,7 +3138,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Candirejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Candirejo',
         ]);
 
         Aplikasi::create([
@@ -2856,7 +3148,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ringinagung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ringinagung',
         ]);
 
         Aplikasi::create([
@@ -2865,7 +3158,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Magetan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Magetan',
         ]);
 
         Aplikasi::create([
@@ -2874,7 +3168,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Bulukerto',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Bulukerto',
         ]);
 
         Aplikasi::create([
@@ -2883,7 +3178,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Mangkujayan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Mangkujayan',
         ]);
 
         Aplikasi::create([
@@ -2892,7 +3188,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tambakrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tambakrejo',
         ]);
 
         Aplikasi::create([
@@ -2901,7 +3198,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mojorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mojorejo',
         ]);
 
         Aplikasi::create([
@@ -2910,7 +3208,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Genengan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Genengan',
         ]);
 
         Aplikasi::create([
@@ -2919,7 +3218,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Karangrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Karangrejo',
         ]);
 
         Aplikasi::create([
@@ -2928,7 +3228,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngadirejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngadirejo',
         ]);
 
         Aplikasi::create([
@@ -2937,7 +3238,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sugihrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sugihrejo',
         ]);
 
         Aplikasi::create([
@@ -2946,7 +3248,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Selorejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Selorejo',
         ]);
 
         Aplikasi::create([
@@ -2955,7 +3258,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jambangan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jambangan',
         ]);
 
         Aplikasi::create([
@@ -2964,7 +3268,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bogem',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bogem',
         ]);
 
         Aplikasi::create([
@@ -2973,7 +3278,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Sampung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Sampung',
         ]);
 
         Aplikasi::create([
@@ -2982,7 +3288,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Rejosari',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Rejosari',
         ]);
 
         Aplikasi::create([
@@ -2991,7 +3298,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Kawedanan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Kawedanan',
         ]);
 
         Aplikasi::create([
@@ -3000,7 +3308,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tulung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tulung',
         ]);
 
         Aplikasi::create([
@@ -3009,7 +3318,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngunut',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngunut',
         ]);
 
         Aplikasi::create([
@@ -3018,7 +3328,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pojok',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pojok',
         ]);
 
         Aplikasi::create([
@@ -3027,7 +3338,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tladan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tladan',
         ]);
 
         Aplikasi::create([
@@ -3036,7 +3348,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Garon',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Garon',
         ]);
 
         Aplikasi::create([
@@ -3045,7 +3358,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Balerejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Balerejo',
         ]);
 
         Aplikasi::create([
@@ -3054,7 +3368,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngentep',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngentep',
         ]);
 
         Aplikasi::create([
@@ -3063,7 +3378,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Giripurno',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Giripurno',
         ]);
 
         Aplikasi::create([
@@ -3072,7 +3388,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mangunrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mangunrejo',
         ]);
 
         Aplikasi::create([
@@ -3081,7 +3398,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Madigondo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Madigondo',
         ]);
 
         Aplikasi::create([
@@ -3090,7 +3408,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kerang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kerang',
         ]);
 
         Aplikasi::create([
@@ -3099,7 +3418,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Jomblang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Jomblang',
         ]);
 
         Aplikasi::create([
@@ -3108,7 +3428,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Waduk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Waduk',
         ]);
 
         Aplikasi::create([
@@ -3117,7 +3438,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kerik',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kerik',
         ]);
 
         Aplikasi::create([
@@ -3126,7 +3448,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kepuhrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kepuhrejo',
         ]);
 
         Aplikasi::create([
@@ -3135,7 +3458,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kuwonharjo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kuwonharjo',
         ]);
 
         Aplikasi::create([
@@ -3144,7 +3468,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Takeran',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Takeran',
         ]);
 
         Aplikasi::create([
@@ -3153,7 +3478,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sawojajar',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sawojajar',
         ]);
 
         Aplikasi::create([
@@ -3162,7 +3488,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tawangrejo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tawangrejo',
         ]);
 
         Aplikasi::create([
@@ -3171,7 +3498,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Duyung',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Duyung',
         ]);
 
         Aplikasi::create([
@@ -3180,7 +3508,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kiringan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kiringan',
         ]);
 
         Aplikasi::create([
@@ -3189,7 +3518,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Krowe',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Krowe',
         ]);
 
         Aplikasi::create([
@@ -3198,7 +3528,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tapen',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tapen',
         ]);
 
         Aplikasi::create([
@@ -3207,7 +3538,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pupus',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pupus',
         ]);
 
         Aplikasi::create([
@@ -3216,7 +3548,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Nguri',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Nguri',
         ]);
 
         Aplikasi::create([
@@ -3225,7 +3558,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kedungpanji',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kedungpanji',
         ]);
 
         Aplikasi::create([
@@ -3234,7 +3568,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Dukuh',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Dukuh',
         ]);
 
         Aplikasi::create([
@@ -3243,7 +3578,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tunggur',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tunggur',
         ]);
 
         Aplikasi::create([
@@ -3252,7 +3588,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Lembeyan Wetan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Lembeyan Wetan',
         ]);
 
         Aplikasi::create([
@@ -3261,7 +3598,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Lembeyan Kulon',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Lembeyan Kulon',
         ]);
 
         Aplikasi::create([
@@ -3270,7 +3608,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Kediren',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Kediren',
         ]);
 
         Aplikasi::create([
@@ -3279,7 +3618,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Krajan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Krajan',
         ]);
 
         Aplikasi::create([
@@ -3288,7 +3628,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Joketro',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Joketro',
         ]);
 
         Aplikasi::create([
@@ -3297,7 +3638,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sundul',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sundul',
         ]);
 
         Aplikasi::create([
@@ -3306,7 +3648,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Pragak',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Pragak',
         ]);
 
         Aplikasi::create([
@@ -3315,7 +3658,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Tamanarum',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Tamanarum',
         ]);
 
         Aplikasi::create([
@@ -3324,7 +3668,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Parang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Parang',
         ]);
 
         Aplikasi::create([
@@ -3333,7 +3678,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngaglik',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngaglik',
         ]);
 
         Aplikasi::create([
@@ -3342,7 +3688,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Ngunut',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Ngunut',
         ]);
 
         Aplikasi::create([
@@ -3351,7 +3698,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Trosono',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Trosono',
         ]);
 
         Aplikasi::create([
@@ -3360,7 +3708,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Bungkuk',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Bungkuk',
         ]);
 
         Aplikasi::create([
@@ -3369,7 +3718,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Mategal',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Mategal',
         ]);
 
         Aplikasi::create([
@@ -3378,7 +3728,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Nglopang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Nglopang',
         ]);
 
         Aplikasi::create([
@@ -3387,7 +3738,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sayutan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sayutan',
         ]);
 
         Aplikasi::create([
@@ -3396,7 +3748,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Sombo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Sombo',
         ]);
 
         Aplikasi::create([
@@ -3405,7 +3758,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Cileng',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Cileng',
         ]);
 
         Aplikasi::create([
@@ -3414,7 +3768,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Plangkrongan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Plangkrongan',
         ]);
 
         Aplikasi::create([
@@ -3423,7 +3778,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Kelurahan Alastuwo',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Kelurahan Alastuwo',
         ]);
 
         Aplikasi::create([
@@ -3432,7 +3788,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Genilangit',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Genilangit',
         ]);
 
         Aplikasi::create([
@@ -3441,7 +3798,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Tidak Aktif',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Janggan',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Janggan',
         ]);
 
         Aplikasi::create([
@@ -3450,7 +3808,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Perbaikan',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Gonggang',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Gonggang',
         ]);
 
         Aplikasi::create([
@@ -3459,7 +3818,8 @@ class AplikasiSeeder extends Seeder
             'status_projek' => 'Selesai',
             'status_aplikasi' => 'Running',
             'type_aplikasi' => 'WEB',
-            'deskripsi' => 'Web OPD Desa Poncol',
+
+            'progres' => 100,        'deskripsi' => 'Web OPD Desa Poncol',
         ]);
     }
 }

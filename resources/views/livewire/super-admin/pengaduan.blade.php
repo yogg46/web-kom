@@ -28,8 +28,7 @@
                                             colspan="1" style="width: 150px;">OPD</th>
                                         <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
                                             colspan="1" style="width: 105px;">Prioritas</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 140px;">Tim</th>
+
                                         <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
                                             colspan="1" style="width: 75px;">Tgl Mulai</th>
                                         <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
@@ -40,69 +39,47 @@
                                             colspan="1" style="width: 50px;">Status</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-                                <tbody>
-                                    <tr role="row" class="odd">
-                                        <td>1</td>
-                                        <td> <strong> antrian@magetan.go.id </strong></td>
-                                        <td>Disdukcapil Magetan</td>
+                                    @php
+                                    $no =($pengaduan->currentpage() - 1) * $pengaduan->perpage() + 1;
+                                    @endphp
+                                    @foreach ($pengaduan as $item )
+
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td> <strong> {{ $item->nama_pengaduan }} </strong></td>
+                                        <td>{{ $item->R_Aplikasi->R_OPD->nama_opd }}</td>
                                         <td><span class="badge-rounded badge-danger text-bold">URGENT</span></td>
-                                        <td></td>
-                                        <td>2009/06/4</td>
-                                        <td>2009/08/4</td>
-                                        <td>Tidak bisa login ke aplikasi</td>
+
+                                        <td>{{ $item->tgl_mulai->format('d/m/Y') }}</td>
+                                        <td>{{ isset($item->tgl_selesai) ? $item->tgl_selesai->format('d/m/Y') : '' }}
+                                        </td>
+                                        <td>{{ $item->deskripsi }}</td>
                                         <td><span class="badge light badge-info">
-                                                Selesai
+                                                {{ $item->status }}
                                             </span></td>
                                     </tr>
+                                    @endforeach
+
                                 </tbody>
 
-                                <tr role="row" class="odd">
-                                    <td>2</td>
-                                    <td> <strong> pelatihan.DTS@magetan.go.id </strong></td>
-                                    <td>Diskominfo Magetan</td>
-                                    <td><span class="badge-rounded badge-danger text-bold">URGENT</span></td>
-                                    <td></td>
-                                    <td>2009/06/25</td>
-                                    <td>2009/08/10</td>
-                                    <td>Formulir pendaftaran tidak dapat diakses oleh user</td>
-                                    <td><span class="badge light badge-info">
-                                            Selesai
-                                        </span></td>
-                                </tr>
-                                </tbody>
+
 
 
 
                             </table>
-                            {{-- <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">
-                                Menampilkan 1
-                                sampai 10 dari 30 daftar</div> --}}
-                            <div class="float-right">
-
-                                <nav>
-                                    <ul class="pagination pagination-sm pagination-gutter pagination-info">
-                                        <li class="page-item page-indicator">
-                                            <a class="page-link" href="javascript:void(0)">
-                                                <i class="la la-angle-left"></i></a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link"
-                                                href="javascript:void(0)">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a>
-                                        </li>
-                                        <li class="page-item page-indicator">
-                                            <a class="page-link" href="javascript:void(0)">
-                                                <i class="la la-angle-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
+                        {{-- <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">
+                            Menampilkan 1
+                            sampai 10 dari 30 daftar</div> --}}
+                        <nav class="float-left ">
+                            <p>Menampilkan {{ $pengaduan->firstItem() }} sampai {{ $pengaduan->lastItem() }} dari {{
+                                $pengaduan->total()
+                                }} daftar</p>
+                        </nav>
+
+                        {{ $pengaduan->onEachSide(0)->links('layouts.halaman') }}
                     </div>
                 </div>
             </div>
