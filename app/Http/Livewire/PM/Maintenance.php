@@ -49,7 +49,7 @@ class Maintenance extends Component
             'norut' => $newArray,
             'run' => Aplikasi::whereIn('status_aplikasi', ['Running', 'Perbaikan', 'Tidak Aktif', 'Semi Aktif'])->search('nama_aplikasi', $this->search)->paginate(10),
         ])->extends('layouts.main', [
-            'tittle' => 'Maintenance',
+            'tittle' => 'Running',
 
         ])
             ->section('isi');

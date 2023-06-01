@@ -178,7 +178,7 @@
                     <li class="{{ request()->is('whatapps') ? 'mm-active' : '' }}">
                         <a href="/whatapps" class="ai-icon" aria-expanded="false">
                             <i class="fa fa-whatsapp"></i>
-                            <span class="nav-text">Whatapps Gateway                            </span>
+                            <span class="nav-text">Whatapps Gateway </span>
                         </a>
                     </li>
                     <li>
@@ -193,7 +193,8 @@
                             <span class="nav-text">Pegawai</span>
                         </a>
                     </li>
-                    <li class="{{ request()->is('opd/*') ? 'mm-active' : '' }}"><a href="/opd" class="ai-icon" aria-expanded="false">
+                    <li class="{{ request()->is('opd/*') ? 'mm-active' : '' }}"><a href="/opd" class="ai-icon"
+                            aria-expanded="false">
                             <i class="flaticon-381-id-card-1"></i>
                             <span class="nav-text">OPD</span>
                         </a>
@@ -210,7 +211,8 @@
                     </li>
                     @endif
                     @if (Auth::user()->role == 'Project Manager')
-                    <li class="{{ request()->is('aplikasi/*') ? 'mm-active' : '' }}"><a href="/aplikasi-pm" class="ai-icon" aria-expanded="false">
+                    <li class="{{ request()->is('aplikasi/*') ? 'mm-active' : '' }}"><a href="/aplikasi-pm"
+                            class="ai-icon" aria-expanded="false">
                             <i class="flaticon-381-smartphone-1"></i>
                             <span class="nav-text">Aplikasi</span>
                         </a>
@@ -225,7 +227,7 @@
                             <span class="nav-text">Productions</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="/maintenance">Maintenance</a></li>
+                            <li><a href="/maintenance">Running</a></li>
                             <li><a href="/perbaikan">Perbaikan</a></li>
 
                         </ul>
