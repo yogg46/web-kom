@@ -61,7 +61,7 @@ stylesheets
                                     <div class="form-floating">
                                         <input class="input form-control" id="email" type="email"
                                             type="text" placeholder="Email" name="email"
-                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            value="{{ old('email') }}"  autocomplete="email" autofocus>
                                         <label for="name-field">Email</label>
 
                                     </div>
@@ -76,7 +76,7 @@ stylesheets
                                     </div>
                                     <div class="form-floating">
                                         <input class="input form-control" id="password" type="password"
-                                            type="password" placeholder="Email address" name="password" required
+                                            type="password" placeholder="Email address" name="password" 
                                             autocomplete="current-password">
                                         <label for="email-field">Password
                                         </label>

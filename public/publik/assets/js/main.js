@@ -649,7 +649,7 @@ window.addEventListener('load', () => {
 
     tabFunc()
 
-    document.querySelector('.preloader').classList.add('loaded');
+    // document.querySelector('.preloader').classList.add('loaded');
 
 });
 

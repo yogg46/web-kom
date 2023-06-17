@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\publikContoller;
 use App\Http\Controllers\WhatappsGateway;
 use App\Http\Livewire\PM\Antrian;
 use App\Http\Livewire\PM\Aplikasipm;
@@ -26,13 +27,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [publikContoller::class, 'index']);
+
 
 
 Auth::routes();
-Route::view('/loogi', 'auth.login3');
+// Route::view('/loogi', 'auth.login3');
 
 
 Route::get('/whatapps', [WhatappsGateway::class, 'index'])->name('whatapps');
