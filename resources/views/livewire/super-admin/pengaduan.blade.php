@@ -15,28 +15,20 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <div id="example4_wrapper" class="dataTables_wrapper no-footer">
-                            <table id="example4" class="display min-w850 dataTable no-footer" role="grid"
-                                aria-describedby="example4_info">
+                        {{-- <div class="table-responsive"> --}}
+                            <table  class="table table-sm table-responsive-sm table-hover"
+                               >
                                 <thead>
                                     <tr role="row">
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">No.</th>
-                                        <th class="sorting_desc" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 152px;" aria-sort="descending">Project</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 150px;">OPD</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 105px;">Prioritas</th>
+                                        <th  >No.</th>
+                                        <th  >Project</th>
+                                        <th  >OPD</th>
+                                        <th  >Prioritas</th>
 
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">Tgl Mulai</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">Tgl Selesai</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 180px;">Deskripsi BUG</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 50px;">Status</th>
+                                        <th  >Tgl Mulai</th>
+                                        <th  >Tgl Selesai</th>
+                                        <th  >Deskripsi BUG</th>
+                                        <th  >Status</th>
                                     </tr>
                                 </thead>
 
@@ -80,7 +72,7 @@
                         </nav>
 
                         {{ $pengaduan->onEachSide(0)->links('layouts.halaman') }}
-                    </div>
+                    {{-- </div> --}}
                 </div>
             </div>
 

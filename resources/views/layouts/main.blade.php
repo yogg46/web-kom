@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/Kominfo3.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/images/Kominfo46.png">
     @stack('css')
     {{--
     <link rel="stylesheet" href="/asset/vendor/chartist/css/chartist.min.css"> --}}
@@ -168,12 +168,12 @@
             <div class="deznav-scroll">
 
                 <ul class="metismenu" id="menu">
-                    {{-- <li class=" "><a class=" ai-icon" href="/home" aria-expanded="false">
+                    <li class=" "><a class=" ai-icon" href="/home" aria-expanded="false">
                             <i class="flaticon-381-networking "></i>
                             <span class="nav-text">Dashboard</span>
                         </a>
 
-                    </li> --}}
+                    </li>
                     @if (Auth::user()->role == 'Super Admin')
                     <li class="{{ request()->is('whatapps') ? 'mm-active' : '' }}">
                         <a href="/whatapps" class="ai-icon" aria-expanded="false">

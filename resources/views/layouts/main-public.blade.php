@@ -39,7 +39,7 @@
     @livewireStyles
     @livewireScripts
 
-
+    @stack('css')
     <style>
         .recaptcha-container {
             width: 100%;
@@ -58,6 +58,21 @@
                 2e width: 95%;
                 /* Adjust the width for mobile devices */
             }
+        }
+    </style>
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinning {
+            animation: spin 1s infinite linear;
         }
     </style>
 
@@ -139,7 +154,7 @@
                                     </a>
 
                                 </li>
-                                <li class=" ">
+                                <li>
                                     <a href="{{ route('waiting-list') }}" class="link-underline link-underline-1">
                                         <span>Antrian</span>
                                     </a>
@@ -203,53 +218,41 @@
     -->
 
         <!--
-    hero 1 - start
+    page header - start
     -->
-        <div class="hero hero-1">
-            <div class="hero-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-0 order-lg-1 col-10 offset-1 order-2">
-                            <div class="hero-content c-white">
-                                <h1>Aplikasi <br> E-Goverment </h1>
-                                <h2>Kabupaten Magetan</h2>
-                                {{-- <p class="large">Orions is a universal app that helps you setup your apps in
-                                    a beautiful and effective way to get more downloads across
-                                    <b>Android</b> and <b>iOS</b> platforms.
-                                </p> --}}
-                                {{-- <div class="download-button-group">
-                                    <a href="#" class="download-button download-button-2 download-button-google">
-                                        <div class="download-button-inner">
-                                            <div class="download-button-icon c-green">
-                                                <i class="fab fa-google-play"></i>
-                                            </div>
-                                            <div class="download-button-content">
-                                                <h5 class="c-grey upper ls-1">get it on</h5>
-                                                <h3 class="c-dark ls-2">Google Play</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="download-button download-button-2 download-button-apple">
-                                        <div class="download-button-inner">
-                                            <div class="download-button-icon c-blue">
-                                                <i class="fab fa-apple"></i>
-                                            </div>
-                                            <div class="download-button-content">
-                                                <h5 class="c-grey upper ls-1">get it on</h5>
-                                                <h3 class="c-dark ls-2">Apple Store</h3>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div> --}}
+        <div class="page-header">
+            <div class="page-header-wrapper" style="padding:  21.2rem 0 6.7rem 0;">
+                <div class="page-header-inner">
+                    <div class="container">
+                        <div class="row d-lg-flex align-items-lg-end">
+                            <div class="col-lg-6">
+                                <div class="page-header-content c-white">
+                                    <h1>{{ $tittle }}</h1>
+                                    <ul>
+                                        @if (isset($slug))
+                                        <li>
+                                            <a href="/" class="link-underline">
+                                                <span>Beranda</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <i class="las la-angle-right"></i>
+                                            <a href="{{ $slug }}" class="link-underline">
+                                                <span>{{ $slugname }}</span>
+                                            </a>
+                                        </li>
+                                        @endif
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 offset-lg-0 order-lg-2 col-10 offset-1 order-1">
-                            <div class="hero-image">
-                                <img class="drop-shadow" src="/publik/assets/images/hero-phone.png" alt="image">
+                            @if (request()->is('app'))
+                            <div class="col-lg-6">
+                                @livewire('publik.cari')
                             </div>
+                            @endif
                         </div>
                     </div>
-
                 </div>
                 <div class="background-pattern background-pattern-1">
                     <div class="background-pattern-img background-loop"
@@ -262,158 +265,39 @@
                 </div>
             </div>
         </div>
-        <div class="testimonial-section">
-            <div class="testimonial-section-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
-                            <div class="section-heading center width-55">
-                                {{-- <div class="sub-heading c-green upper ls-1">
-                                    <i class="las la-comments"></i>
-                                    <h5>feedbacks</h5>
-                                </div> --}}
-                                <div class="main-heading c-dark">
-                                    <h1>Antrian Aplikasi</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="testimonial-slider">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    @forelse ( $antri as $key )
+        <!--
+    page header - end
+    -->
 
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-slide">
-                                            <div class="image">
-                                                <div class="image-wrapper">
-                                                    <div class="image-inner">
-                                                        <div
-                                                            style="width: 199px; line-height: 199px; text-align: center; font-size: 120px; background: linear-gradient(to bottom, #01458e, #0093dd);">
-                                                            <span style="color: white">
-                                                                {{ $key->no_urut }}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="content">
-                                                <h2>{{ $key->nama_aplikasi }}</h1>
-                                                    <p>{{ $key->deskripsi }}</p>
-                                                    <h5>{{ $key->R_OPD->nama_opd }}</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    @empty
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-slide">
-                                            <div class="image">
-                                                <div class="image-wrapper">
-                                                    <div class="image-inner">
-                                                        <div
-                                                            style="width: 199px; line-height: 199px; text-align: center; font-size: 120px; background: linear-gradient(to bottom, #01458e, #0093dd);">
-
-                                                            <span style="color: #ffff">
-                                                                #
-                                                            </span>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="content">
-                                                <h2>
-                                                    </h1>
-                                                    <p> Tidak ada antrian</p>
-                                                    {{-- <h5> </h5> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforelse
+        @yield('index')
+        <!--
+    tabs section - start
+    -->
+       
+        <!--
+    tabs section - end
+    -->
 
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--
+    faq section - start
+    -->
 
-        @livewire('publik.app-publik')
-        {{-- @yield('app') --}}
+        <!--
+    faq section - end
+    -->
 
+        <!--
+    instagram - start
+    -->
 
+        <!--
+    instagram - end
+    -->
 
-        <div class="contact-form-section">
-            <div class="contact-form-section-wrapper">
-                <div class="container">
-                    <div class="row gx-5 contact-form-section-row">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
-                            <!--
-                        contact form - start
-                        -->
-                            <div class="contact-form drop-shadow-2">
-                                <div class="contact-form-wrapper">
-                                    <div class="section-heading section-heading-2 center">
-                                        <div class="sub-heading c-green upper ls-1">
-                                            <i class="las la-envelope"></i>
-                                            <h5>Pengaduan</h5>
-                                        </div>
-                                        <div class="main-heading c-dark">
-                                            <h1>Tulis Pengaduan Aplikasi</h1>
-                                        </div>
-                                    </div>
-                                    <form action="#">
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="name-field" type="text"
-                                                placeholder="Judul Aplikasi">
-                                            <label for="name-field">Judul Aplikasi</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="email-field" type="text"
-                                                placeholder="CP Pengadu">
-                                            <label for="email-field">CP Pengadu</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="message-field" type="text"
-                                                placeholder="Deskripsi BUG">
-                                            <label for="message-field">Deskripsi BUG</label>
-                                        </div>
-                                        <div class="form-floating row">
-
-
-                                            <div class="recaptcha-container"> {!! htmlFormSnippet() !!} </div>
-                                        </div>
-
-                                        <button type="submit" class="button button-2">
-                                            <span class="button-inner">
-                                                <span class="button-content">
-                                                    <span class="text">Submit Reply</span>
-                                                </span>
-                                            </span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-3"></div>
-
-                            <!--
-                        contact form - end
-                        -->
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--
+    footer - start
+    -->
         <footer class="footer">
             <div class="footer-wrapper">
                 <div class="container">
@@ -562,7 +446,6 @@
     <script src="/publik/assets/js/overlay-scrollbars.min.js"></script>
     <script src="/publik/assets/js/gsap.min.js"></script>
     <script src="/publik/assets/js/main.js"></script>
-
 </body>
 
 </html>

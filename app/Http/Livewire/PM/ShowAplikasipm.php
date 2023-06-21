@@ -48,11 +48,23 @@ class ShowAplikasipm extends Component
 
         // dd($newArray);
         return view('livewire.p-m.show-aplikasipm', [
-            'PM' => User::where('role', 'Project Manager')->pluck('name', 'id'),
-            'QA' => User::where('role', 'Quality Assurance')->pluck('name', 'id'),
-            'SA' => User::where('role', 'System Analyst')->pluck('name', 'id'),
-            'PG' => User::where('role', 'Programmer')->pluck('name', 'id'),
+            'PM' => User::where('role', '<>', 'Super Admin')->pluck('name', 'id'),
+            // 'QA' => User::pluck('name', 'id'),
+            // 'SA' => User::pluck('name', 'id'),
+            // 'PG' => User::pluck('name', 'id'),
             'norut' => $newArray,
+            'pesan' => Tim::where('id_user', $this->pm)->whereHas('R_Aplikasi', function ($query) {
+                $query->where('status_aplikasi', 'Progres');
+            })->get(),
+            'pesanSA' => Tim::where('id_user', $this->sa)->whereHas('R_Aplikasi', function ($query) {
+                $query->where('status_aplikasi', 'Progres');
+            })->get(),
+            'pesanQA' => Tim::where('id_user', $this->qa)->whereHas('R_Aplikasi', function ($query) {
+                $query->where('status_aplikasi', 'Progres');
+            })->get(),
+            'pesanPG' => Tim::whereIn('id_user', $this->pg)->whereHas('R_Aplikasi', function ($query) {
+                $query->where('status_aplikasi', 'Progres');
+            })->orderBy('id_user')->get(),
         ])
             ->extends('layouts.main', [
                 'tittle' => $this->aplikasis->nama_aplikasi,
@@ -453,6 +465,16 @@ class ShowAplikasipm extends Component
             'tgl_selesai' => Carbon::now(),
             'progres' => 100
         ]);
+
+        $aplikasis = Aplikasi::whereNotNull('no_urut')->orderBy('no_urut')->get();
+        $counter = 1;
+
+        foreach ($aplikasis as $aplikasi) {
+            $aplikasi->update([
+                'no_urut' => $counter
+            ]);
+            $counter++;
+        }
 
         Progres::create([
             'tanggal' => Carbon::parse($this->selesai)->format('Y-m-d H:i:s'),

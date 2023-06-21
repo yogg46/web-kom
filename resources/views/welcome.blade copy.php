@@ -361,7 +361,7 @@
                                 </a>
                                 <a href="/">
                                     <h3 class="c-dark" style="margin:0.9rem 0 1.3rem 0">
-                                        <p style="font-size: font-size: 3rem;
+                                        <p style=" font-size: 3rem;
                                         font-weight: 600;">
                                             {{ $key->nama_aplikasi }}
                                         </p>

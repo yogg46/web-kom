@@ -31,9 +31,10 @@
                         <div class="">Progress
                         </div>
                         <div class="form-group ">
-                            <input {{ $aplikasis->status_projek == 'Selesai' ? 'readonly' : '' }} class="form-control form-control-sm text-black" type="number" placeholder=""
-                                wire:model.lazy='progres_apk' wire:change='updateProgres()' step="10" min="0" max="100"
-                                style="text-align: center;height: 30px;width: 60px">
+                            <input {{ $aplikasis->status_projek == 'Selesai' ? 'readonly' : '' }} class="form-control
+                            form-control-sm text-black" type="number" placeholder=""
+                            wire:model.lazy='progres_apk' wire:change='updateProgres()' step="10" min="0" max="100"
+                            style="text-align: center;height: 30px;width: 60px">
                         </div>
                     </div>
                     <div class="progress">
@@ -492,13 +493,36 @@
                             <div class="col-md-6">
                                 <div wire:ignore class="form-group">
                                     <strong><label class="control-label">Project Manager</label></strong>
-                                    <select wire:model='pm' class="form-control default-select">
+                                    <select wire:model='pm' class=" form-control default-select ">
                                         <option>Pilih Project Manager</option>
                                         @foreach ($PM as $item => $v)
-                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        <option value="{{ $item }}"> {{ $v }}
+
+                                        </option>
                                         @endforeach
                                     </select>
                                 </div>
+                                @if (isset($pm))
+                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
+                                    @if (isset($pesan->first()->R_User->name))
+
+                                    <strong>
+
+                                        {{ $pesan->first()->R_User->name }}
+                                    </strong>
+                                    sedang mengerjakan
+                                    @endif
+                                    @forelse ( $pesan->unique('id_aplikasi') as $item )
+
+                                    <br>
+                                    {{ $item->R_Aplikasi->nama_aplikasi }}
+                                    @empty
+                                    sedang tidak mengerjakan apapun
+
+                                    @endforelse
+                                    {{-- @json($pesan) --}}
+                                </div>
+                                @endif
                                 @error('pm')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -511,11 +535,32 @@
                                     <strong><label class="control-label">Quality Assurance</label></strong>
                                     <select wire:model='qa' class="form-control default-select">
                                         <option>Pilih Quality Assurance</option>
-                                        @foreach ($QA as $item => $v)
+                                        @foreach ($PM as $item => $v)
                                         <option value="{{ $item }}"> {{ $v }} </option>
                                         @endforeach
                                     </select>
                                 </div>
+                                @if (isset($qa))
+                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
+                                    @if (isset($pesanQA->first()->R_User->name))
+
+                                    <strong>
+
+                                        {{ $pesanQA->first()->R_User->name }}
+                                    </strong>
+                                    sedang mengerjakan
+                                    @endif
+                                    @forelse ( $pesanQA->unique('id_aplikasi') as $item )
+
+                                    <br>
+                                    {{ $item->R_Aplikasi->nama_aplikasi }}
+                                    @empty
+                                    sedang tidak mengerjakan apapun
+
+                                    @endforelse
+                                    {{-- @json($pesan) --}}
+                                </div>
+                                @endif
                                 @error('qa')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -528,13 +573,35 @@
                             <div class="col-md-6">
                                 <div wire:ignore class="form-group">
                                     <strong><label class="control-label">System Analyst</label></strong>
-                                    <select wire:model='sa' class="form-control default-select">
+                                    <select  wire:model='sa' class="form-control default-select">
                                         <option>Pilih System Analyst</option>
-                                        @foreach ($SA as $item => $v)
+                                        @foreach ($PM as $item => $v)
                                         <option value="{{ $item }}"> {{ $v }} </option>
                                         @endforeach
                                     </select>
                                 </div>
+                                @if (isset($sa))
+                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
+                                    @if (isset($pesanSA->first()->R_User->name))
+
+                                    <strong>
+
+                                        {{ $pesanSA->first()->R_User->name }}
+                                    </strong>
+                                    sedang mengerjakan
+                                    @endif
+                                    @forelse ( $pesanSA->unique('id_aplikasi') as $item )
+
+                                    <br>
+                                    {{ $item->R_Aplikasi->nama_aplikasi }}
+                                    @empty
+                                    sedang tidak mengerjakan apapun
+
+                                    @endforelse
+                                    {{-- @json($pesan) --}}
+                                </div>
+                                @endif
+
                                 @error('sa')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -545,13 +612,15 @@
                             <div class="col-md-6">
                                 <div wire:ignore class="form-group">
                                     <strong><label class="control-label">Programmer </label></strong>
-                                    <select multiple id="mySelect" wire:model="pg" class="form-control default-select">
-                                        @foreach ($PG as $item => $v)
-                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                    <select multiple id="sel" wire:model="pg" class="form-control default-select ">
+                                        @foreach ($PM as $item => $v)
+                                        <option wire:loading.attr='disabled' value="{{ $item }}" data-title=" {{ $v }}"> {{ $v }} </option>
                                         @endforeach
 
                                     </select>
                                 </div>
+                                {{-- @json($pg) --}}
+
                                 @error('pg')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -863,6 +932,29 @@
 @endpush
 
 @push('js')
+{{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> --}}
+{{-- <script type="text/JavaScript">
+    $(function () {
+                $("#sel option").each(function(i){
+                    if(i > 0){
+                        var title = "The select val=" + $(this).attr("data-title");
+                        $(this).attr("title", title);
+                    }
+                });
+            });
+        </script> --}}
+
+
+<script type="text/JavaScript">
+    $(function () {
+        $("#sel option").each(function(){
+            var dataTitle = $(this).data("title");
+            if (dataTitle) {
+                $(this).attr("title", dataTitle);
+            }
+        });
+    });
+</script>
 <script>
     // document.addEventListener("livewire:load", function () {
         //     // Inisialisasi Bootstrap Select pada elemen dengan ID mySelect
@@ -873,6 +965,10 @@
         //         Livewire.emit('selectedValuesChanged', $(this).val());
         //     });
         // });
+
+
+
+            // $('[data-toggle="tooltip"]').tooltip();
 
 
 

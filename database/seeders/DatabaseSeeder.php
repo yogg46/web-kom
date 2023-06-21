@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Pegawai;
+use App\Models\Tim;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,5 +42,6 @@ class DatabaseSeeder extends Seeder
             opdSeeder::class,
             AplikasiSeeder::class,
         ]);
+        Tim::factory(200)->create();
     }
 }

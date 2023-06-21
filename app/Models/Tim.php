@@ -18,6 +18,7 @@ class Tim extends Model
     {
         return $this->belongsTo(User::class, 'id_user');
     }
+    
     public function R_Aplikasi()
     {
         return $this->belongsTo(Aplikasi::class, 'id_aplikasi');

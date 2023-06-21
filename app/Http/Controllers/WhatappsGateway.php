@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aplikasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Http;
@@ -34,12 +35,17 @@ class WhatappsGateway extends Controller
         $number = $request->input('number');
         $message = $request->input('message');
 
+
         // Send the message
+        # code...
         try {
+
             $response = Http::post('http://localhost:8001/send-message', [
                 'number' => $number,
                 'message' => $message,
             ]);
+
+
 
             // Check the response status and return the appropriate response
             if ($response->successful()) {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aplikasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,12 +27,14 @@ class HomeController extends Controller
     {
         $tittle = "Dashboard";
 
-        if (Auth::user()->role == 'Super Admin') {
-            return redirect()->route('userManagement');
-        }elseif(Auth::user()->role == 'Project Manager') {
-            return redirect()->route('aplikasi-pm');
-        }
+        // if (Auth::user()->role == 'Super Admin') {
+        //     return redirect()->route('userManagement');
+        // }elseif(Auth::user()->role == 'Project Manager') {
+        //     return redirect()->route('aplikasi-pm');
+        // }
 
-        return view('home',['tittle'=>$tittle]);
+        $app = Aplikasi::all();
+
+        return view('home',['tittle'=>$tittle,'app'=>$app]);
     }
 }

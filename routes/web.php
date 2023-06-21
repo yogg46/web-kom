@@ -28,6 +28,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [publikContoller::class, 'index']);
+Route::get('/app', [publikContoller::class, 'app']);
+Route::get('/app/{id}', [publikContoller::class, 'showapp'])->name('app-publik');
+Route::get('/waiting-list', [publikContoller::class, 'waitinglist'])->name('waiting-list');
+Route::get('/pemeliharaan', [publikContoller::class, 'pemeliharaan'])->name('pemeliharaan');
 
 
 

@@ -12,6 +12,7 @@
                                             class="flaticon-381-search-2"></i></a></span>
                             </div>
                         </div>
+                        {{ $resett }}
                     </div>
                     <div class="d-flex mb-3">
 
@@ -45,7 +46,7 @@
                                     <td> <strong>{{ $item->nama_aplikasi }}</strong></td>
                                     <td>{{ $item->R_OPD->nama_opd }}  </td>
                                     <td>
-                                        <div wire:ignore>
+                                        <div  >
                                             <select wire:change='show({{ $item->id }})' id="my-select-{{ $item->id }}"
                                                 class="form-control form-control-lg   " style="min-width: 150px;"
                                                 wire:model="status.{{ $item->id }}">
@@ -118,9 +119,9 @@
                                 <label class="col-lg-2 col-form-label-lg font-weight-bold">Nomor Antrian
                                     Perbeaikan</label>
                                 <div class="col-lg-10">
-                                    <div wire:ignore>
+                                    <div >
                                         <select wire:model='no_urut' class="form-control default-select">
-                                            <option>Pilih Nomor Antrian Aplikasi</option>
+                                            <option value="">Pilih Nomor Antrian Aplikasi</option>
                                             @foreach ($norut as $item => $value)
                                             <option value="{{ $item }}"> {{ $item }} {{ $value ? ' - '.$value : ''
                                                 }}
@@ -245,28 +246,7 @@
     </style>
     @endpush
     @push('js')
-    {{-- <script>
-        // Mendapatkan elemen select
-        var selectElement = document.getElementById('status-select');
 
-        // Mendapatkan elemen modal
-        var modalElement = document.getElementById('myModal');
-
-        // Mendeteksi perubahan nilai pada select
-        selectElement.addEventListener('change', function() {
-            // Mendapatkan nilai yang dipilih
-            var selectedValue = this.value;
-
-            // Memeriksa apakah nilai yang dipilih adalah 'Perbaikan'
-            if (selectedValue === 'Perbaikan') {
-                // Memunculkan modal
-                $('#myModal').modal('show');
-            } else {
-                // Menyembunyikan modal
-                $('#myModal').modal('hide');
-            }
-        });
-    </script> --}}
 
     <script>
         window.addEventListener('tutup_perbaikan', event => {
@@ -281,6 +261,7 @@
 
         // Mendeteksi perubahan nilai pada select menggunakan Livewire
         let data = '{{ $resett }}';
+        console.log(data);
         Livewire.on('statusSelected', function(selectedValue) {
             if (selectedValue === 'Perbaikan') {
                 // Memunculkan modal
@@ -368,6 +349,20 @@
             });
         });
 
+
+        Livewire.on('dataSaved', () => {
+            // Your JavaScript logic here
+            data = '1';
+            console.log(data);
+            Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            icon: 'success',
+            title: 'Data Berhasil Disimpan'
+        });
+        });
 
         // Livewire.on('optionsUpdated', (selectedOptions) => {
         //     Object.entries(selectedOptions).forEach(([key, value]) => {

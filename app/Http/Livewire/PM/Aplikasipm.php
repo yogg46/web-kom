@@ -21,6 +21,8 @@ class Aplikasipm extends Component
     public $id_opd;
     public $type_projek;
     public $cp;
+    public $tgl_mulai;
+    public $tgl_selesai;
 
     public $notif = 0;
     public function updatingSearch()
@@ -52,6 +54,8 @@ class Aplikasipm extends Component
         'id_opd' => 'required',
         'deskripsi' => 'required',
         'type_projek' => 'required',
+        'tgl_mulai' => 'required',
+        'tgl_selesai' => 'required',
         'cp' => 'required|numeric|min_digits:11',
     ];
 
@@ -61,6 +65,8 @@ class Aplikasipm extends Component
         'deskripsi.required' => 'Kolom Deskripsi wajib diisi.',
         'type_projek.required' => 'Kolom Jenis Projek wajib diisi.',
         'cp.required' => 'Kolom Contact Person wajib diisi.',
+        'tgl_mulai.required' => 'Kolom Tanggal Mulai wajib diisi.',
+        'tgl_selesai.required' => 'Kolom Tanggal Selesai wajib diisi.',
         'cp.numeric' => 'Kolom Contact Person harus berupa angka.',
         'cp.min_digits' => 'Kolom Contact Person harus memiliki panjang minimal 12 digit.',
         // 'cp.min' => 'Kolom Contact Person harus terdiri dari 12 digit.',
@@ -73,6 +79,8 @@ class Aplikasipm extends Component
             'id_opd' => 'required',
             'deskripsi' => 'required',
             'type_projek' => 'required',
+            'tgl_mulai' => 'required',
+            'tgl_selesai' => 'required',
             'cp' => 'required|numeric|min_digits:11',
 
         ]);
@@ -89,7 +97,9 @@ class Aplikasipm extends Component
             'deskripsi' => $this->deskripsi,
             'type_projek' => $this->type_projek,
             'cp' => $this->cp,
-            'status_aplikasi' => 'Inisiasi'
+            'status_aplikasi' => 'Inisiasi',
+            'tgl_mulai' => $this->tgl_mulai,
+            'tgl_selesai' => $this->tgl_selesai,
         ]);
 
         // Http::post('http://localhost:8001/send-message', [

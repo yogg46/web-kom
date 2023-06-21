@@ -12,7 +12,7 @@ use Livewire\WithPagination;
 class Maintenance extends Component
 {
     use WithPagination;
-    use LivewireAlert;
+    // use LivewireAlert;
 
     public $search = '';
     public $resett = 1;
@@ -85,7 +85,7 @@ class Maintenance extends Component
             // 'keterangan' => $this->alasan
         ]);
         $this->resett = 1;
-        $this->alert('success', 'Data Berhasil Disimpan');
+        // $this->alert('success', 'Data Berhasil Disimpan');
         # code...
     }
     public function show($id)
@@ -135,8 +135,13 @@ class Maintenance extends Component
             'no_pengaduan' => $this->no_urut,
         ]);
         $this->dispatchBrowserEvent('tutup_perbaikan');
-        $this->alert('success', 'Data Berhasil Disimpan');
+        // $this->alert('success', 'Data Berhasil Disimpan');
         $this->resett = 1;
+        $this->emit('dataSaved');
+        $this->reset(['deskripsi_bug', 'nama_perbaikan']);
+        $this->no_urut = '';
+        // $this->reset();
+
     }
 
 
@@ -155,8 +160,11 @@ class Maintenance extends Component
             'keterangan' => $this->alasan
         ]);
         $this->dispatchBrowserEvent('tutup_tidak');
-        $this->alert('success', 'Data Berhasil Disimpan');
+        // $this->alert('success', 'Data Berhasil Disimpan');
         $this->resett = 1;
+        $this->emit('dataSaved');
+        // $this->reset();
+
         # code...
     }
 
@@ -174,8 +182,10 @@ class Maintenance extends Component
             'keterangan' => $this->alasan
         ]);
         $this->dispatchBrowserEvent('tutup_semi');
-        $this->alert('success', 'Data Berhasil Disimpan');
+        $this->emit('dataSaved');
+        // $this->alert('success', 'Data Berhasil Disimpan');
         $this->resett = 1;
+        // $this->reset();
         # code...
     }
 }

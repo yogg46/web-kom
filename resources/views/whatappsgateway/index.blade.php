@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<form id="send-message-form">
+{{-- <form id="send-message-form">
     @csrf
     <div>
         <label for="number">Phone Number:</label>
@@ -31,7 +31,7 @@
     <div>
         <button type="submit">Send Message</button>
     </div>
-</form>
+</form> --}}
 
 @endsection
 @push('css')
@@ -77,7 +77,7 @@
         });
     });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#send-message-form').submit(function(event) {
             event.preventDefault();
@@ -116,5 +116,5 @@
             });
         });
     });
-</script>
+</script> --}}
 @endpush

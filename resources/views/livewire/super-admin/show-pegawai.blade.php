@@ -10,8 +10,7 @@
                         <div class="profile-photo">
                             {{-- <img src="images/profile/profile.png" class="img-fluid rounded-circle" alt=""> --}}
                             @if (!empty($pegawai->avatar) && Storage::exists('public/' . $pegawai->avatar))
-                                <img src="{{ Storage::url($pegawai->avatar) }}" class=" img-fluid  rounded-circle" alt=""
-                                   >
+                            <img src="{{ Storage::url($pegawai->avatar) }}" class=" img-fluid  rounded-circle" alt="">
                             @else
                             <img src="/asset/images/profile/profile.png" class="img-fluid rounded-circle" alt="">
 
@@ -25,8 +24,8 @@
                             <div class="profile-email px-2 pt-2">
                                 <h4 class="text-muted mb-2">{{ $pegawai->email }}</h4>
                                 <p style="text-transform: capitalize"><i
-                                    class="fa fa-circle {{ $pegawai->status == 'aktif' ? 'text-success' : 'text-danger' }}  mr-1"></i>
-                                {{ $pegawai->status }}</p>
+                                        class="fa fa-circle {{ $pegawai->status == 'aktif' ? 'text-success' : 'text-danger' }}  mr-1"></i>
+                                    {{ $pegawai->status }}</p>
                             </div>
                         </div>
                     </div>
@@ -40,96 +39,165 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
+                    <strong>
+
+                        Aplikasi Yang Sedang Dikerjakan
+                    </strong>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <div id="example4_wrapper" class="dataTables_wrapper no-footer">
-                            <table id="example4" class="display min-w850 dataTable no-footer" role="grid"
-                                aria-describedby="example4_info">
-                                <thead>
-                                    <tr role="row">
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">No.</th>
-                                        <th class="sorting_desc" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 152px;" aria-sort="descending">Project</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 150px;">OPD</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 105px;">Prioritas</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 140px;">Tim</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">Tgl Mulai</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 75px;">Tgl Selesai</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 180px;">Deskripsi Aplikasi</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1"
-                                            colspan="1" style="width: 50px;">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <tbody>
-                                    <tr role="row" class="odd">
-                                        <td>1</td>
-                                        <td> <strong> antrian@magetan.go.id </strong></td>
-                                        <td>Disdukcapil Magetan</td>
-                                        <td><span class="badge-rounded badge-success text-bold">LOW</span></td>
-                                        <td></td>
-                                        <td>2009/06/4</td>
-                                        <td>2009/08/4</td>
-                                        <td>Aplikasi untuk antrian</td>
-                                        <td><span class="badge light badge-secondary">
-                                                Proses
-                                            </span></td>
-                                    </tr>
-                                </tbody>
+                        <table class="table table-sm table-responsive-sm table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>No.</th>
+                                    <th>Project</th>
+                                    <th>OPD</th>
+                                    <th>Prioritas</th>
+                                    {{-- <th>Tim</th> --}}
+                                    <th>Tgl Mulai</th>
+                                    <th>Tgl Selesai</th>
+                                    <th>Deskripsi Aplikasi</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tbody>
+                                @php
+                                $no =($nowapp->currentpage() - 1) * $nowapp->perpage() + 1;
+                                @endphp
+                                @forelse ($nowapp as $item)
 
-                                <tr role="row" class="odd">
-                                    <td>2</td>
-                                    <td> <strong> pelatihan.DTS@magetan.go.id </strong></td>
-                                    <td>Diskominfo Magetan</td>
-                                    <td><span class="badge light badge-danger text-bold">URGENT</span></td>
-                                    <td></td>
-                                    <td>2009/06/25</td>
-                                    <td>2009/08/10</td>
-                                    <td>Aplikasi untuk pendaftaran dan informasi pelatihan DTS</td>
-                                    <td><span class="badge light badge-info">
-                                            Selesai
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td> <strong> {{ $item->nama_aplikasi }} </strong></td>
+                                    <td>{{ $item->R_OPD->nama_opd }}</td>
+                                    <td><span class="{{ $item->prioritas == 'Urgent' ? 'badge-rounded badge-danger text-bold':(
+                                        $item->prioritas == 'High' ? 'badge-rounded badge-warning text-bold': (
+                                            $item->prioritas == 'Medium' ?'badge-rounded badge-primary  text-bold': (
+                                                $item->prioritas == 'Low' ? 'badge-rounded badge-success text-bold':''
+                                            )
+                                        )
+                                    ) }}">{{ $item->prioritas }}</span></td>
+
+                                    {{-- <td></td> --}}
+                                    <td>{{ ($item->tgl_mulai ? date('d m Y', strtotime($item->tgl_mulai)) : '') }}</td>
+
+                                    <td>{{ ($item->tgl_selesai ? date('d m Y', strtotime($item->tgl_selesai)) : '') }}
+                                    </td>
+
+                                    <td>{{ $item->deskripsi }}</td>
+                                    <td class=" text-center"><span class="badge light badge-info">
+                                            {{ $item->status_aplikasi }}
                                         </span></td>
                                 </tr>
-                                </tbody>
-                            </table>
-                            <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">
-                                Menampilkan 1 sampai 10 dari 30 daftar</div>
-                            <div class="float-right">
+                                @empty
+                                <tr>
+                                    <td colspan="8" rowspan="3" class=" text-center">
+                                        Data Kosong
 
-                                <nav>
-                                    <ul class="pagination pagination-sm pagination-gutter pagination-info">
-                                        <li class="page-item page-indicator">
-                                            <a class="page-link" href="javascript:void(0)">
-                                                <i class="la la-angle-left"></i></a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link"
-                                                href="javascript:void(0)">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a>
-                                        </li>
-                                        <li class="page-item page-indicator">
-                                            <a class="page-link" href="javascript:void(0)">
-                                                <i class="la la-angle-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
+                                    </td>
+                                </tr>
+
+                                @endforelse
+                            </tbody>
+
+
+                            </tbody>
+                        </table>
+                        <nav class="float-left ">
+                            <p>Menampilkan {{ $nowapp->firstItem() }} sampai {{ $nowapp->lastItem() }} dari {{
+                                $nowapp->total()
+                                }} daftar</p>
+                        </nav>
+                        {{--
+                    </div> --}}
+                    {{ $nowapp->onEachSide(0)->links('layouts.halaman') }}
                 </div>
             </div>
         </div>
     </div>
+    {{--
+</div> --}}
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <strong>
+
+                Riwayat Aplikasi
+            </strong>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-sm table-responsive-sm table-hover">
+                    <thead>
+                        <tr role="row">
+                            <th>No.</th>
+                            <th>Project</th>
+                            <th>OPD</th>
+                            <th>Prioritas</th>
+
+                            <th>Tgl Mulai</th>
+                            <th>Tgl Selesai</th>
+                            <th>Deskripsi Aplikasi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tbody>
+                        @php
+                        $nom =($app->currentpage() - 1) * $app->perpage() + 1;
+                        @endphp
+                        @forelse ($app as $item)
+
+                        <tr>
+                            <td>{{ $nom++ }}</td>
+                            <td> <strong> {{ $item->nama_aplikasi }} </strong></td>
+                            <td>{{ $item->R_OPD->nama_opd }}</td>
+                            <td><span class="{{ $item->prioritas == 'Urgent' ? 'badge-rounded badge-danger text-bold':(
+                                        $item->prioritas == 'High' ? 'badge-rounded badge-warning text-bold': (
+                                            $item->prioritas == 'Medium' ?'badge-rounded badge-primary  text-bold': (
+                                                $item->prioritas == 'Low' ? 'badge-rounded badge-success text-bold':''
+                                            )
+                                        )
+                                    ) }}">{{ $item->prioritas }}</span></td>
+
+                            {{-- <td></td> --}}
+                            <td>{{ ($item->tgl_mulai ? date('d m Y', strtotime($item->tgl_mulai)) : '') }}</td>
+
+                            <td>{{ ($item->tgl_selesai ? date('d m Y', strtotime($item->tgl_selesai)) : '') }}
+                            </td>
+
+                            <td>{{ $item->deskripsi }}</td>
+                            <td class=" text-center"><span class="badge light badge-info">
+                                    {{ $item->status_aplikasi }}
+                                </span></td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="8" rowspan="3" class=" text-center">
+                                Data Kosong
+
+                            </td>
+                        </tr>
+
+                        @endforelse
+                    </tbody>
+
+
+                    </tbody>
+                </table>
+                <nav class="float-left ">
+                    <p>Menampilkan {{ $app->firstItem() }} sampai {{ $app->lastItem() }} dari {{
+                        $app->total()
+                        }} daftar</p>
+                </nav>
+                {{--
+            </div> --}}
+            {{ $app->onEachSide(0)->links('layouts.halaman') }}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
 </div>
