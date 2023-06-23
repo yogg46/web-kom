@@ -351,69 +351,99 @@
 
 
 
-        <div class="contact-form-section">
-            <div class="contact-form-section-wrapper">
-                <div class="container">
-                    <div class="row gx-5 contact-form-section-row">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
-                            <!--
-                        contact form - start
-                        -->
-                            <div class="contact-form drop-shadow-2">
-                                <div class="contact-form-wrapper">
-                                    <div class="section-heading section-heading-2 center">
-                                        <div class="sub-heading c-green upper ls-1">
-                                            <i class="las la-envelope"></i>
-                                            <h5>Pengaduan</h5>
-                                        </div>
-                                        <div class="main-heading c-dark">
-                                            <h1>Tulis Pengaduan Aplikasi</h1>
-                                        </div>
-                                    </div>
-                                    <form action="#">
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="name-field" type="text"
-                                                placeholder="Judul Aplikasi">
-                                            <label for="name-field">Judul Aplikasi</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="email-field" type="text"
-                                                placeholder="CP Pengadu">
-                                            <label for="email-field">CP Pengadu</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input class="input form-control" id="message-field" type="text"
-                                                placeholder="Deskripsi BUG">
-                                            <label for="message-field">Deskripsi BUG</label>
-                                        </div>
-                                        <div class="form-floating row">
 
+        <div>
 
-                                            <div class="recaptcha-container"> {!! htmlFormSnippet() !!} </div>
-                                        </div>
-
-                                        <button type="submit" class="button button-2">
-                                            <span class="button-inner">
-                                                <span class="button-content">
-                                                    <span class="text">Submit Reply</span>
-                                                </span>
-                                            </span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+            <div class="contact-form-section">
+                <div class="contact-form-section-wrapper">
+                    <div class="container">
+                        <div class="row gx-5 contact-form-section-row">
                             <div class="col-lg-3"></div>
+                            <div class="col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
+                                <!--
+                            contact form - start
+                            -->
+                                <div class="contact-form drop-shadow-2">
+                                    <div class="contact-form-wrapper">
+                                        <div class="section-heading section-heading-2 center">
+                                            <div class="sub-heading c-green upper ls-1">
+                                                <i class="las la-envelope"></i>
+                                                <h5>Pengaduan</h5>
+                                            </div>
+                                            <div class="main-heading c-dark">
+                                                <h1>Tulis Pengaduan Aplikasi</h1>
+                                            </div>
+                                        </div>
+                                        <form action="{{ route('simpan-aduan') }}" method="POST" >
+                                            @csrf
+                                            <div class="form-floating">
+                                                <input class="input form-control" id="judul_aplikasi" name="judul_aplikasi" type="text" value="{{ old('judul_aplikasi') }}"
+                                                    placeholder="Judul Aplikasi">
+                                                <label for="judul_aplikasi" name="judul_aplikasi">Judul Aplikasi</label>
+                                                @error('judul_aplikasi')
+                                                <span class="text-danger" role="alert" style="margin-top: 10px;">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div class="form-floating">
+                                                <input class="input form-control" id="cp" name="cp" type="text" value="{{ old('cp') }}"
+                                                    placeholder="CP Pengadu">
+                                                <label for="cp" >CP Pengadu</label>
+                                                @error('cp')
+                                                <span class="text-danger" role="alert" style="margin-top: 10px;">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div class="form-floating">
+                                                <input class="input form-control" id="deskripsi" name="deskripsi" type="text" value="{{ old('deskripsi') }}"
+                                                    placeholder="Deskripsi BUG">
+                                                <label for="deskripsi">Deskripsi BUG</label>
+                                                @error('deskripsi')
+                                                <span class="text-danger" role="alert" style="margin-top: 10px;">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div class="form-floating row">
 
-                            <!--
-                        contact form - end
-                        -->
+
+                                                <div class="recaptcha-container"> {!! htmlFormSnippet() !!} </div>
+                                                @error('g-recaptcha-response')
+                                                <span class="text-danger" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+
+                                            <button type="submit"  class="button button-2 " >
+                                                <span class="button-inner">
+                                                    <span class="button-content">
+                                                        <span class="text">Submit Reply</span>
+                                                    </span>
+                                                </span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3"></div>
+
+                                <!--
+                            contact form - end
+                            -->
+                            </div>
+
                         </div>
-
                     </div>
                 </div>
             </div>
+
         </div>
+
+
+
+        {{-- @livewire('publik.aduan') --}}
         <footer class="footer">
             <div class="footer-wrapper">
                 <div class="container">
@@ -552,10 +582,22 @@
     -->
 
     </div>
+    {{-- @stack('js') --}}
 
     <!--
     scripts
     -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if(session('success'))
+    <script>
+        swal.fire({
+            title: 'Sukses!',
+            text: '{{ session("success") }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    </script>
+    @endif
     <script src="/publik/assets/js/bootstrap.bundle.min.js"></script>
     <script src="/publik/assets/js/swiper-bundle.min.js"></script>
     <script src="/publik/assets/js/glightbox.min.js"></script>
@@ -563,6 +605,7 @@
     <script src="/publik/assets/js/gsap.min.js"></script>
     <script src="/publik/assets/js/main.js"></script>
 
+    {{-- <x-livewire-alert::flash /> --}}
 </body>
 
 </html>

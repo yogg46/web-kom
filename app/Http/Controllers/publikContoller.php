@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\aduan;
 use App\Models\Aplikasi;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
@@ -53,6 +54,35 @@ class publikContoller extends Controller
         $slugname = 'Pemeliharaan';
         $list = Pengaduan::where('status', '<>', 'Selesai')->get();
         $tittle = 'Pemeliharaan';
-        return view('pemeliharaan', compact(['tittle', 'slug', 'slugname','list']));
+        return view('pemeliharaan', compact(['tittle', 'slug', 'slugname', 'list']));
+    }
+
+    public function aduan(Request $request)
+    {
+
+        $this->validate($request, [
+            'g-recaptcha-response' => 'recaptcha|required',
+            'cp' => 'required|numeric',
+            'judul_aplikasi' => 'required',
+            'deskripsi' => 'required'
+        ], [
+            'g-recaptcha-response.recaptcha' => 'Mohon konfirmasikan bahwa Anda bukan robot dengan mengisi kolom reCaptcha.',
+            'cp.required' => 'Kolom Kontak Person (CP) wajib diisi.',
+            'cp.numeric' => 'Kolom Kontak Person (CP) hanya boleh berisi angka.',
+            'judul_aplikasi.required' => 'Kolom Judul Aplikasi wajib diisi.',
+            'deskripsi.required' => 'Kolom Deskripsi wajib diisi.'
+        ]);
+
+
+
+        aduan::create([
+            'judul_aplikasi' => $request->judul_aplikasi,
+            'cp' => $request->cp,
+            'deskripsi' => $request->deskripsi,
+        ]);
+        return redirect('/')->with('success', 'Aduan berhasil dikirim.');
+
+
+        // return redirect()->back();
     }
 }

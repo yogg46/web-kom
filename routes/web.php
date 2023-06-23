@@ -32,6 +32,7 @@ Route::get('/app', [publikContoller::class, 'app']);
 Route::get('/app/{id}', [publikContoller::class, 'showapp'])->name('app-publik');
 Route::get('/waiting-list', [publikContoller::class, 'waitinglist'])->name('waiting-list');
 Route::get('/pemeliharaan', [publikContoller::class, 'pemeliharaan'])->name('pemeliharaan');
+Route::any('/simpan-aduan', [publikContoller::class, 'aduan'])->name('simpan-aduan');
 
 
 
