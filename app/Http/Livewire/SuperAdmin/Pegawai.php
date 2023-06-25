@@ -29,6 +29,19 @@ class Pegawai extends Component
     protected $listeners = ['delete'];
 
 
+    public $sortField = 'created_at';
+    public $sortAsc = true;
+
+    public function sortBy($field)
+    {
+        if ($this->sortField === $field) {
+            $this->sortAsc = !$this->sortAsc;
+        } else {
+            $this->sortField = $field;
+            $this->sortAsc = false;
+        }
+    }
+
     public function updatingSearch()
     {
         $this->resetPage();
@@ -38,7 +51,7 @@ class Pegawai extends Component
 
         return view('livewire.super-admin.pegawai', [
             'pegawai' => User::where('role', '<>', 'Super Admin')->search('name', $this->search)
-                ->orderBy('created_at', 'desc')
+                ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
                 ->paginate(9),
         ])
             ->extends('layouts.main', [

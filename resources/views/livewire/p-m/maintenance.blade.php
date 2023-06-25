@@ -12,7 +12,7 @@
                                             class="flaticon-381-search-2"></i></a></span>
                             </div>
                         </div>
-                        {{ $resett }}
+                      
                     </div>
                     <div class="d-flex mb-3">
 

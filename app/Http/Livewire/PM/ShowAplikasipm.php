@@ -48,23 +48,13 @@ class ShowAplikasipm extends Component
 
         // dd($newArray);
         return view('livewire.p-m.show-aplikasipm', [
-            'PM' => User::where('role', '<>', 'Super Admin')->pluck('name', 'id'),
-            // 'QA' => User::pluck('name', 'id'),
-            // 'SA' => User::pluck('name', 'id'),
-            // 'PG' => User::pluck('name', 'id'),
+            'PM' => User::where('role', '<>', 'Super Admin')->with(['R_Tim' => function ($query) {
+                $query->withCount(['R_Aplikasi as progress_count' => function ($query) {
+                    $query->where('status_aplikasi', 'Progres');
+                }]);
+            }])->get(),
             'norut' => $newArray,
-            'pesan' => Tim::where('id_user', $this->pm)->whereHas('R_Aplikasi', function ($query) {
-                $query->where('status_aplikasi', 'Progres');
-            })->get(),
-            'pesanSA' => Tim::where('id_user', $this->sa)->whereHas('R_Aplikasi', function ($query) {
-                $query->where('status_aplikasi', 'Progres');
-            })->get(),
-            'pesanQA' => Tim::where('id_user', $this->qa)->whereHas('R_Aplikasi', function ($query) {
-                $query->where('status_aplikasi', 'Progres');
-            })->get(),
-            'pesanPG' => Tim::whereIn('id_user', $this->pg)->whereHas('R_Aplikasi', function ($query) {
-                $query->where('status_aplikasi', 'Progres');
-            })->orderBy('id_user')->get(),
+
         ])
             ->extends('layouts.main', [
                 'tittle' => $this->aplikasis->nama_aplikasi,

@@ -10,6 +10,19 @@ class Tabelapp extends Component
     public $search;
     public $app;
     protected $listeners = ['carii' => 'render', 'searchSubmitted'];
+    public $sortField = 'created_at';
+    public $sortAsc = true;
+
+    public function sortBy($field)
+    {
+        if ($this->sortField === $field) {
+            $this->sortAsc = !$this->sortAsc;
+        } else {
+            $this->sortField = $field;
+            $this->sortAsc = false;
+        }
+    }
+
     public function render()
     {
         $pp = $this->search;
@@ -19,6 +32,7 @@ class Tabelapp extends Component
         })
         ->orWhere('status_aplikasi', 'like', '%' . $this->search . '%')
         ->orWhere('status_projek', 'like', '%' . $this->search . '%')
+        ->orderBy($this->sortField, $this->sortAsc ? 'ASC' : 'DESC')
         ->get();
 
         return view('livewire.publik.tabelapp');

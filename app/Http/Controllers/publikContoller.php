@@ -14,9 +14,9 @@ class publikContoller extends Controller
 
         // $selectedItem = $request->query('selected_item');
         $antri = Aplikasi::whereNotNull('no_urut')->orderBy('no_urut')->get();
-        // $app = Aplikasi::paginate(6);
+        $app = Aplikasi::pluck('id','nama_aplikasi');
         // $app->appends(['selected_item' => $selectedItem]);
-        return view('welcome', ['antri' => $antri]);
+        return view('welcome', ['antri' => $antri,'apps'=>$app]);
     }
 
 
@@ -34,7 +34,7 @@ class publikContoller extends Controller
         $app = Aplikasi::where('slug', $id)->first();
         $tittle = $app->nama_aplikasi;
         $slug = '/app';
-        $slugname = 'aplikasi';
+        $slugname = 'Aplikasi';
         return view('show-app', compact(['tittle', 'app', 'slugname', 'slug']));
     }
 

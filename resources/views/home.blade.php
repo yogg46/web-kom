@@ -45,7 +45,8 @@
                                 <td>{{ $item->R_OPD->nama_opd }}</td>
                                 <td>
                                     <div class="d-flex align-items-center"><i
-                                            class="fa fa-circle {{ $item->status_aplikasi == 'Running' ? 'text-success' :( $item->status_aplikasi == 'Tidak Aktif' ? 'text-danger':'text-info'  ) }}  mr-1"></i> {{ $item->status_aplikasi }}</div>
+                                            class="fa fa-circle {{ $item->status_aplikasi == 'Running' ? 'text-success' :( $item->status_aplikasi == 'Tidak Aktif' ? 'text-danger':'text-info'  ) }}  mr-1"></i>
+                                        {{ $item->status_aplikasi }}</div>
                                 </td>
                             </tr>
                             @endforeach

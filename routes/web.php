@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\publikContoller;
 use App\Http\Controllers\WhatappsGateway;
 use App\Http\Livewire\PM\Antrian;
@@ -36,13 +37,15 @@ Route::any('/simpan-aduan', [publikContoller::class, 'aduan'])->name('simpan-adu
 
 
 
+
 Auth::routes();
 // Route::view('/loogi', 'auth.login3');
 
 
-Route::get('/whatapps', [WhatappsGateway::class, 'index'])->name('whatapps');
+Route::get('/aduan', [HomeController::class, 'aduan'])->middleware('auth')->name('aduan');
 Route::post('/send-message', [WhatappsGateway::class, 'sendMessage'])->name('send-message');
 
+Route::get('/app', [publikContoller::class, 'app']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
 // Route::get('/post', Userm::class);
 Route::middleware(['auth', 'checkRole:Super Admin'])->group(function () {

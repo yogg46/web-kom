@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\aduan;
 use App\Models\Aplikasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,5 +37,12 @@ class HomeController extends Controller
         $app = Aplikasi::all();
 
         return view('home',['tittle'=>$tittle,'app'=>$app]);
+    }
+
+    public function aduan(){
+
+        $aduan = aduan::all();
+        $tittle = 'Aduan';
+        return view('aduan',['aduan'=>$aduan,'tittle'=>$tittle]);
     }
 }

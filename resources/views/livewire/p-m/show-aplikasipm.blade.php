@@ -495,34 +495,23 @@
                                     <strong><label class="control-label">Project Manager</label></strong>
                                     <select wire:model='pm' class=" form-control default-select ">
                                         <option>Pilih Project Manager</option>
-                                        @foreach ($PM as $item => $v)
-                                        <option value="{{ $item }}"> {{ $v }}
+                                        @foreach ($PM as $item )
+                                        <option value="{{ $item->id }}"> {{ $item->name }}
+                                            {{-- {{ $item->R_Tim }} --}}
+
+                                            @if ( $item->R_Tim->sum('progress_count') == 0)
+
+
+                                            @else
+                                            (Sedang mengerjakan {{  $item->R_Tim->sum('progress_count') }} aplikasi )
+
+                                            @endif
 
                                         </option>
                                         @endforeach
                                     </select>
                                 </div>
-                                @if (isset($pm))
-                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
-                                    @if (isset($pesan->first()->R_User->name))
 
-                                    <strong>
-
-                                        {{ $pesan->first()->R_User->name }}
-                                    </strong>
-                                    sedang mengerjakan
-                                    @endif
-                                    @forelse ( $pesan->unique('id_aplikasi') as $item )
-
-                                    <br>
-                                    {{ $item->R_Aplikasi->nama_aplikasi }}
-                                    @empty
-                                    sedang tidak mengerjakan apapun
-
-                                    @endforelse
-                                    {{-- @json($pesan) --}}
-                                </div>
-                                @endif
                                 @error('pm')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -535,32 +524,19 @@
                                     <strong><label class="control-label">Quality Assurance</label></strong>
                                     <select wire:model='qa' class="form-control default-select">
                                         <option>Pilih Quality Assurance</option>
-                                        @foreach ($PM as $item => $v)
-                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @foreach ($PM as $item )
+                                        <option value="{{ $item->id }}"> {{ $item->name }}
+                                            @if ( $item->R_Tim->sum('progress_count') == 0)
+
+
+                                            @else
+                                            (Sedang mengerjakan {{  $item->R_Tim->sum('progress_count') }} aplikasi )
+
+                                            @endif</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                @if (isset($qa))
-                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
-                                    @if (isset($pesanQA->first()->R_User->name))
 
-                                    <strong>
-
-                                        {{ $pesanQA->first()->R_User->name }}
-                                    </strong>
-                                    sedang mengerjakan
-                                    @endif
-                                    @forelse ( $pesanQA->unique('id_aplikasi') as $item )
-
-                                    <br>
-                                    {{ $item->R_Aplikasi->nama_aplikasi }}
-                                    @empty
-                                    sedang tidak mengerjakan apapun
-
-                                    @endforelse
-                                    {{-- @json($pesan) --}}
-                                </div>
-                                @endif
                                 @error('qa')
                                 <div class="invalid-feedback animated fadeInUp d-block">
 
@@ -573,34 +549,21 @@
                             <div class="col-md-6">
                                 <div wire:ignore class="form-group">
                                     <strong><label class="control-label">System Analyst</label></strong>
-                                    <select  wire:model='sa' class="form-control default-select">
+                                    <select wire:model='sa' class="form-control default-select">
                                         <option>Pilih System Analyst</option>
-                                        @foreach ($PM as $item => $v)
-                                        <option value="{{ $item }}"> {{ $v }} </option>
+                                        @foreach ($PM as $item )
+                                        <option value="{{ $item->id }}"> {{ $item->name }}
+                                            @if ( $item->R_Tim->sum('progress_count') == 0)
+
+
+                                            @else
+                                            (Sedang mengerjakan {{  $item->R_Tim->sum('progress_count') }} aplikasi )
+
+                                            @endif </option>
                                         @endforeach
                                     </select>
                                 </div>
-                                @if (isset($sa))
-                                <div class="invalid-feedback animated fadeInUp d-block text-primary mb-2">
-                                    @if (isset($pesanSA->first()->R_User->name))
 
-                                    <strong>
-
-                                        {{ $pesanSA->first()->R_User->name }}
-                                    </strong>
-                                    sedang mengerjakan
-                                    @endif
-                                    @forelse ( $pesanSA->unique('id_aplikasi') as $item )
-
-                                    <br>
-                                    {{ $item->R_Aplikasi->nama_aplikasi }}
-                                    @empty
-                                    sedang tidak mengerjakan apapun
-
-                                    @endforelse
-                                    {{-- @json($pesan) --}}
-                                </div>
-                                @endif
 
                                 @error('sa')
                                 <div class="invalid-feedback animated fadeInUp d-block">
@@ -613,8 +576,16 @@
                                 <div wire:ignore class="form-group">
                                     <strong><label class="control-label">Programmer </label></strong>
                                     <select multiple id="sel" wire:model="pg" class="form-control default-select ">
-                                        @foreach ($PM as $item => $v)
-                                        <option wire:loading.attr='disabled' value="{{ $item }}" data-title=" {{ $v }}"> {{ $v }} </option>
+                                        @foreach ($PM as $item )
+                                        <option wire:loading.attr='disabled' value="{{ $item->id }}"> {{ $item->name }}
+                                            @if ( $item->R_Tim->sum('progress_count') == 0)
+
+
+                                            @else
+                                            (Sedang mengerjakan {{  $item->R_Tim->sum('progress_count') }} aplikasi )
+
+                                            @endif
+                                        </option>
                                         @endforeach
 
                                     </select>

@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('aduans', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_aplikasi');
+            $table->unsignedBigInteger('judul_aplikasi');
             $table->string('cp');
             $table->text('deskripsi');
+            $table->foreign('judul_aplikasi')->references('id')->on('aplikasis')->onUpdate('cascade');
             $table->timestamps();
         });
     }

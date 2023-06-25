@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('keterangan')->nullable();
             $table->string('cp')->nullable();
             $table->string('slug');
+            $table->enum('arsip', ['yes', 'no'])->default('no');
             $table->foreign('id_opd')->references('id')->on('data_opds')->onUpdate('cascade');
             $table->timestamps();
         });

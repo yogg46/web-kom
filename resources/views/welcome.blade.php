@@ -245,7 +245,7 @@
                         </div>
                         <div class="col-lg-6 offset-lg-0 order-lg-2 col-10 offset-1 order-1">
                             <div class="hero-image">
-                                <img class="drop-shadow" src="/publik/assets/images/hero-phone.png" alt="image">
+                                <img class="drop-shadow" src="/publik/assets/images/hero-phone.png" style="max-height: 500px;" alt="image">
                             </div>
                         </div>
                     </div>
@@ -377,8 +377,15 @@
                                         <form action="{{ route('simpan-aduan') }}" method="POST" >
                                             @csrf
                                             <div class="form-floating">
-                                                <input class="input form-control" id="judul_aplikasi" name="judul_aplikasi" type="text" value="{{ old('judul_aplikasi') }}"
-                                                    placeholder="Judul Aplikasi">
+                                                {{-- <input class="input form-control" id="judul_aplikasi" name="judul_aplikasi" type="text" value="{{ old('judul_aplikasi') }}"
+                                                    placeholder="Judul Aplikasi"> --}}
+                                                <select id="judul_aplikasi" name="judul_aplikasi"  class="input form-control">
+
+                                                    <option value=""> Pilih Aplikasi</option>
+                                                    @foreach ($apps as $j => $v)
+                                                    <option value="{{ $v }}"> {{ $j }} </option>
+                                                    @endforeach
+                                                </select>
                                                 <label for="judul_aplikasi" name="judul_aplikasi">Judul Aplikasi</label>
                                                 @error('judul_aplikasi')
                                                 <span class="text-danger" role="alert" style="margin-top: 10px;">

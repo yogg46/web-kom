@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\aduan;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
-
+use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -35,6 +36,12 @@ class AppServiceProvider extends ServiceProvider
             }
 
             return $this;
+        });
+
+
+        View::composer('layouts.main', function ($view) {
+            $notif = aduan::orderBy('created_at','DESC')->take(5)->get();
+            $view->with('notif', $notif);
         });
     }
 }

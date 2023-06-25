@@ -14,4 +14,10 @@ class aduan extends Model
         'cp',
         'deskripsi',
     ];
+
+    public function R_Aplikasi()
+    {
+        # code...
+        return $this->belongsTo(Aplikasi::class, 'judul_aplikasi');
+    }
 }

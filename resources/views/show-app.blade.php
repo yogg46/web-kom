@@ -5,10 +5,10 @@
     <div class="feature-section-wrapper" style="padding:0 0 0 0;">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-lg-5 offset-lg-0 col-10 offset-1">
+                <div class="col-lg-4 offset-lg-0 col-10 offset-1">
                     <div class="feature-section-image">
-                        <img src="/publik/assets/images/feature-section-2-img.jpg" class="image" alt="image">
-                        <img src="/publik/assets/images/feature-section-2-phone.png" class="phone" alt="phone">
+                        {{-- <img src="/publik/assets/images/feature-section-2-img.jpg" class="image" alt="image"> --}}
+                        <img src="/publik/assets/images/hero-phone.png" class="phone" alt="phone">
                         <div class="background-pattern background-pattern-radius-reverse">
                             <div class="background-pattern-img background-loop"
                                 style="background-image: url(&quot;/publik/assets/images/patterns/pattern.jpg&quot;); background-position: -433.548px center;"
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-10 offset-1">
+                <div class="col-lg-7 offset-lg-1 col-md-8 offset-md-2 col-10 offset-1">
                     <div class="feature-section-content">
                         <div class="section-heading">
                             <div class="sub-heading c-green upper ls-1">
@@ -25,11 +25,16 @@
                                 <h5>{{ $app->R_OPD->nama_opd }}</h5>
                             </div>
                             <div class="main-heading c-dark">
-                                <p>
-                                <h1>
-                                    {{ $app->nama_aplikasi }}
+
+                                <h1 style="
+                                 word-wrap: break-word; 
+                                ">
+
+
+                                        {{ $app->nama_aplikasi }}
+
                                 </h1>
-                            </p>
+
                             </div>
                         </div>
                         <p class="c-grey">{{ $app->deskripsi }}</p>
