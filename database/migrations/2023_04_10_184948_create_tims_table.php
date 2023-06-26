@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_aplikasi');
             $table->unsignedBigInteger('id_user');
-            $table->enum('role', [ 'Project Manager', "System Analyst", "Programmer", "Quality Assurance"]);
+            $table->enum('role', [ "Project Manager", "System Analyst", "Programmer", "Quality Assurance"]);
             $table->foreign('id_aplikasi')->references('id')->on('aplikasis')->onUpdate('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();

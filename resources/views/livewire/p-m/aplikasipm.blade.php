@@ -62,36 +62,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-6 mx-0">
 
-                                <label class="col-lg-12 col-form-label-lg font-weight-bold">Tanggal Mulai</label>
-                                <div class="col-lg-12">
-                                    <input type="date" wire:model='tgl_mulai' class="form-control form-control-lg"
-                                        placeholder="masukkan tanggal progres Analisis Awal">
-                                    @error('tgl_mulai')
-                                    <div class="invalid-feedback animated fadeInUp d-block">
-
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-6 mx-0">
-
-                                <label class="col-lg-12 col-form-label-lg font-weight-bold">Tanggal Selesai</label>
-                                <div class="col-lg-12">
-                                    <input type="date" wire:model='tgl_selesai' class="form-control form-control-lg"
-                                        placeholder="masukkan tanggal progres Analisis Awal">
-                                    @error('tgl_selesai')
-                                    <div class="invalid-feedback animated fadeInUp d-block">
-
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
                         <div class="form-group row">
                             <label class="col-lg-2 col-form-label-lg font-weight-bold">Klien (OPD)</label>
                             <div class="col-lg-10">
@@ -127,6 +98,36 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6 mx-0">
+
+                                <label class="col-lg-12 col-form-label-lg font-weight-bold">Tanggal Mulai</label>
+                                <div class="col-lg-12">
+                                    <input type="date" wire:model='tgl_mulai' class="form-control form-control-lg"
+                                        placeholder="masukkan tanggal progres Analisis Awal">
+                                    @error('tgl_mulai')
+                                    <div class="invalid-feedback animated fadeInUp d-block">
+
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-6 mx-0">
+
+                                <label class="col-lg-12 col-form-label-lg font-weight-bold">Tanggal Selesai</label>
+                                <div class="col-lg-12">
+                                    <input type="date" wire:model='tgl_selesai' class="form-control form-control-lg"
+                                        placeholder="masukkan tanggal progres Analisis Awal">
+                                    @error('tgl_selesai')
+                                    <div class="invalid-feedback animated fadeInUp d-block">
+
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\publikContoller;
 use App\Http\Controllers\WhatappsGateway;
@@ -8,6 +9,7 @@ use App\Http\Livewire\PM\Aplikasipm;
 use App\Http\Livewire\PM\Maintenance;
 use App\Http\Livewire\PM\Perbaikan;
 use App\Http\Livewire\PM\ShowAplikasipm;
+use App\Http\Livewire\Publik\Profile;
 use App\Http\Livewire\SuperAdmin\Aplikasi;
 use App\Http\Livewire\SuperAdmin\ODP;
 use App\Http\Livewire\SuperAdmin\Pegawai;
@@ -28,26 +30,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// ========================== publik =========================
 Route::get('/', [publikContoller::class, 'index']);
 Route::get('/app', [publikContoller::class, 'app']);
 Route::get('/app/{id}', [publikContoller::class, 'showapp'])->name('app-publik');
 Route::get('/waiting-list', [publikContoller::class, 'waitinglist'])->name('waiting-list');
 Route::get('/pemeliharaan', [publikContoller::class, 'pemeliharaan'])->name('pemeliharaan');
 Route::any('/simpan-aduan', [publikContoller::class, 'aduan'])->name('simpan-aduan');
+Route::get('/aduan', [HomeController::class, 'aduan'])->middleware('auth')->name('aduan');
+Route::post('/send-message', [WhatappsGateway::class, 'sendMessage'])->name('send-message');
+Route::get('/app', [publikContoller::class, 'app']);
 
 
 
 
 Auth::routes();
-// Route::view('/loogi', 'auth.login3');
-
-
-Route::get('/aduan', [HomeController::class, 'aduan'])->middleware('auth')->name('aduan');
-Route::post('/send-message', [WhatappsGateway::class, 'sendMessage'])->name('send-message');
-
-Route::get('/app', [publikContoller::class, 'app']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
-// Route::get('/post', Userm::class);
+Route::get('/profil', Profile::class)->middleware('auth')->name('profil');
+// ========================== Super Admin =========================
+
 Route::middleware(['auth', 'checkRole:Super Admin'])->group(function () {
     Route::get('/user-management', UserManagement::class)->middleware('auth', 'checkRole:Super Admin')->name('userManagement');
     Route::get('/pegawai', Pegawai::class)->name('pegawai');
@@ -59,6 +61,9 @@ Route::middleware(['auth', 'checkRole:Super Admin'])->group(function () {
     Route::get('/opd/{slug}', ShowOPD::class)->name('show-opd');
 });
 
+
+// ========================== Project Manager =========================
+
 Route::middleware(['auth', 'checkRole:Project Manager'])->group(function () {
 
     Route::get('/antrian', Antrian::class)->name('antrian-pm');
@@ -69,8 +74,3 @@ Route::middleware(['auth', 'checkRole:Project Manager'])->group(function () {
     Route::get('/maintenance', Maintenance::class)->name('maintenance');
     Route::get('/perbaikan', Perbaikan::class)->name('perbaikan');
 });
-
-// Route::get('/aplikasi-m/show-progress', function () {
-//     $tittle = 'Aplikasi';
-//     return view('show-aplikasi-progress', compact('tittle'));
-// });

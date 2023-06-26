@@ -136,20 +136,7 @@ class Pegawai extends Component
             'email' => 'required|email',
             'jabatan' => 'required',
         ]);
-        // if (Storage::exists('public/' . $this->avatar)) {
-        //     Storage::delete('public/' . $this->avatar);
-        //     $this->alert('success', 'gambar Berhasil Diupdate');
-        // };
-        // $nama_avatarUP = $this->update_avatar->store("images", 'public');
-        // $manager = new ImageManager();
 
-
-        // $image = $manager->make('storage/' . $nama_avatarUP)->fit(500, 500);
-        // $image->save('storage/' . $nama_avatarUP);
-
-        // if (Storage::exists('public/' . $this->avatar)) {
-        //     Storage::delete('public/' . $this->avatar);
-        // }
         if (File::exists($this->avatar)) {
             File::delete($this->avatar);
         }
@@ -185,9 +172,7 @@ class Pegawai extends Component
                 ]);
             }
 
-            // session()->flash('message', 'User Berhasil Diupdate.');
-            // @dd($User);
-            // $this->emit('edit');
+
             $this->dispatchBrowserEvent('edit');
             $this->alert('success', 'User Berhasil Diupdate');
             $this->resetInput();
