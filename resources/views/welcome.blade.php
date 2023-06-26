@@ -245,7 +245,8 @@
                         </div>
                         <div class="col-lg-6 offset-lg-0 order-lg-2 col-10 offset-1 order-1">
                             <div class="hero-image">
-                                <img class="drop-shadow" src="/publik/assets/images/hero-phone.png" style="max-height: 500px;" alt="image">
+                                <img class="drop-shadow" src="/publik/assets/images/hero-phone.png"
+                                    style="max-height: 500px;" alt="image">
                             </div>
                         </div>
                     </div>
@@ -302,9 +303,9 @@
                                             </div>
 
                                             <div class="content">
-                                                <h2>{{ $key->nama_aplikasi }}</h1>
-                                                    <p>{{ $key->deskripsi }}</p>
-                                                    <h5>{{ $key->R_OPD->nama_opd }}</h5>
+                                                <h2>{{ $key->nama_aplikasi }}</h2>
+                                                <p>{{ $key->deskripsi }}</p>
+                                                <h5>{{ $key->R_OPD->nama_opd }}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -319,7 +320,10 @@
                                                             style="width: 199px; line-height: 199px; text-align: center; font-size: 120px; background: linear-gradient(to bottom, #01458e, #0093dd);">
 
                                                             <span style="color: #ffff">
-                                                                #
+
+                                                                <img class="drop-shadow"
+                                                                    src="/asset/images/Kominfo3.png"
+                                                                    style="max-height: 300px;" alt="image">
                                                             </span>
 
                                                         </div>
@@ -328,10 +332,11 @@
                                                 </div>
                                             </div>
                                             <div class="content">
-                                                <h2>
-                                                    </h1>
-                                                    <p> Tidak ada antrian</p>
-                                                    {{-- <h5> </h5> --}}
+                                                <h3>
+                                                    Belum ada antrian aplikasi
+                                                </h3>
+                                                <p> </p>
+                                                {{-- <h5> </h5> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -374,12 +379,15 @@
                                                 <h1>Tulis Pengaduan Aplikasi</h1>
                                             </div>
                                         </div>
-                                        <form action="{{ route('simpan-aduan') }}" method="POST" >
+                                        <form action="{{ route('simpan-aduan') }}" method="POST">
                                             @csrf
                                             <div class="form-floating">
-                                                {{-- <input class="input form-control" id="judul_aplikasi" name="judul_aplikasi" type="text" value="{{ old('judul_aplikasi') }}"
-                                                    placeholder="Judul Aplikasi"> --}}
-                                                <select id="judul_aplikasi" name="judul_aplikasi"  class="input form-control">
+                                                {{-- <input class="input form-control" id="judul_aplikasi"
+                                                    name="judul_aplikasi" type="text"
+                                                    value="{{ old('judul_aplikasi') }}" placeholder="Judul Aplikasi">
+                                                --}}
+                                                <select id="judul_aplikasi" name="judul_aplikasi"
+                                                    class="input form-control">
 
                                                     <option value=""> Pilih Aplikasi</option>
                                                     @foreach ($apps as $j => $v)
@@ -394,9 +402,9 @@
                                                 @enderror
                                             </div>
                                             <div class="form-floating">
-                                                <input class="input form-control" id="cp" name="cp" type="text" value="{{ old('cp') }}"
-                                                    placeholder="CP Pengadu">
-                                                <label for="cp" >CP Pengadu</label>
+                                                <input class="input form-control" id="cp" name="cp" type="text"
+                                                    value="{{ old('cp') }}" placeholder="CP Pengadu">
+                                                <label for="cp">CP Pengadu</label>
                                                 @error('cp')
                                                 <span class="text-danger" role="alert" style="margin-top: 10px;">
                                                     <strong>{{ $message }}</strong>
@@ -404,7 +412,8 @@
                                                 @enderror
                                             </div>
                                             <div class="form-floating">
-                                                <input class="input form-control" id="deskripsi" name="deskripsi" type="text" value="{{ old('deskripsi') }}"
+                                                <input class="input form-control" id="deskripsi" name="deskripsi"
+                                                    type="text" value="{{ old('deskripsi') }}"
                                                     placeholder="Deskripsi BUG">
                                                 <label for="deskripsi">Deskripsi BUG</label>
                                                 @error('deskripsi')
@@ -424,7 +433,7 @@
                                                 @enderror
                                             </div>
 
-                                            <button type="submit"  class="button button-2 " >
+                                            <button type="submit" class="button button-2 ">
                                                 <span class="button-inner">
                                                     <span class="button-content">
                                                         <span class="text">Submit Reply</span>
@@ -612,7 +621,8 @@
     <script src="/publik/assets/js/gsap.min.js"></script>
     <script src="/publik/assets/js/main.js"></script>
 
-    {{-- <x-livewire-alert::flash /> --}}
+    {{--
+    <x-livewire-alert::flash /> --}}
 </body>
 
 </html>

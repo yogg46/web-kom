@@ -43,15 +43,15 @@
     <div class="timeline-block timeline-block-right">
         <div class="marker"></div>
         <div class="timeline-content">
-            <h3>Belum ada Antrian</h3>
-            <span>Some work experience</span>
+            <h3>Belum ada Pemeliharaan</h3>
+            {{-- <span>Some work experience</span>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                 ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex ea commodo consequat. Duis aute irure dolor in
                 reprehenderit in voluptate.
-            </p>
+            </p> --}}
         </div>
     </div>
     @endforelse
@@ -156,6 +156,10 @@
         .containerss:before {
             left: 8px;
             width: 2px;
+        }
+        .ltr-except-numbers {
+            /* direction: ltr; */
+            text-align: left;
         }
 
         .timeline-block {
