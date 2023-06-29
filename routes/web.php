@@ -43,7 +43,7 @@ Route::post('/send-message', [WhatappsGateway::class, 'sendMessage'])->name('sen
 Route::get('/app', [publikContoller::class, 'app']);
 
 
-
+Route::get('/whatapps',[WhatappsGateway::class,'index'])->middleware('auth')->name('whatapps');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
